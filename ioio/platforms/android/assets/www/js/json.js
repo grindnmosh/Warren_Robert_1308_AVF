@@ -1,12 +1,8 @@
 /*
 Robert Warren
-Term 1304
-Mobile Interface and Usability (MIU)
+Term 1308
+AVF
 I Owe, I Owe * Bill List
-
-Dropbox: https://www.dropbox.com/sh/03yhmwxv5pmms41/4XEl9oEfZ8
-Github: https://github.com/grindnmosh/Warren_Robert_1304_MIU.git
-URL: http://grind-design.com
 */
 
 var sampleBills = {
