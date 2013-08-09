@@ -17,6 +17,9 @@ h1 {
 h2 { 
 	text-align: center;
 }
+h4 { 
+	text-align: center;
+}
 #gridImg .ui-block {
 	height: 100px;
 }
