@@ -101,9 +101,9 @@ $('#instalink').on('click', function () {
 			$.each(pics.data, function(i, img) {
 				var makeSubList = $('<ul></ul>');
 				var makeSubLi = $(
-				"<img id=images src='" + img.images.standard_resolution.url  + "'/>"
+				"<img id=images src='" + img.images.low_resolution.url  + "'/>"
 			);
-			makeSubList.append(makeSubLi).appendTo('#instagram');
+			makeSubLi.appendTo('#instagram');
 			});
 		}
 		
@@ -129,12 +129,13 @@ $('#fb2link').on('click', function () {
 	$.mobile.changePage("#fbnf",{});
 	$('#feed').empty();
 	$.ajax({
-		url		:	"https://graph.facebook.com/100004240532347?fields=id,name,feed&access_token=CAACEdEose0cBAKZBZCiDPIVT1p2qXgbWCIR2hXdMCGvDVyhhIsHwltyd03IEwGzGZCxtFXFfctZACVXLUDcf8cj4jdRhsZCyXVS27qa2hFZB3Lc8ZAtAuTveNvvDg15fZAny96R37YVAj3mu2dXIwNVan6dkfUdIf0Fd0uLYcBJXJQZDZD",
+		url		:	"https://graph.facebook.com/100004240532347?fields=id,name,feed&access_token=618228588208865|ULb0s2EwnML7ByFoQiF-coTZ4R0",
 		type		:	"GET",
 		dataType	:	"JSONP",
-		success		:	function(data, status) {
+		success		:	function(news, status) {
 			alert("JSONP Success");
-			console.log(data);
+			console.log(news);
+			
 		}
 	});
 });
