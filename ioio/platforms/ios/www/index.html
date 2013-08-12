@@ -4,8 +4,8 @@ Robert Warren
 Term 1308
 AVF
 I Owe, I Owe * Bill List
-
 -->
+
 <html>
 	<head>
 		<title>I Owe, I Owe * Bill List</title>
@@ -13,6 +13,15 @@ I Owe, I Owe * Bill List
 		<link rel="stylesheet" href="css/themes/grind-theme.min.css" />
 		<link rel="stylesheet" href="css/index.css" type= "text/css" />
 		<script src= "js/libs/modernizr.custom.min.js"></script>
+		<script type="text/javascript">
+		(function() {
+			var po = document.createElement('script');
+			po.type = 'text/javascript'; po.async = true;
+			po.src = 'https://apis.google.com/js/client:plusone.js?onload=render';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(po, s);
+		})();	
+		</script>
 		<meta charset="UTF-8" />
 		<!--<meta name="viewport" content="target-densitydpi=device-dpi" />-->
 		<meta name="HandheldFriendly" content="true"/>
@@ -25,47 +34,53 @@ I Owe, I Owe * Bill List
 	
 	<body>
 		<div data-role="page" data-theme="a" id="home" >
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<section data-role="header" data-theme="a" data-position="fixed">
 				<h1><a href="#home"><img id="brandImg" src="img/brand.jpg" /></a></h1>
-			</div>
-			<div  data-role="content">
+			</section>
+			<section  data-role="content">
 				<h2><a href="#add" class="browse" id="cta"><img id="ctaimg" src="img/ctabg.png"></a></h2>		
 				<h2>Robert Warren</h2>
 				<p>AVF Term 1308</p>
 				
-				<div data-role="collapsible" data-theme="d" data-collapsed="true">
+				<section data-role="collapsible" data-theme="d" data-collapsed="true">
 					<h3>Research Discussion topics</h3>
 					<ul>
-						<li><a href="#">Week 1: coming soon</a></li>
-						<li><a href="#">Week 2: coming soon</a></li>
-						<li><a href="#">Week 3: coming soon</a></li>
-						<li><a href="#">Week 4: coming soon</a></li>	
+						<li><a href="#disc1">Week 1 Discussion: Data Research, Project Intent</a></li>
+						<li><a href="#">Week 2 Discussion: coming soon</a></li>
+						<li><a href="#">Week 3 Discussion: coming soon</a></li>
 					</ul>			
-				</div>
+				</section>
 				
-				<div data-role="collapsible" data-theme="d" data-collapsed="true">
+				<section data-role="collapsible" data-theme="d" data-collapsed="true">
 					<h3>Native components Android/iOS</h3>
 					<ul>
 						<li>in-app browser</li>
 						<li>Date and Time on index page?</li>
-						<li>Network to follow links to the web or eventually pull info from a server</li>
-						<li>contacts to autofill in bill name</li>
+						<li>Network to follow links to the web or eventually push/pull info with cloud storage</li>
+						<li>contacts to load in bill name with autofill</li>
 						<li>email to send a bill entry to a contact or manual entry will link from share tab in nav bar</li>
 						<li>messaging for same reason as above?</li>
 					</ul>
-				</div>
+				</section>
 	
-				<div data-role="collapsible" data-theme="d" data-collapsed="true">
+				<section data-role="collapsible" data-theme="d" data-collapsed="true">
 					<h3>JSON-P Data APIs</h3>
 					<ul>
-						<li>google+ +1</li>
-						<li>Facebook like</li>
-						<li>twitter follow</li>
-						<li>not sure how to apply Instagram but planning on at least temporarily connecting the api</li>	
+						<li><div id="gSignInWrapper">
+							<span class="label">Sign in with:</span>
+							<div id="customBtn" class="customGPlusSignIn">
+								<span class="icon"></span>
+								<span class="buttonText">Google+</span>
+							</div>
+						</div>(Fails Authorization)</li>
+						<li><a href="#fbnf" id="fb2link">Recommend This App on Facebook</a></li>
+						<li><a href="#testPage" id="twlink">Recommend This App on Google+</a></li>
+						<li><a href="#twit" id="tw2link">Follow The Dev On Twitter</a>(Direct Plugin API)</li>
+						<li><a href="#insta" id="instalink">The Developer: A Secret Peak(Instagram)</a>(Working Unstyled)</li>	
 					</ul>
 					
-				</div>
-				<div data-role="collapsible" data-theme="d" data-collapsed="true">
+				</section>
+				<section data-role="collapsible" data-theme="d" data-collapsed="true">
 					<h3>icon and launch image links</h3>
 					<ul>
 						<li><a href="https://www.dropbox.com/s/8zy4dfn14sh761k/ioio_app_icon.jpg" class="icon">ioio App Icon</a></li>
@@ -74,111 +89,223 @@ I Owe, I Owe * Bill List
 						<li><a href="https://www.dropbox.com/s/kxqreolx25w8qdw/ioio_portrait.jpg" class="icon">ioio Launch Page(Portrait)</a></li>
 						<li><a href="https://www.dropbox.com/s/ro5kqpw5fxqzkw0/ioio_landscape.jpg" class="icon">ioio Launch Page(Landscape)</a></li>
 					</ul>
-				</div>
-				<div>
+				</section>
+				<section>
 					<h4><img id="icon" class="icon" src="img/ioio_app_icon.jpg"></h4>
-				</div>
-			</div>
+				</section>
+			</section>
 
-			<div data-role="footer" data-theme="d" data-position="fixed">
-				<div data-role="navbar">
+			<section data-role="footer" data-theme="d" data-position="fixed">
+				<section data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#" data-icon="gear">Share</a></li>
 						<li><a href="#about" data-icon="bars">About</a></li>
 					</ul>
-				</div>
-			</div>	
+				</section>
+			</section>	
 		</div>
 
 
 				
 		<div data-role="page" data-theme="a" id="about" >
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<section data-role="header" data-theme="a" data-position="fixed">
 					<h1><a href="#home"><img id="brandImg" src="img/brand.jpg" /></a></h1>
-			</div>
-			<div  data-role="content">
-				<h2>Grind-Design projects for Full Sail</h2>
-				<p>Designer:  Robert Warren</p>
-				
-				<div data-role="collapsible" data-theme="d" data-collapsed="true">
+			</section>
+			<section  data-role="content">
+				<h2>Robert Warren</h2>
+				<p>AVF Term 1308</p>				
+				<section data-role="collapsible" data-theme="d" data-collapsed="true">
 					<h3>Source</h3>
 					<ul>
 						<li> Follow my <a href = "https://github.com/grindnmosh/Warren_Robert_1308_AVF">github</a> for updates </li>
 						<li>Android <a href = "http://grindnmosh.github.io/Warren_Robert_1308_AVF/ioio/platforms/android/assets/www/index.html">Sample</a></li>
 						<li>iOS <a href = "http://grindnmosh.github.io/Warren_Robert_1308_AVF/ioio/platforms/ios/www/index.html">Sample</a></li>
-				</div>
+				</section>
 				
-				<div data-role="collapsible" data-theme="d" data-collapsed="true">
+				<section data-role="collapsible" data-theme="d" data-collapsed="true">
 					<h3>Social Networks</h3>
-					<p>Follow me on <a href = "https://twitter.com/grindnmosh">Twitter</a></p>
-					<p>Like Me on <a href = "https://www.facebook.com/grindnmosh">Facebook</a></p>
-					<p>+1 Me on <a href = "https://plus.google.com/115633683788706355406/">Google+</a></p>
-				</div>
+					<ul>
+						<li>Follow me on <a href = "https://twitter.com/grindnmosh">Twitter</a></p>
+						<li>Like Me on <a href = "https://www.facebook.com/grindnmosh">Facebook</a></p>
+						<li>+1 Me on <a href = "https://plus.google.com/115633683788706355406/">Google+</a></p>
+					</ul>
+				</section>
 	
-				<div data-role="collapsible" data-theme="d" data-collapsed="true">
+				<section data-role="collapsible" data-theme="d" data-collapsed="true">
 					<h3>Contact Info</h3>
-					<h4>For Bug and Error Reports:</h4>
-					<p>bugreports@grind-design.com</p>
-					<h4>Suggestions:</h4>
-					<p>suggestions@grind-design.com</p>
-					<h4>Site Issues:</h4>
-					<p>admin@grind-design.com</p>
-					<h4>Contact the Developer:</h4>
-					<p>grindnmosh@grind-design.com</p>
-				</div>
+					<ul>
+						<li><h4>For Bug and Error Reports:</h4>
+						<p>bugreports@grind-design.com</p></li>
+						<li><h4>Suggestions:</h4>
+						<p>suggestions@grind-design.com</p></li>
+						<li><h4>Site Issues:</h4>
+						<p>admin@grind-design.com</p></li>
+						<li><h4>Contact the Developer:</h4>
+						<p>grindnmosh@grind-design.com</p></li>
+					</ul>
+				</section>
 				
-				<div data-role="collapsible" data-theme="d" data-collapsed="true" >
+				<section data-role="collapsible" data-theme="d" data-collapsed="true" >
 					<h3>Credits</h3>
-					<p>Hand Giving Money To Other Hand Image courtesy of creativedoxfoto/FreeDigitalPhotos.net</p>
-				</div>
-			</div>
+					<ul>
+						<li>Hand Giving Money To Other Hand Image courtesy of creativedoxfoto/FreeDigitalPhotos.net</li>
+					</ul>
+				</section>
+			</section>
 		
-			<div data-role="footer" data-theme="d" data-position="fixed">
-				<div data-role="navbar">
+			<section data-role="footer" data-theme="d" data-position="fixed">
+				<section data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#" data-icon="gear">Share</a></li>
 						<li><a href="#about" data-icon="bars">About</a></li>
 					</ul>
-				</div>
-			</div>
+				</section>
+			</section>
 		</div>
+		
+		<div data-role="page" data-theme="a" id="disc1" >
+			<section data-role="header" data-theme="a" data-position="fixed">
+					<h1><a href="#home"><img id="brandImg" src="img/brand.jpg" /></a></h1>
+			</section>
+			<section  data-role="content">
+				<ul>
+					<li>Keeping in mind that you said Twitter would appear still in some lessons and that we should replace it in all cases with Instagram, my writing covers Instagram in place of Twitter where applicable.</li>
+					<br>
+					<li>Instagram could be used to as a built in login to the apps private areas or cross device/web storage for auto population of Data already entered onto a new device. This would also allow for instant syncing across the devices allowing Instagram to be used as cloud storage. I have never actually seen this in any app, used with Instagram. This is more commonly seen with Facebook or Google+ logins and occasionally Twitter logins. I prefer the apps I have seen that give you the choice between direct login with no cloud support or the multiple social network login options with cloud support. I like the apps that have a simple backup sync with more popular direct cloud options like Dropbox or Box.  I intend to use the Facebook Like API, the Google+ +1 API, the Twitter Follow API, Evernote syncing API as well as include the Dropbox API for backing up Data. I just need to learn how to implement these API features. I also want to make the login options of some or all of these available. I would love to say this would all happen this month but we will see.</li>
+					<br>
+					<li>JSON-P is an interesting concept, in the fact that is lets use Data from another domain. This allows you to pull data from the API’s source websites with no issues. Cross platform the browser generally denies data unless wrapped in script tags, which makes the data useless beyond evaluating it. JSON-P uses this loophole to gain access to cross-domain data and wraps it in a way that makes it fully usable. Without JSON-P a call for data would involve several steps of calling your server, which calls on the API’s server, which in turn sends it back to your server then to you. That is a lot slower in getting returned data than directly getting it and only JSON-P can currently do this effectively. So JSON-P apps definitely provide an advantage in getting data returned to you faster.</li>
+					<br>
+					<li>Some of the APIs that blend best with native functions that I found actually blend between native features.  The camera would blend well with any of your social media services. Storage would blend well with cloud services like Dropbox, Box or even Facebook or Google+. The Network feature works well with the in-app web browser, the social networks, the cloud storage, the sharing features using email or messaging and anything else that needs to pull information from or even sending information to the web.  Contacts can be used to sync with any of the incorporated services or to populate into services. These would sync well with sharing options using social network APIs. The options are limitless and these are only some general examples.</li>
+					<br>
+					<li>My intentions this month is to begin my social network promotional integration and multi device sync support into my app and add the features needed to take full advantage of native features like contacts, calendar, network, internal storage and when applicable SD card support. I know SD storage will only be an option for the Android side for most devices but this is a highly request feature of Android users so I do intend to implement it. I intend to have at least the basic functionality to make the app fully useable by the end of this month and have it available on both app stores. This is an app that I already enjoy using in the mobile web version I have and I have had requests to be a beta tester for this app when it becomes available for such.  I already discussed in the first paragraph some detailed desires for the use of API’s in this app.</li>
+					<br>
+					<li>We have learned so much up till now and honestly it is really jumbled up in my head as to where or when I learned what. It is even jumbled which techniques I have just formed in combination of what I have learned in class, from others or just trial and error. But I will try to break down these three categories. As far as research, this is the most important step in any project. You should a lot time before beginning the structuring of the project itself to research the why, how to and effective use of the big picture of what you want to do. This in turn creates a need for additional research on the components that need to be incorporated, some of which you had already planned and some that you hadn’t previously thought of.  This creates it’s own research. Once you have completed your thorough research you are ready to begin the design stage. The design stage should include two main pieces. They are our wireframe and your flowchart. As you build these you find the need for even more components to complete your goals returning you to the research stage.  This is also the stage to plan your apps branding, which may change as you go. Once your planning is complete, it is time to begin the design stages. This is the point when you start writing your primary code, which has been html5 so far. We then make it look nice with CSS. We finally make it function with our JavaScript or JavaScript libraries such as jQuery. The final step is to add data sources and native functionality to make the app function as we envisioned it. One of the biggest things I have learned and something I want to ensure is included, is to not over think it. As humans that is our biggest flaw.</li>					
+				</ul>
+			</section>
+		
+			<section data-role="footer" data-theme="d" data-position="fixed">
+				<section data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#" data-icon="gear">Share</a></li>
+						<li><a href="#about" data-icon="bars">About</a></li>
+					</ul>
+				</section>
+			</section>
+		</div>
+
 		<div data-role="page" data-theme="a" id="view" >
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<section data-role="header" data-theme="a" data-position="fixed">
 				<h1><a href="#home"><img id="brandImg" src="img/brand.jpg" /></a></h1>
-			</div>
-			<div id="display" data-theme="d" data-role="content">
-				<div>
+			</section>
+			<section id="display" data-theme="d" data-role="content">
+				<section>
 					<a href="#add" id="addNewBill"><input type="button" data-role="button" data-theme="d" data-icon="arrow-r" data-iconpos="right" value="Add Another Bill" /></a>
-				</div>
-				<div>
+				</section>
+				<section>
 					<input type="button" data-role="button" data-theme="b" data-icon="arrow-r" data-iconpos="right" value="Clear Storage" id="clearAllData"/>
-				</div>
-				<!--<div id="display" ></div>-->
-			</div>
-			<div data-role="footer" data-theme="d" data-position="fixed">
-				<div data-role="navbar">
+				</section>
+			</section>
+			<section data-role="footer" data-theme="d" data-position="fixed">
+				<section data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#" data-icon="gear">Share</a></li>
 						<li><a href="#about" data-icon="bars">About</a></li>
 					</ul>
-				</div>	
-			</div>
+				</section>	
+			</section>
 		</div>
+		
+		<div data-role="page" data-theme="a" id="testPage" >
+			<section data-role="header" data-theme="a" data-position="fixed">
+				<h1><a href="#home"><img id="brandImg" src="img/brand.jpg" /></a></h1>
+			</section>
+			<section id="testers" data-theme="d" data-role="content">
+			
+			</section>
+			<section data-role="footer" data-theme="d" data-position="fixed">
+				<section data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#" data-icon="gear">Share</a></li>
+						<li><a href="#about" data-icon="bars">About</a></li>
+					</ul>
+				</section>	
+			</section>
+		</div>
+
+		
+		<div data-role="page" data-theme="a" id="insta" >
+			<section data-role="header" data-theme="a" data-position="fixed">
+				<h1><a href="#home"><img id="brandImg" src="img/brand.jpg" /></a></h1>
+			</section>
+			<section id="instagram" data-theme="d" data-role="content">
+			
+			</section>
+			<section data-role="footer" data-theme="d" data-position="fixed">
+				<section data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#" data-icon="gear">Share</a></li>
+						<li><a href="#about" data-icon="bars">About</a></li>
+					</ul>
+				</section>	
+			</section>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="twit" >
+			<section data-role="header" data-theme="a" data-position="fixed">
+				<h1><a href="#home"><img id="brandImg" src="img/brand.jpg" /></a></h1>
+			</section>
+			<section id="twistedTwit" data-theme="d" data-role="content">
+				<a class="twitter-timeline" href="https://twitter.com/grindnmosh" data-widget-id="366722003048218625">Tweets by @grindnmosh</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+			</section>
+			<section data-role="footer" data-theme="d" data-position="fixed">
+				<section data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#" data-icon="gear">Share</a></li>
+						<li><a href="#about" data-icon="bars">About</a></li>
+					</ul>
+				</section>	
+			</section>
+		</div>
+
+		<div data-role="page" data-theme="a" id="fbnf" >
+			<section data-role="header" data-theme="a" data-position="fixed">
+				<h1><a href="#home"><img id="brandImg" src="img/brand.jpg" /></a></h1>
+			</section>
+			<section id="feed" data-theme="d" data-role="content">
+			
+			</section>
+			<section data-role="footer" data-theme="d" data-position="fixed">
+				<section data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#" data-icon="gear">Share</a></li>
+						<li><a href="#about" data-icon="bars">About</a></li>
+					</ul>
+				</section>	
+			</section>
+		</div>
+
 	
 		<div data-role="page" id="add">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<section data-role="header" data-theme="a" data-position="fixed">
 				<h1><a href="#home"><img id="brandImg" src="img/brand.jpg" /></a></h1>
-			</div>
-			<div  data-role="content" data-theme="a" id="addFormEdits">
+			</section>
+			<section  data-role="content" data-theme="a" id="addFormEdits">
 	    		<form action="" id="addBill">
-		    		<div data-role="fieldcontain">
+		    		<section data-role="fieldcontain">
 						<fieldset data-role="controlgroup" id="top">
 							<h2>Add A New Bill</h2>
-							<div id="centered">Fields marked with <p class="star">*</p> are required fields.</div>
-							<div data-role="fieldcontain">
+							<section id="centered">Fields marked with <p class="star">*</p> are required fields.</section>
+							<section data-role="fieldcontain">
 						    	<label for="btype"><p class="star">*</p> Bill Type</label>
 						    	<legend><p class="star">*</p> Bill Type</legend>
 						    	<select name="btype" id="btype" data-theme="d" class="required"  data-native-menu="false">
@@ -192,28 +319,28 @@ I Owe, I Owe * Bill List
 									<option value="Other">Other</option>
 								</select>
 								<p class="inputHints">Please select bill category</p>
-							</div>
-							<div data-role="fieldcontain">
+							</section>
+							<section data-role="fieldcontain">
 								<label for="bname" ><p class="star">*</p> Bill Name</label>
 							    <input type="text"  data-clear-btn="true" name="bname" id="bname" class="required" placeholder="Elec, Car, Netflix, etc" value="">
 							    <p class="inputHints">This is where you name your bill</p>
-							</div>
-							<div data-role="fieldcontain">
+							</section>
+							<section data-role="fieldcontain">
 						        <label for="prio">Priority</label>
 						        <input type="range" data-theme="d" id="prio"  min="0" max="10" value="5">
 						        <p class="inputHints">Priority: Low_______________________High</p>
-							</div>
-							<div data-role="fieldcontain">
+							</section>
+							<section data-role="fieldcontain">
 								<label for="amt"><p class="star">*</p> Amount</label>
 								<input type="text" data-clear-btn="true" name="amt" id="amt" class="required number"  placeholder="150.00" />
 								<p class="inputHints">Please enter bill amount in 100.00 format</p>
-							</div>
-							<div data-role="fieldcontain">
+							</section>
+							<section data-role="fieldcontain">
 								<label for="due"><p class="star">*</p> Due Date</label>
 								<input type="date" name="due" id="due" class="required date"  />
 								<p class="inputHints">Please enter the bill due date</p>
-							</div>
-							<div data-role="fieldcontain">
+							</section>
+							<section data-role="fieldcontain">
 								<label for="freqs"><p class="star">*</p> frequency</label>
 								<legend><p class="star">*</p> frequency</legend>
 								<select name="freqs" id="freqs" class="required" data-theme="d" data-native-menu="false">
@@ -227,12 +354,12 @@ I Owe, I Owe * Bill List
 									<option value="Other">Other</option>
 								</select>
 								<p class="inputHints">Please select the frequency of this bill</p>
-							</div>
+							</section>
 							<input type="hidden" name="billNumber" id="billNumber" value="00001" />
 							<input type="hidden" name="timeSaved" id="timeSaved" value="currentTime" />
 						</fieldset>
-		    		</div>
-		    		<div data-role="fieldcontain">
+		    		</section>
+		    		<section data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
 							<legend><p class="star">*</p> Payment Status</legend>
 						    <input type="radio" data-theme="d" checked value="UnPaid" name="status" id="unpd" class="Unpaid" />
@@ -260,7 +387,7 @@ I Owe, I Owe * Bill List
 							</select>
 							<p class="inputHints">Please select payment method if applicable</p>
 			    		
-				    		<div data-role="fieldcontain">
+				    		<section data-role="fieldcontain">
 							    <fieldset data-role="controlgroup">
 							        <legend>Payment Time</legend>
 							        <input type="checkbox" name="paymentTime" id="ontime" data-theme="d" value-"On Time">
@@ -271,34 +398,34 @@ I Owe, I Owe * Bill List
 							        <label for="lfee" >Late Fee</label>
 							        <p class="inputHints">Please select all that apply</p>
 							    </fieldset>
-				    		</div>
+				    		</section>
 				    	</ol>
-		    		</div>
-				    <div data-role="fieldcontain">
+		    		</section>
+				    <section data-role="fieldcontain">
 					    <label for="textArea">Comments</label>
-					    <div><textarea id="textArea"></textarea></div>
-				    </div>
-				    <div data-role="fieldcontain">
+					    <section><textarea id="textArea"></textarea></section>
+				    </section>
+				    <section data-role="fieldcontain">
 						<input type="submit" name="saveMe" id="saveMe" data-theme="d" value="Save Me" data-role="button" data-icon="arrow-r" data-iconpos="right" />
-				    </div>
-			    	<div data-role="fieldcontain">
+				    </section>
+			    	<section data-role="fieldcontain">
 						<input type="reset" name="resetMe" id="resetMe" data-theme="b" data-role="button" data-icon="arrow-r" data-iconpos="right" value="Reset Me" />
-			    	</div>
-				    <div data-role="fieldcontain">
+			    	</section>
+				    <section data-role="fieldcontain">
 						<a href = "#view" id="displayLink"><input type="button" data-theme="a" data-role="button" data-icon="arrow-r" data-iconpos="right" value="Display Bills" /></a>
-					</div>
+					</section>
 				    <a href="#errors" id="abErrors" data-rel="dialog" data-transition="pop">Open Errors</a>
-			    </div>
+			    </section>
 			</form>
-	    	<div data-role="footer" data-theme="d" data-position="fixed" id="footer">
-				<div data-role="navbar">
+	    	<section data-role="footer" data-theme="d" data-position="fixed" id="footer">
+				<section data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#" data-icon="gear">Share</a></li>
 						<li><a href="#about" data-icon="bars">About</a></li>
 					</ul>
-				</div>		
-			</div>
+				</section>		
+			</section>
 		</div>
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>

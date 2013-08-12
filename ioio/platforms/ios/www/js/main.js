@@ -1,3 +1,13 @@
+
+/*
+Robert Warren
+Term 1308
+AVF
+I Owe, I Owe * Bill List
+*/
+
+
+
 $(document).ready(function(){
 
 	$('#home').on('pageinit', function(){
@@ -11,15 +21,6 @@ $(document).ready(function(){
 			var	abErrors = $('#abErrors');
 		    billForm.validate({
 				invalidHandler: function(form, validator) {
-					/*abErrors.click();
-					var labels = '';
-					for(var key in validator.submitted) {
-						var tag = $('label[for^="'+ key +'"]').not('.error');
-						var groupTag = tag.closest('fieldset').find('.ui-controlgroup-label').not('[generated]');
-						var itemName = groupTag.length ? groupTag.text() : tag.text();
-						labels += '<li>' + itemName + ": *Required" + '</li>';
-					};
-					$("#errors ul").html(labels);*/
 				},
 				submitHandler: function() {
 				var data = billForm.serializeArray();
@@ -86,6 +87,95 @@ function createButtons(key, buttons) {
 	delButton.innerHTML = delText;
 	buttons.appendChild(delButton);
 };
+
+$('#instalink').on('click', function () {
+	$.mobile.changePage("#insta",{});
+	$('#instagram').empty();
+	$.ajax({
+		url		:	"https://api.instagram.com/v1/users/188391197/media/recent/?access_token=188391197.542325c.4843642a97f447cdb843f9275c8a1420",
+		type		:	"GET",
+		dataType	:	"JSONP",
+		success		:	function(pics, status) {
+			alert("JSONP Success");
+			console.log(pics.data)
+			$.each(pics.data, function(i, img) {
+				var makeSubList = $('<ul></ul>');
+				var makeSubLi = $(
+				"<img id=images src='" + img.images.standard_resolution.url  + "'/>"
+			);
+			makeSubList.append(makeSubLi).appendTo('#instagram');
+			});
+		}
+		
+	});
+});
+
+
+$('#fblink').on('click', function () {;
+	$.mobile.changePage("#",{});
+	$('#').empty();
+	$.ajax({
+		url		:	"",
+		type		:	"GET",
+		dataType	:	"JSONP",
+		success		:	function(data, status) {
+			alert("JSONP Success");
+	
+		}
+	});
+});
+
+$('#fb2link').on('click', function () {
+	$.mobile.changePage("#fbnf",{});
+	$('#feed').empty();
+	$.ajax({
+		url		:	"https://graph.facebook.com/100004240532347?fields=id,name,feed&access_token=CAACEdEose0cBAKZBZCiDPIVT1p2qXgbWCIR2hXdMCGvDVyhhIsHwltyd03IEwGzGZCxtFXFfctZACVXLUDcf8cj4jdRhsZCyXVS27qa2hFZB3Lc8ZAtAuTveNvvDg15fZAny96R37YVAj3mu2dXIwNVan6dkfUdIf0Fd0uLYcBJXJQZDZD",
+		type		:	"GET",
+		dataType	:	"JSONP",
+		success		:	function(data, status) {
+			alert("JSONP Success");
+			console.log(data);
+		}
+	});
+});
+
+$('#twlink').on('click', function () {
+	$.mobile.changePage("#testPage",{});
+	$('#testers').empty();
+	$.ajax({
+		url		:	"http://quotesondesign.com/api/3.0/api-3.0",
+		type		:	"GET",
+		dataType	:	"JSONP",
+		success		:	function(data, status) {
+			alert("JSONP Success");
+		}
+	});
+});
+
+function render() {
+	gapi.signin.render('customBtn', {
+		//'callback': 'signinCallback',
+		'clientid': '184003152658.apps.googleusercontent.com',
+		'cookiepolicy': 'single_host_origin',
+		'requestvisibleactions': 'http://schemas.google.com/AddActivity',
+		'scope': 'https://www.googleapis.com/auth/plus.login'
+	});
+}
+
+
+$('#gp2link').on('click', function () {
+	$.mobile.changePage("#",{});
+	$('#').empty();
+	$.ajax({
+		url		:	"",
+		type		:	"GET",
+		dataType	:	"JSONP",
+		success		:	function(data, status) {
+			alert("JSONP Success");
+	
+		}
+	});
+});
 
 
 function howPaid() {
@@ -162,7 +252,7 @@ function makeEdits() {
     	document.getElementById("lfee").setAttribute("checked", "checked");
 	};
 	document.getElementById("textArea").value = recallData.textArea[1];
-	edit.setAttribute("value", "Edit Me");
+	edit.setAttribute("value", "Update Me");
 	var changeSubmit = document.getElementById("saveMe");
 	key = this.key
 	return key
@@ -286,6 +376,8 @@ function clearAll() {
 	};
 	return clearAll
 };
+
+
 
 displayLink.addEventListener("click", getBill);
 clearBill.addEventListener("click", clearAll);

@@ -30,6 +30,11 @@ h4 {
 #billTypeImg {
 	margin: 20px 20px 20px 20px;
 }
+#images {
+	height: 200px;
+	display: inline;
+	margin: 20px;
+}
 #dueDateImg {
 	margin: 20px 20px 20px 20px;
 }
@@ -46,19 +51,19 @@ h4 {
 	margin: 20px 20px 20px 20px;
 }
 #imgSize1 {
-	Height: 75px;
+	height: 75px;
 }
 #imgSize2 {
-	Height: 75px;
+	height: 75px;
 }
 #imgSize3 {
-	Height: 75px;
+	height: 75px;
 }
 #imgSize4 {
-	Height: 75px;
+	height: 75px;
 }
 #imgSize5 {
-	Height: 75px;
+	height: 75px;
 }
 #ctaimg {
 	width: 275px;
@@ -124,4 +129,36 @@ li {
     padding-top: .8em;
     margin-top: 1.4em;
     border-top: 1px solid rgba(0,0,0,.1);
+}
+#customBtn {
+	display: inline-block;
+	background: #dd4b39;
+	color: white;
+	width: 165px;
+	border-radius: 5px;
+	white-space: nowrap;
+}
+#customBtn:hover {
+	background: #e74b37;
+	cursor: hand;
+}
+span.label {
+	font-weight: bold;
+}
+span.icon {
+	background: url('/+/images/branding/btn_red_32.png') transparent 5px 50% no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	width: 35px;
+	height: 35px;
+	border-right: #bb3f30 1px solid;
+}
+span.buttonText {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 35px;
+	padding-right: 35px;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: 'Roboto',arial,sans-serif;
 }
