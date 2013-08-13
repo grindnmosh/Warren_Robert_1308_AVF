@@ -27,7 +27,6 @@ $(document).ready(function () {
 
         });
         //any other code needed for addItem page goes here
-        $(document).ready(function () {
             var now = new Date();
             var month = (now.getMonth() + 1);
             var day = now.getDate();
@@ -35,7 +34,6 @@ $(document).ready(function () {
             if (day < 10) day = "0" + day;
             var today = now.getFullYear() + '-' + month + '-' + day;
             $('#due').val(today);
-        }); //date plugin
 
         $(document).ready(function () {    $("#effect").css("display", "none");        $(".Unpaid").click(function () {        
                 if ($('input[name=status]:checked').val() == "Paid") {            $("#effect").slideDown("fast"); //Slide Down Effect
@@ -59,7 +57,7 @@ var localClear = document.getElementById("clearAllData");
 var saveSuccess = "Your Bill Is Saved!";
 var radioSelected = document.forms[0].status;
 
-function createButtons(key, buttons) {
+var createButtons = function(key, buttons) {
     var editButton = document.createElement("input");
     editButton.setAttribute("type", "button");
     editButton.setAttribute("value", "Edit Bill");
@@ -104,20 +102,6 @@ $('#instalink').on('click', function () {
 });
 
 
-$('#fblink').on('click', function () {
-    $.mobile.changePage("#", {});
-    $('#').empty();
-    $.ajax({
-        url: "",
-        type: "GET",
-        dataType: "JSONP",
-        success: function (data, status) {
-            alert("JSONP Success");
-
-        }
-    });
-});
-
 $('#fb2link').on('click', function () {
     $.mobile.changePage("#fbnf", {});
     $('#feed').empty();
@@ -125,33 +109,22 @@ $('#fb2link').on('click', function () {
         url: "https://graph.facebook.com/100004240532347?fields=id,name,feed&access_token=618228588208865|ULb0s2EwnML7ByFoQiF-coTZ4R0",
         type: "GET",
         dataType: "JSONP",
-        success: function (news, status) {
+        success: function (feed) {
             alert("JSONP Success");
-            console.log(news);
-            $.each(news.feed, function (i, data) {
-            	console.log(news.feed);
+            console.log(feed);
+            $.each(feed.feed.data, function (i, data) {
+            	console.log(data.story);
+                var makeSubList = $('<ul></ul>');
                 var makeSubLi = $(
-                "<li>" + data.story + "</li>");
-            makeSubLi.appendTo('#feed');
+                "<li>" + data.story + "</li>" +
+                "<li>" + "<img src='" + data.picture + "'/></li>" + "<hr />") 
+            makeSubList.append(makeSubLi).appendTo('#feed');
             });
         }
     });
 });
 
-$('#twlink').on('click', function () {
-    $.mobile.changePage("#testPage", {});
-    $('#testers').empty();
-    $.ajax({
-        url: "http://quotesondesign.com/api/3.0/api-3.0",
-        type: "GET",
-        dataType: "JSONP",
-        success: function (data, status) {
-            alert("JSONP Success");
-        }
-    });
-});
-
-function render() {
+var render = function() {
     gapi.signin.render('customBtn', {
         //'callback': 'signinCallback',
         'clientid': '184003152658.apps.googleusercontent.com',
@@ -177,7 +150,7 @@ $('#gp2link').on('click', function () {
 });
 
 
-function howPaid() {
+var howPaid = function() {
     var paidWith = document.getElementById("pdwith");
     if (status - pd.checked) {
         paymentValue = paidWith.value;
@@ -187,7 +160,7 @@ function howPaid() {
 }
 
 
-function getSelectedRadio() {
+var getSelectedRadio = function() {
     for (i = 0; i < radioSelected.length; i++) {
         if (radioSelected[i].checked) {
             paidValue = radioSelected[i].value;
@@ -197,7 +170,7 @@ function getSelectedRadio() {
 }
 
 
-function getCheckBoxOnTime() {
+var getCheckBoxOnTime = function() {
     if (document.getElementById('ontime').checked) {
         onTime = document.getElementById('ontime').value;
     } else {
@@ -205,7 +178,7 @@ function getCheckBoxOnTime() {
     }
 }
 
-function getCheckBoxLate() {
+var getCheckBoxLate = function() {
     if (document.getElementById('late').checked) {
         late = document.getElementById('late').value;
     } else {
@@ -213,7 +186,7 @@ function getCheckBoxLate() {
     }
 }
 
-function getCheckBoxLateFee() {
+var getCheckBoxLateFee = function() {
     if (document.getElementById('lfee').checked) {
         lateFee = document.getElementById('lfee').value;
     } else {
@@ -221,11 +194,11 @@ function getCheckBoxLateFee() {
     }
 }
 
-function editAdd() {
+var editAdd = function() {
     window.location = '#add';
 }
 
-function makeEdits() {
+var makeEdits = function () {
     editAdd();
     var value = localStorage.getItem(this.key);
     var recallData = JSON.parse(value);
@@ -257,7 +230,7 @@ function makeEdits() {
     return key;
 }
 
-function loadImg(billImg, newSub) {
+var loadImg = function(billImg, newSub) {
     var img = document.createElement("li");
     newSub.appendChild(img);
     var insertImg = document.createElement("img");
@@ -267,7 +240,7 @@ function loadImg(billImg, newSub) {
     img.appendChild(insertImg);
 }
 
-function cleanHouse() {
+var cleanHouse = function() {
     if (localStorage.length === 0) {
         alert("There is no data to clear!!");
     } else {
@@ -278,7 +251,7 @@ function cleanHouse() {
     return false;
 }
 //var autofillData = function (){};
-function getSampleBills() {
+var getSampleBills = function() {
     for (var n in sampleBills) {
         var id = (Math.floor(Math.random() * 1000000001));
         localStorage.setItem(id, JSON.stringify(sampleBills[n]));
@@ -286,7 +259,7 @@ function getSampleBills() {
 }
 
 //var getData = function(){};
-function getBill() {
+var getBill = function() {
     //window.location='#view';
     if (localStorage.length === 0) {
         getSampleBills();
@@ -324,7 +297,7 @@ function getBill() {
 /*var storeData = function(data){
 	console.log(data);
 }; */
-function getForm(key, data) {
+var getForm = function(key, data) {
     var id = key;
     getSelectedRadio();
     howPaid();
@@ -352,7 +325,7 @@ function getForm(key, data) {
 }
 
 //var	deleteItem = function (){};
-function runDelete() {
+var runDelete = function() {
     var verify = confirm("Are you sure you want to delete this bill. This can not be undone.");
     if (verify) {
         localStorage.removeItem(this.key);
@@ -365,7 +338,7 @@ function runDelete() {
 }
 
 //var clearLocal = function(){};
-function clearAll() {
+var clearAll = function() {
     var areYouSure = confirm("Are you sure you want to clear the form and start over?");
     if (areYouSure) {
         resetMe.setAttribute("type", "reset");
