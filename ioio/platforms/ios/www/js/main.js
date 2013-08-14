@@ -4,7 +4,6 @@ Term 1308
 AVF
 I Owe, I Owe * Bill List
 */
-
 $(document).ready(function() {
 	$('#home').on('pageinit', function() {
 		//code needed for home page goes here
@@ -123,21 +122,19 @@ $('#gp2link').on('click', function() {
 		}
 	});
 });
-
 var signinCallback = function(authResult) {
-	if (authResult['access_token']) {
-		// Successfully authorized
-		// Hide the sign-in button now that the user is authorized, for example:
-		document.getElementById('signinButton').setAttribute('style', 'display: none');
-	} else if (authResult['error']) {
-		// There was an error.
-		// Possible error codes:
-		//   "access_denied" - User denied access to your app
-		//   "immediate_failed" - Could not automatically log in the user
-		// console.log('There was an error: ' + authResult['error']);
+		if (authResult['access_token']) {
+			// Successfully authorized
+			// Hide the sign-in button now that the user is authorized, for example:
+			document.getElementById('signinButton').setAttribute('style', 'display: none');
+		} else if (authResult['error']) {
+			// There was an error.
+			// Possible error codes:
+			//   "access_denied" - User denied access to your app
+			//   "immediate_failed" - Could not automatically log in the user
+			// console.log('There was an error: ' + authResult['error']);
+		}
 	}
-}
-
 var howPaid = function() {
 		var paidWith = document.getElementById("pdwith");
 		if (status - pd.checked) {
@@ -321,27 +318,27 @@ var clearAll = function() {
 		}
 		return clearAll;
 	};
-	
 // coming soon for native features and mashups???
+
 function onDeviceReady() {
 	$("#nav-contacts").on("click", contactsFn);
 	$("#nav-networkTest").on("click", networkTestFn);
 	$("#nav-email").on("click", emailFn);
 	$("#nav-sms").on("click", smsFn);
-}; // phonegap deviceready
+} // phonegap deviceready
 var contactsFn = function() {
-	//load camera immediately? load buttons first?	
-}; // end contactsFn
+		//load camera immediately? load buttons first?	
+	}; // end contactsFn
 var networkTestFn = function() {
-	//check for connection? load data?	
-};// end networkTestFn
+		//check for connection? load data?	
+	}; // end networkTestFn
 var emailFn = function() {
-	//do something	
-};// end emailFn
+		//do something	
+	}; // end emailFn
 var smsFn = function() {
-	//do something	
-};// end smsFn
-
+		//do something	
+	}; // end smsFn
+    
 document.addEventListener("deviceready", onDeviceReady, false);
 displayLink.addEventListener("click", getBill);
 clearBill.addEventListener("click", clearAll);
