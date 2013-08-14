@@ -11,7 +11,7 @@ URL: http://grind-design.com
 
 */
 h1 { 
-	text-align: center;
+    text-align: center;
 	margin: 0 20px;
 }
 h2 { 
@@ -25,15 +25,15 @@ h4 {
 }
 #browseSz {
 	width: 275px;
-	align: center;
+	text-align: center;
 }
 #billTypeImg {
 	margin: 20px 20px 20px 20px;
 }
 #images {
-	height: 200px;
-	display: inline;
-	margin: 20px;
+	width: 150px;
+	margin: 20px 20px 20px 20px;
+	border: 2px solid blue;
 }
 #dueDateImg {
 	margin: 20px 20px 20px 20px;
@@ -67,7 +67,7 @@ h4 {
 }
 #ctaimg {
 	width: 275px;
-	align: center;
+	text-align: center;
 }
 #brandImg {
 	width: 130px;
@@ -97,8 +97,8 @@ label {
 	font-size: x-small;
 }
 #billImg {
-	align: left;
-	width: 100px;
+	text-align: left;
+	height: 100px;
 	margin: 40px 0;
 	border: 2px solid blue;
 }
@@ -125,40 +125,7 @@ li {
     background: #111;
 }
 .ui-grid-a {
-    margin-top: 1em;
     padding-top: .8em;
     margin-top: 1.4em;
     border-top: 1px solid rgba(0,0,0,.1);
-}
-#customBtn {
-	display: inline-block;
-	background: #dd4b39;
-	color: white;
-	width: 165px;
-	border-radius: 5px;
-	white-space: nowrap;
-}
-#customBtn:hover {
-	background: #e74b37;
-	cursor: hand;
-}
-span.label {
-	font-weight: bold;
-}
-span.icon {
-	background: url('/+/images/branding/btn_red_32.png') transparent 5px 50% no-repeat;
-	display: inline-block;
-	vertical-align: middle;
-	width: 35px;
-	height: 35px;
-	border-right: #bb3f30 1px solid;
-}
-span.buttonText {
-	display: inline-block;
-	vertical-align: middle;
-	padding-left: 35px;
-	padding-right: 35px;
-	font-size: 14px;
-	font-weight: bold;
-	font-family: 'Roboto',arial,sans-serif;
 }
