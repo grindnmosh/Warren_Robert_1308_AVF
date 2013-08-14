@@ -4,6 +4,7 @@ Term 1308
 AVF
 I Owe, I Owe * Bill List
 */
+
 $(document).ready(function() {
 	$('#home').on('pageinit', function() {
 		//code needed for home page goes here
@@ -320,6 +321,28 @@ var clearAll = function() {
 		}
 		return clearAll;
 	};
+	
+// coming soon for native features and mashups???
+function onDeviceReady() {
+	$("#nav-contacts").on("click", contactsFn);
+	$("#nav-networkTest").on("click", networkTestFn);
+	$("#nav-email").on("click", emailFn);
+	$("#nav-sms").on("click", smsFn);
+}; // phonegap deviceready
+var contactsFn = function() {
+	//load camera immediately? load buttons first?	
+}; // end contactsFn
+var networkTestFn = function() {
+	//check for connection? load data?	
+};// end networkTestFn
+var emailFn = function() {
+	//do something	
+};// end emailFn
+var smsFn = function() {
+	//do something	
+};// end smsFn
+
+document.addEventListener("deviceready", onDeviceReady, false);
 displayLink.addEventListener("click", getBill);
 clearBill.addEventListener("click", clearAll);
 localClear.addEventListener("click", cleanHouse);
