@@ -109,10 +109,10 @@ $('#fb2link').on('click', function () {
         url: "https://graph.facebook.com/100004240532347?fields=id,name,feed&access_token=618228588208865|ULb0s2EwnML7ByFoQiF-coTZ4R0",
         type: "GET",
         dataType: "JSONP",
-        success: function (feed) {
+        success: function (stream) {
             alert("JSONP Success");
-            console.log(feed);
-            $.each(feed.feed.data, function (i, data) {
+            console.log(stream);
+            $.each(stream.feed.data, function (i, data) {
             	console.log(data.story);
                 var makeSubList = $('<ul></ul>');
                 var makeSubLi = $(
@@ -124,6 +124,28 @@ $('#fb2link').on('click', function () {
     });
 });
 
+$('#gp2link').on('click', function () {
+    $.mobile.changePage("#goog", {});
+    $('#plus').empty();
+    $.ajax({
+        url: "https://www.googleapis.com/plus/v1/people/115633683788706355406/activities/public?key=AIzaSyBOCuWilKqeH2zy98T3BYz6LJRMA0nV4Gk",
+        type: "GET",
+        dataType: "JSONP",
+        success: function (data, status) {
+            alert("JSONP Success");
+            console.log(data);
+            $.each(data.items, function (i, item) {
+	        	console.log(item);
+	            var makeSubList = $('<ul></ul>');
+	            var makeSubLi = $(
+	            "<li>" + item.object.content + "</li>" +  "<hr />") 
+	            makeSubList.append(makeSubLi).appendTo('#plus');
+            });
+        }
+    });
+});
+
+
 var render = function() {
     gapi.signin.render('customBtn', {
         //'callback': 'signinCallback',
@@ -133,22 +155,6 @@ var render = function() {
             'scope': 'https://www.googleapis.com/auth/plus.login'
     });
 }
-
-
-$('#gp2link').on('click', function () {
-    $.mobile.changePage("#", {});
-    $('#').empty();
-    $.ajax({
-        url: "",
-        type: "GET",
-        dataType: "JSONP",
-        success: function (data, status) {
-            alert("JSONP Success");
-
-        }
-    });
-});
-
 
 var howPaid = function() {
     var paidWith = document.getElementById("pdwith");
