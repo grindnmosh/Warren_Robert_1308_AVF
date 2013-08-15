@@ -39,7 +39,7 @@ h4 {
 }
 .load {
 	text-align: center;
-	width: 350px;
+	width: 700px;
 }
 #images {
 	width: 125px;
@@ -76,12 +76,15 @@ h4 {
 #imgSize5 {
 	height: 75px;
 }
+#icon {
+	width: 250px;
+}
 #ctaimg {
-	width: 275px;
+	width: 500px;
 	text-align: center;
 }
 .brandImg {
-	width: 130px;
+	width: 240px;
 	text-align: left;
 }
 p {
@@ -115,9 +118,9 @@ label {
 }
 li {
 	list-style: none;
+	font-size: larger;
 }
 .star {
-	text-align: left; 
 	color: red;
 	display: inline;
 }

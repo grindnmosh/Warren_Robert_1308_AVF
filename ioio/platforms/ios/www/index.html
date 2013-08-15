@@ -13,7 +13,10 @@ I Owe, I Owe * Bill List
     	"http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" rel=
     	"stylesheet">
     	<link href="css/themes/grind-theme.min.css" rel="stylesheet">
-    	<link href="css/index.css" rel="stylesheet" type="text/css">
+    	<link rel="stylesheet" type="text/css" media="(max-device-width: 520px)" href="css/index.css" />
+    	<link rel="stylesheet" type="text/css" media="(min-device-width: 530px) and (max-device-width: 800px)" href="css/miniTablet.css" />
+    	<link rel="stylesheet" type="text/css" media="(min-device-width: 810px)" href="css/tablet.css" />
+
     	<script src="js/libs/modernizr.custom.min.js"></script>
     	<meta charset="UTF-8">
     	<!--<meta name="viewport" content="target-densitydpi=device-dpi" />-->
@@ -28,13 +31,13 @@ I Owe, I Owe * Bill List
     <body>
     	<div data-role="page" data-theme="a" id="home">
     		<section data-position="fixed" data-role="header" data-theme="a">
-    			<h1><a href="#home"><img id="brandImg" name="brandImg" src=
-    			"img/brand.jpg"></a></h1>
+    			<h1><a href="#home"><img class="brandImg" src=
+    			"img/brand.jpg" alt="img/brand.jpg"></a></h1>
     		</section>
     
     		<section data-role="content">
-    			<h2><a class="browse" href="#add" id="cta" name="cta"><img id=
-    			"ctaimg" name="ctaimg" src="img/ctabg.png"></a></h2>
+    			<h2><a class="browse" href="#add" id="cta"><img id=
+    			"ctaimg" src="img/ctabg.png" alt="img/ctabg.png"></a></h2>
     
     			<h2>Robert Warren</h2>
     
@@ -87,32 +90,19 @@ I Owe, I Owe * Bill List
     
     				<ul>
     					<li>
-    						<span id="signinButton">
-								<span
-									class="g-signin"
-									data-callback="signinCallback"
-									data-clientid="184003152658-jf5kd5fv7hjs9i9m1pv6jjactb7vjogt.apps.googleusercontent.com"
-									data-cookiepolicy="single_host_origin"
-									data-requestvisibleactions="http://schemas.google.com/AddActivity"
-									data-scope="https://www.googleapis.com/auth/plus.login">
-								</span>
-							</span>(Only Works On Website - grind-design.com)
+    						<a href="#fbnf" id="fb2link">Follow The Developer On Facebook</a>(Working JSONP)
     					</li>
     
     					<li>
-    						<a href="#fbnf" id="fb2link" name="fb2link">Follow The Developer On Facebook</a>(Working JSONP)
+    						<a href="#goog" id="gp2link">Follow The Developer On Google+</a>(Working JSONP)
     					</li>
     
     					<li>
-    						<a href="#goog" id="gp2link" name="gp2link">Follow The Developer On Google+</a>(Working JSONP)
+    						<a href="#twit" id="tw2link">Follow The Dev On Twitter</a>(Direct Plugin API)
     					</li>
     
     					<li>
-    						<a href="#twit" id="tw2link" name="tw2link">Follow The Dev On Twitter</a>(Direct Plugin API)
-    					</li>
-    
-    					<li>
-    						<a href="#insta" id="instalink" name="instalink">The Developer: A Secret Peak(Instagram)</a>(Working JSONP)
+    						<a href="#insta" id="instalink">The Developer: A Secret Peak(Instagram)</a>(Working JSONP)
     					</li>
     				</ul>
     			</section>
@@ -150,7 +140,7 @@ I Owe, I Owe * Bill List
     			</section>
     
     			<section>
-    				<h4><img class="icon" id="icon" name="icon" src= "img/ioio_app_icon.jpg"></h4>
+    				<h4><img class="icon" id="icon" src= "img/ioio_app_icon.jpg" alt="img/ioio_app_icon.jpg"></h4>
     			</section>
     
     			<section data-position="fixed" data-role="footer" data-theme="d">
@@ -175,8 +165,8 @@ I Owe, I Owe * Bill List
     
     	<div data-role="page" data-theme="a" id="about">
     		<section data-position="fixed" data-role="header" data-theme="a">
-    			<h1><a href="#home"><img id="brandImg" name="brandImg" src=
-    			"img/brand.jpg"></a></h1>
+    			<h1><a href="#home"><img class="brandImg" src=
+    			"img/brand.jpg" alt="img/brand.jpg"></a></h1>
     		</section>
     
     		<section data-role="content">
@@ -294,8 +284,8 @@ I Owe, I Owe * Bill List
     
     	<div data-role="page" data-theme="a" id="disc1">
     		<section data-position="fixed" data-role="header" data-theme="a">
-    			<h1><a href="#home"><img id="brandImg" name="brandImg" src=
-    			"img/brand.jpg"></a></h1>
+    			<h1><a href="#home"><img class="brandImg" src=
+    			"img/brand.jpg" alt="img/brand.jpg"></a></h1>
     		</section>
     
     		<section data-role="content">
@@ -430,18 +420,14 @@ I Owe, I Owe * Bill List
     
     	<div data-role="page" data-theme="a" id="view">
     		<section data-position="fixed" data-role="header" data-theme="a">
-    			<h1><a href="#home"><img id="brandImg" name="brandImg" src=
-    			"img/brand.jpg"></a></h1>
+    			<h1><a href="#home"><img class="brandImg" src=
+    			"img/brand.jpg" alt="img/brand.jpg"></a></h1>
     		</section>
     
     		<section data-role="content" data-theme="d" id="display">
     			<section>
-    				<a href="#add" id="addNewBill" name=
-    				"addNewBill"><input data-icon="arrow-r" data-iconpos="right"
-    				data-role="button" data-theme="d" type="button" value=
-    				"Add Another Bill"></a>
+    				<a href="#add" id="addNewBill" data-icon="arrow-r" data-iconpos="right" data-role="button" data-theme="d" type="button">Add Another Bill</a>
     			</section>
-    
     			<section>
     				<input data-icon="arrow-r" data-iconpos="right" data-role=
     				"button" data-theme="b" id="clearAllData" type="button" value=
@@ -470,12 +456,11 @@ I Owe, I Owe * Bill List
     
     	<div data-role="page" data-theme="a" id="goog">
     		<section data-position="fixed" data-role="header" data-theme="a">
-    			<h1><a href="#home"><img id="brandImg" name="brandImg" src=
-    			"img/brand.jpg"></a></h1>
+    			<h1><a href="#home"><img class="brandImg" src= "img/brand.jpg" alt="img/brand.jpg"></a></h1>
     		</section>
     
     		<section>
-    			<h1>The Developer gives a peak at his Google+ Activities</h1>
+    			<h1 id="gcolor">The Developer gives a peak at his Google+ Activities</h1>
     			<h2><a href=
     			"https://plus.google.com/115633683788706355406/posts">Visit The
     			Developer's Google+</a></h2>
@@ -484,6 +469,7 @@ I Owe, I Owe * Bill List
     		<section data-role="content" data-theme="d">
 	    		<ul>
 	    			<li id="plus">
+	    				<p><img class="load" src="img/loading.png" alt="img/loading.png"></p>
 	    			</li>
 	    		</ul>
     		</section>
@@ -509,8 +495,7 @@ I Owe, I Owe * Bill List
     
     	<div data-role="page" data-theme="a" id="insta">
     		<section data-position="fixed" data-role="header" data-theme="a">
-    			<h1><a href="#home"><img id="brandImg" name="brandImg" src=
-    			"img/brand.jpg"></a></h1>
+    			<h1><a href="#home"><img class="brandImg" src= "img/brand.jpg" alt="img/brand.jpg"></a></h1>
     		</section>
     
     		<section>
@@ -519,8 +504,12 @@ I Owe, I Owe * Bill List
     			Instagram</a></h2>
     		</section>
     
-    		<section data-role="content" data-theme="d" id="instagram">
-	    			
+    		<section data-role="content" data-theme="d">
+	    		<ul>
+	    			<li id="instagram">
+	    				<p><img class="load" src="img/loading.png" alt="img/loading.png"></p>
+	    			</li>
+	    		</ul>
     		</section>
     
     		<section data-position="fixed" data-role="footer" data-theme="d">
@@ -544,8 +533,7 @@ I Owe, I Owe * Bill List
     
     	<div data-role="page" data-theme="a" id="twit">
     		<section data-position="fixed" data-role="header" data-theme="a">
-    			<h1><a href="#home"><img id="brandImg" name="brandImg" src=
-    			"img/brand.jpg"></a></h1>
+    			<h1><a href="#home"><img class="brandImg" src= "img/brand.jpg" alt="img/brand.jpg"></a></h1>
     		</section>
     
     		<section>
@@ -591,13 +579,16 @@ I Owe, I Owe * Bill List
     
     	<div data-role="page" data-theme="a" id="fbnf">
     		<section data-position="fixed" data-role="header" data-theme="a">
-    			<h1><a href="#home"><img id="brandImg" name="brandImg" src=
-    			"img/brand.jpg"></a></h1>
+    			<h1><a href="#home"><img class="brandImg" src= "img/brand.jpg" alt="img/brand.jpg"></a></h1>
     		</section>
-    
+    		<section>
+    			<h2 id="fbcolor">The Developer On FaceBook</h2>
+    			<h2><a href="http://instagram.com/grindnmosh">Be Friends With The Developer</a></h2>
+    		</section>
     		<section data-role="content" data-theme="d">
 	    		<ul>
-	    			<li id="feed"
+	    			<li id="feed">
+	    				<p><img class="load" src="img/loading.png" alt="img/loading.png"></p>
 	    			</li>
 	    		</ul>
     		</section>
@@ -623,33 +614,25 @@ I Owe, I Owe * Bill List
     
     	<div data-role="page" id="add">
     		<section data-position="fixed" data-role="header" data-theme="a">
-    			<h1><a href="#home"><img id="brandImg" name="brandImg" src=
-    			"img/brand.jpg"></a></h1>
+    			<h1><a href="#home"><img class="brandImg" src="img/brand.jpg" alt="img/brand.jpg"></a></h1>
     		</section>
     
     		<section data-role="content" data-theme="a" id="addFormEdits">
-    			<form action="" id="addBill" name="addBill">
+    			<form action="#" id="addBill" name="addBill">
     				<section data-role="fieldcontain">
     					<fieldset data-role="controlgroup" id="top">
     						<h2>Add A New Bill</h2>
     
     						<section id="centered">
-    							Fields marked with
-    
-    							<p class="star">*</p>are required fields.
+    							Fields marked with<p class="star"> * </p>are required fields.
     						</section>
     
     						<section data-role="fieldcontain">
     							<label for="btype"></label>
+    							 
     
-    							<p class="star"><label for=
-    							"btype">*</label></p><label for="btype">Bill
-    							Type</label> <legend></legend>
-    
-    							<p class="star"><legend>*</legend></p><legend>Bill
-    							Type</legend> <select class="required"
-    							data-native-menu="false" data-theme="d" id="btype"
-    							name="btype">
+    							<p class="star">*</p>Bill Type 
+    							<select class="required" data-native-menu="false" data-theme="d" id="btype" name="btype">
     								<option data-placeholder="true" value="">
     									--Choose Bill Type--
     								</option>
@@ -683,19 +666,12 @@ I Owe, I Owe * Bill List
     								</option>
     							</select>
     
-    							<p class="inputHints">Please select bill
-    							category</p>
+    							<p class="inputHints">Please select bill category</p>
     						</section>
     
-    						<section data-role="fieldcontain">
-    							<label for="bname"></label>
-    
-    							<p class="star"><label for=
-    							"bname">*</label></p><label for="bname">Bill
-    							Name</label> <input class="required"
-    							data-clear-btn="true" id="bname" name="bname"
-    							placeholder="Elec, Car, Netflix, etc" type="text"
-    							value="">
+    						<section data-role="fieldcontain">    
+    							<p class="star">*</p>Bill Name
+    							<input class="required" data-clear-btn="true" id="bname" name="bname" placeholder="Elec, Car, Netflix, etc" type="text" value="">
     
     							<p class="inputHints">This is where you name your
     							bill</p>
@@ -705,16 +681,12 @@ I Owe, I Owe * Bill List
     							<label for="prio">Priority</label>
     							<input data-theme="d" id="prio" max="10" min="0"
     							type="range" value="5">
-    
     							<p class="inputHints">Priority:
     							Low_______________________High</p>
     						</section>
     
     						<section data-role="fieldcontain">
-    							<label for="amt"></label>
-    
-    							<p class="star"><label for=
-    							"amt">*</label></p><label for="amt">Amount</label>
+    							<p class="star">*</p>Amount
     							<input class="required number" data-clear-btn=
     							"true" id="amt" name="amt" placeholder="150.00"
     							type="text">
@@ -724,26 +696,15 @@ I Owe, I Owe * Bill List
     						</section>
     
     						<section data-role="fieldcontain">
-    							<label for="due"></label>
-    
-    							<p class="star"><label for=
-    							"due">*</label></p><label for="due">Due
-    							Date</label> <input class="required date" id="due"
-    							name="due" type="date">
+    							<p class="star">*</p>Due Date
+    							<input class="required date" id="due" name="due" type="date">
     
     							<p class="inputHints">Please enter the bill due
     							date</p>
     						</section>
     
     						<section data-role="fieldcontain">
-    							<label for="freqs"></label>
-    
-    							<p class="star"><label for=
-    							"freqs">*</label></p><label for=
-    							"freqs">frequency</label> <legend></legend>
-    
-    							<p class="star">
-    							<legend>*</legend></p><legend>frequency</legend>
+    							<p class="star">*</p>frequency    
     							<select class="required" data-native-menu="false"
     							data-theme="d" id="freqs" name="freqs">
     								<option data-placeholder="true" value="">
@@ -779,34 +740,26 @@ I Owe, I Owe * Bill List
     								</option>
     							</select>
     
-    							<p class="inputHints">Please select the frequency
-    							of this bill</p>
-    						</section><input id="billNumber" name="billNumber"
-    						type="hidden" value="00001"> <input id="timeSaved"
-    						name="timeSaved" type="hidden" value="currentTime">
+    							<p class="inputHints">Please select the frequency of this bill</p>
+    						</section>
     					</fieldset>
     				</section>
     
     				<section data-role="fieldcontain">
-    					<fieldset data-role="controlgroup">
-    						<legend></legend>
-    
-    						<p class="star"><legend>*</legend></p><legend>Payment
-    						Status</legend> <input checked class="Unpaid"
-    						data-theme="d" id="unpd" name="status" type="radio"
-    						value="UnPaid"> <label for="unpd">UnPaid</label>
-    						<input class="Unpaid" data-theme="d" id="pd" name=
-    						"status" type="radio" value="Paid"> <label for=
-    						"pd">Paid</label>
-    
-    						<p class="inputHints">Please select payment status</p>
+    					<fieldset data-role="controlgroup">    
+    						<p class="star">*</p> Payment Status
+						    <input type="radio" data-theme="d" checked value="UnPaid" name="status" id="unpd" class="Unpaid" />
+						    <label for="unpd">UnPaid</label>
+						    <input type="radio" data-theme="d" value="Paid" name="status" id="pd" class="Unpaid" />
+						    <label for="pd">Paid</label>
+						    <p class="inputHints">Please select payment status</p>	
     					</fieldset>
     
     					<div class="formset" id="effect" style="margin-left: 2em">
-    						<h2>Paid Bill
-    						Information:</h2><select data-native-menu="false"
-    						data-theme="d" id="pdwith" name="pdwith">
-    							<option data-placeholder="true" value="">
+    						<h2>Paid Bill Information:</h2>
+    						<p>Payment Type</p>
+    						<select data-native-menu="false" data-theme="d" id="pdwith" name="pdwith">
+    							<option data-placeholder="true" value="--Choose Payment Type--">
     								--Choose Payment Type--
     							</option>
     
@@ -814,34 +767,27 @@ I Owe, I Owe * Bill List
     								<option value="Debit Card">
     									Debit Card
     								</option>
-    
-    								<option value="Cash">
+         								<option value="Cash">
     									Cash
     								</option>
-    
-    								<option value="Check">
+         							<option value="Check">
     									Check
     								</option>
     							</optgroup>
-    
-    							<optgroup label="Credit Cards">
+     							<optgroup label="Credit Cards">
     								<option value="MasterCard">
     									MasterCard
     								</option>
-    
-    								<option value="Visa">
+     								<option value="Visa">
     									Visa
     								</option>
-    
-    								<option value="Discover">
+     								<option value="Discover">
     									Discover
     								</option>
-    
-    								<option value="American Express">
+     								<option value="American Express">
     									American Express
     								</option>
-    
-    								<option value="Other Card">
+     								<option value="Other Card">
     									Other Card
     								</option>
     							</optgroup>
@@ -852,15 +798,10 @@ I Owe, I Owe * Bill List
     
     						<section data-role="fieldcontain">
     							<fieldset data-role="controlgroup">
-    								<legend>Payment Time</legend>
-    								<input data-theme="d" id="ontime" name=
-    								"paymentTime" type="checkbox"> <label for=
-    								"ontime">On Time</label> <input data-theme="d"
-    								id="late" name="paymentTime" type="checkbox"
-    								value="Late"> <label for="late">Late</label>
-    								<input data-theme="d" id="lfee" name=
-    								"paymentTime" type="checkbox" value="Late Fee">
-    								<label for="lfee">Late Fee</label>
+    								<p>Payment Time</p>
+    								<input data-theme="d" id="ontime" name= "paymentTime" type="checkbox"> <label for= "ontime">On Time</label>
+    								<input data-theme="d" id="late" name="paymentTime" type="checkbox" value="Late"> <label for="late">Late</label>
+    								<input data-theme="d" id="lfee" name= "paymentTime" type="checkbox" value="Late Fee"><label for="lfee">Late Fee</label>
     
     								<p class="inputHints">Please select all that
     								apply</p>
@@ -890,12 +831,10 @@ I Owe, I Owe * Bill List
     				</section>
     
     				<section data-role="fieldcontain">
-    					<a href="#view" id="displayLink" name=
-    					"displayLink"><input data-icon="arrow-r" data-iconpos=
-    					"right" data-role="button" data-theme="a" type="button"
-    					value="Display Bills"></a>
+    					<a href="#view" id="displayLink" type="button" data-icon="arrow-r" data-iconpos="right" data-theme="a">Display Bills</a>
+    						
     				</section><a data-rel="dialog" data-transition="pop" href=
-    				"#errors" id="abErrors" name="abErrors">Open Errors</a>
+    				"#errors" id="abErrors">Open Errors</a>
     			</form>
     		</section>
     
@@ -917,18 +856,11 @@ I Owe, I Owe * Bill List
     				</ul>
     			</section>
     		</section>
-    	</div>
+    	</div>    	
     	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> 
     	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> 
     	<script src="js/libs/jquery.validate.min.js" type="text/javascript"></script> 
     	<script src="js/main.js" type="text/javascript"></script> 
     	<script src="js/json.js" type="text/javascript"></script>
-    	<script type="text/javascript">
-			(function() {
-				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-				po.src = 'https://apis.google.com/js/client:plusone.js';
-				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-			})();
-	    </script>
     </body>
 </html>

@@ -5,42 +5,49 @@ AVF
 I Owe, I Owe * Bill List
 */
 function onDeviceReady() {
-	$("#nav-contacts").on("click", contactsFn);
-	$("#nav-networkTest").on("click", networkTestFn);
-	$("#nav-email").on("click", emailFn);
-	$("#nav-sms").on("click", smsFn);
-
+	var contactsFn = function() {
+		//load camera immediately? load buttons first?	
+	}; // end contactsFn
+	var networkTestFn = function() {
+		//check for connection? load data?	
+	}; // end networkTestFn
+	var emailFn = function() {
+		//do something	
+	}; // end emailFn
+	var smsFn = function() {
+		//do something	
+	}; // end smsFn	
+	
 	$('#add').on('pageinit', function() {
 		var billForm = $('#addBill');
 		var abErrors = $('#abErrors');
+		var getForm = "";
+		var key = "";
 		billForm.validate({
+			
 			invalidHandler: function(form, validator) {},
 			submitHandler: function() {
 				var data = billForm.serializeArray();
 				getForm(key, data);
 			}
 		});
-		//any other code needed for addItem page goes here
-		var now = new Date();
-		var month = (now.getMonth() + 1);
-		var day = now.getDate();
-		if (month < 10) month = "0" + month;
-		if (day < 10) day = "0" + day;
-		var today = now.getFullYear() + '-' + month + '-' + day;
-		$('#due').val(today);
-		$(function() {
-			$("#effect").css("display", "none");
-			$(".Unpaid").click(function() {
-				if ($('input[name=status]:checked').val() == "Paid") {
-					$("#effect").slideDown("fast"); //Slide Down Effect
-				} else {
-					$("#effect").slideUp("fast");  //Slide Up Effect
-				}
-			});
-		}); //responsive disclosure
-	});
+	});	
+	//any other code needed for addItem page goes here
+		
 } // phonegap deviceready
 var edit = document.getElementById("saveMe");
+var makeEdits = "";
+var runDelete = "";
+var pd = "";
+var paymentValue = "";
+var paidValue = "";
+var onTime = "";
+var late = "";
+var lateFee = "";
+var sampleBills = "";
+var resetMe = "";
+var i = "";
+var l = "";
 var key = (Math.floor(Math.random() * 1000000001));
 var clearBill = document.getElementById("resetMe");
 var localClear = document.getElementById("clearAllData");
@@ -84,7 +91,6 @@ var smsFn = function() {
 	
 $('#instalink').on('click', function() {
 	$.mobile.changePage("#insta", {});
-	$('#instagram').empty();
 	$.ajax({
 		url: "https://api.instagram.com/v1/users/188391197/media/recent/?access_token=188391197.542325c.4843642a97f447cdb843f9275c8a1420",
 		type: "GET",
@@ -92,8 +98,8 @@ $('#instalink').on('click', function() {
 		success: function(pics, status) {
 			alert("JSONP Success");
 			console.log(pics.data);
+			$('#instagram').empty();
 			$.each(pics.data, function(i, img) {
-				var makeSubList = $('<ul></ul>');
 				var makeSubLi = $("<img id=images src='" + img.images.low_resolution.url + "'/>");
 				makeSubLi.appendTo('#instagram');
 			});
@@ -103,7 +109,6 @@ $('#instalink').on('click', function() {
 
 $('#fb2link').on('click', function() {
 	$.mobile.changePage("#fbnf", {});
-	$('#feed').empty();
 	$.ajax({
 		url: "https://graph.facebook.com/100004240532347?fields=id,name,feed&access_token=618228588208865|ULb0s2EwnML7ByFoQiF-coTZ4R0",
 		type: "GET",
@@ -113,16 +118,15 @@ $('#fb2link').on('click', function() {
 			console.log(stream);
 			$.each(stream.feed.data, function(i, data) {
 				console.log(data.story);
-				var makeSubList = $('<ul></ul>');
-				var makeSubLi = $("<li>" + data.story + "</li>" + "<li>" + "<img src='" + data.picture + "'/></li>" + "<hr />");
-				makeSubList.append(makeSubLi).appendTo('#feed');
+				$('#feed').empty();
+				var makeSubLi = $("<h3 id = 'fbcolor'>" + data.story + "</h3><h3><img src='" + data.picture + "'/>" + "</h3><hr/>");
+				makeSubLi.appendTo('#feed');
 			});
 		}
 	});
 });
 $('#gp2link').on('click', function() {
 	$.mobile.changePage("#goog", {});
-	$('#plus').empty();
 	$.ajax({
 		url: "https://www.googleapis.com/plus/v1/people/115633683788706355406/activities/public?key=AIzaSyBOCuWilKqeH2zy98T3BYz6LJRMA0nV4Gk",
 		type: "GET",
@@ -130,28 +134,15 @@ $('#gp2link').on('click', function() {
 		success: function(data, status) {
 			alert("JSONP Success");
 			console.log(data);
+			$('#plus').empty();
 			$.each(data.items, function(i, item) {
 				console.log(item);
-				var makeSubList = $('<ul></ul>');
-				var makeSubLi = $("<li>" + item.object.content + "</li>" + "<hr />");
-				makeSubList.append(makeSubLi).appendTo('#plus');
+				var makeSubLi = $("<h3 id='gcolor'>" + item.object.content + "</h3><hr/>");
+				makeSubLi.appendTo('#plus');
 			});
 		}
 	});
 });
-var signinCallback = function(authResult) {
-	if (authResult['access_token']) {
-		// Successfully authorized
-		// Hide the sign-in button now that the user is authorized, for example:
-		document.getElementById('signinButton').setAttribute('style', 'display: none');
-	} else if (authResult['error']) {
-		// There was an error.
-		// Possible error codes:
-		//   "access_denied" - User denied access to your app
-		//   "immediate_failed" - Could not automatically log in the user
-		// console.log('There was an error: ' + authResult['error']);
-	}
-}
 var howPaid = function() {
 	var paidWith = document.getElementById("pdwith");
 	if (status - pd.checked) {
@@ -334,7 +325,10 @@ var clearAll = function() {
 };
 // coming soon for native features and mashups???
 
-    
+$("#nav-contacts").on("click", contactsFn);
+$("#nav-networkTest").on("click", networkTestFn);
+$("#nav-email").on("click", emailFn);
+$("#nav-sms").on("click", smsFn);
 document.addEventListener("deviceready", onDeviceReady, false);
 displayLink.addEventListener("click", getBill);
 clearBill.addEventListener("click", clearAll);
