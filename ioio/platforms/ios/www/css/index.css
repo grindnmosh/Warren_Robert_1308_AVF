@@ -22,16 +22,16 @@ h4 {
 }
 #gridImg .ui-block {
 	height: 100px;
-}
+
 #browseSz {
 	width: 275px;
 	text-align: center;
 }
 #billTypeImg {
-	margin: 20px 20px 20px 20px;
+	margin: 20px 20px 20px 00px;
 }
 #images {
-	width: 150px;
+	width: 50px;
 	margin: 20px 20px 20px 20px;
 	border: 2px solid blue;
 }
