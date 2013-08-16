@@ -5,28 +5,18 @@ AVF
 I Owe, I Owe * Bill List
 */
 function onDeviceReady() {
-	var contactsFn = function() {
-		//load camera immediately? load buttons first?	
-	}; // end contactsFn
-	var networkTestFn = function() {
-		//check for connection? load data?	
-	}; // end networkTestFn
-	var emailFn = function() {
-		//do something	
-	}; // end emailFn
-	var smsFn = function() {
-		//do something	
-	}; // end smsFn	
 	
-	$('#add').on('pageinit', function() {
-		var billForm = $('#addBill');
-		var abErrors = $('#abErrors');
-		var getForm = "";
-		var key = "";
-		billForm.validate({
+	$('#home').on('pageinit', function(){
+		//code needed for home page goes here
+	});	
 			
-			invalidHandler: function(form, validator) {},
-			submitHandler: function() {
+	
+	$('#add').on('pageinit', function(getForm) {
+		var billForm = $('#addBill');
+		console.log(billForm);
+		billForm.validate({
+			invalidHandler: function(billForm, validator) {},
+			submitHandler: function(key) {
 				var data = billForm.serializeArray();
 				getForm(key, data);
 			}
@@ -45,9 +35,10 @@ var onTime = "";
 var late = "";
 var lateFee = "";
 var sampleBills = "";
-var resetMe = "";
+var resetMe = document.getElementById("resetMe");;
 var i = "";
 var l = "";
+var dLink = document.getElementById("displayLink");; 
 var key = (Math.floor(Math.random() * 1000000001));
 var clearBill = document.getElementById("resetMe");
 var localClear = document.getElementById("clearAllData");
@@ -274,7 +265,7 @@ var getBill = function() {
 	}
 };
 
-var getForm = function(key, data) {
+var getForm = function() {
 	var id = key;
 	getSelectedRadio();
 	howPaid();
@@ -282,24 +273,26 @@ var getForm = function(key, data) {
 	getCheckBoxLate();
 	getCheckBoxLateFee();
 	var item = {};
-	item.btype = ["Bill Type: ", document.getElementById("btype").value];
-	item.bname = ["Bill Name: ", document.getElementById("bname").value];
-	item.prio = ["Bill Priority: ", document.getElementById("prio").value];
-	item.amt = ["Bill Amount: $", document.getElementById("amt").value];
-	item.due = ["Bill Due Date: ", document.getElementById("due").value];
-	item.freqs = ["Bill Frequency: ", document.getElementById("freqs").value];
-	item.pd = ["Paid: ", paidValue];
-	item.pdwith = ["Paid with: ", paymentValue];
-	item.ontime = ["On time?: ", onTime];
-	item.late = ["Late?: ", late];
-	item.lfee = ["Late Fee?: ", lateFee];
-	item.textArea = ["Comments: ", document.getElementById("textArea").value];
+		console.log(item);
+		item.btype = ["Bill Type: ", document.getElementById("btype").value];
+		item.bname = ["Bill Name: ", document.getElementById("bname").value];
+		item.prio = ["Bill Priority: ", document.getElementById("prio").value];
+		item.amt = ["Bill Amount: $", document.getElementById("amt").value];
+		item.due = ["Bill Due Date: ", document.getElementById("due").value];
+		item.freqs = ["Bill Frequency: ", document.getElementById("freqs").value];
+		item.pd = ["Paid: ", paidValue];
+	 	item.pdwith = ["Paid with: ", paymentValue];
+	 	item.ontime = ["On time?: ", onTime];   		 	
+	 	item.late = ["Late?: ", late];
+	 	item.lfee = ["Late Fee?: ", lateFee];
+	 	item.textArea = ["Comments: ", document.getElementById("textArea").value];
 	localStorage.setItem(id, JSON.stringify(item));
 	alert(saveSuccess);
-	//edit.setAttribute("type", "reset"); 
-	window.location.reload();
+ 	//edit.setAttribute("type", "reset"); 
+ 	window.location.reload(); 
 	return getForm;
 };
+
 //var	deleteItem = function (){};
 var runDelete = function() {
 	var verify = confirm("Are you sure you want to delete this bill. This can not be undone.");
@@ -323,13 +316,9 @@ var clearAll = function() {
 	}
 	return clearAll;
 };
-// coming soon for native features and mashups???
 
-$("#nav-contacts").on("click", contactsFn);
-$("#nav-networkTest").on("click", networkTestFn);
-$("#nav-email").on("click", emailFn);
-$("#nav-sms").on("click", smsFn);
 document.addEventListener("deviceready", onDeviceReady, false);
-displayLink.addEventListener("click", getBill);
+dLink.addEventListener("click", getBill);
+edit.addEventListener("click", getForm);
 clearBill.addEventListener("click", clearAll);
 localClear.addEventListener("click", cleanHouse);
