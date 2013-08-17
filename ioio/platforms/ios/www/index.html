@@ -1,864 +1,909 @@
-<!DOCTYPE html>
 <!-- 
 Robert Warren
 Term 1308
 AVF
 I Owe, I Owe * Bill List
 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 
 <html>
-    <head>
-    	<title>I Owe, I Owe * Bill List</title>
-    	<link href=
-    	"http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" rel=
-    	"stylesheet">
-    	<link href="css/themes/grind-theme.min.css" rel="stylesheet">
-    	<link rel="stylesheet" type="text/css" media="(max-device-width: 7300px)" href="css/index.css" />
-    	<link rel="stylesheet" type="text/css" media="(min-device-width: 730px) and (max-device-width: 810px)" href="css/portTablet.css" />
-    	<link rel="stylesheet" type="text/css" media="(min-device-width: 810px)" href="css/landTablet.css" />
-    	<script src="js/libs/modernizr.custom.min.js"></script>
-    	<meta charset="UTF-8">
-    	<!--<meta name="viewport" content="target-densitydpi=device-dpi" />-->
-    	<meta content="true" name="HandheldFriendly">
-    	<meta content="320" name="MobileOptimized">
-    	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-    	<meta content="A simple way to track your bills." name="description">
-    	<meta content="bills, paid, unpaid, bill types, bill list" name="keywords">
-    	<meta content="index, follow" name="robots">
-    </head>
-    
-    <body>
-    	<div data-role="page" data-theme="a" id="home">
-    		<section data-position="fixed" data-role="header" data-theme="a">
-    			<h1><a href="#home"><img class="brandImg" src=
-    			"img/brand.jpg" alt="img/brand.jpg"></a></h1>
-    		</section>
-    
-    		<section data-role="content">
-    			<h2><a class="browse" href="#add" id="cta"><img id=
-    			"ctaimg" src="img/ctabg.png" alt="img/ctabg.png"></a></h2>
-    
-    			<h2>Robert Warren</h2>
-    
-    			<p>AVF Term 1308</p>
-    
-    			<section data-collapsed="true" data-role="collapsible" data-theme=
-    			"d">
-    				<h3>Research Discussion topics</h3>
-    
-    				<ul>
-    					<li>
-    						<a href="#disc1">Week 1 Discussion: Data Research,
-    						Project Intent</a>
-    					</li>
-    
-    					<li>
-    						<a href="#">Week 2 Discussion: coming soon</a>
-    					</li>
-    
-    					<li>
-    						<a href="#">Week 3 Discussion: coming soon</a>
-    					</li>
-    				</ul>
-    			</section>
-    
-    			<section data-collapsed="true" data-role="collapsible" data-theme=
-    			"d">
-    				<h3>Native components Android/iOS</h3>
-    
-    				<ul>
-    					<li>in-app browser</li>
-    
-    					<li>Date and Time on index page?</li>
-    
-    					<li>Network to follow links to the web or eventually
-    					push/pull info with cloud storage</li>
-    
-    					<li>contacts to load in bill name with autofill</li>
-    
-    					<li>email to send a bill entry to a contact or manual entry
-    					will link from share tab in nav bar</li>
-    
-    					<li>messaging for same reason as above?</li>
-    				</ul>
-    			</section>
-    
-    			<section data-collapsed="true" data-role="collapsible" data-theme=
-    			"d">
-    				<h3>JSON-P Data APIs</h3>
-    
-    				<ul>
-    					<li>
-    						<a href="#fbnf" id="fb2link">Follow The Developer On Facebook</a>(Working JSONP)
-    					</li>
-    
-    					<li>
-    						<a href="#goog" id="gp2link">Follow The Developer On Google+</a>(Working JSONP)
-    					</li>
-    
-    					<li>
-    						<a href="#twit" id="tw2link">Follow The Dev On Twitter</a>(Direct Plugin API)
-    					</li>
-    
-    					<li>
-    						<a href="#insta" id="instalink">The Developer: A Secret Peak(Instagram)</a>(Working JSONP)
-    					</li>
-    				</ul>
-    			</section>
-    
-    			<section data-collapsed="true" data-role="collapsible" data-theme=
-    			"d">
-    				<h3>icon and launch image links</h3>
-    
-    				<ul>
-    					<li>
-    						<a class="icon" href=
-    						"https://www.dropbox.com/s/8zy4dfn14sh761k/ioio_app_icon.jpg">ioio App Icon</a>
-    					</li>
-    
-    					<li>
-    						<a class="icon" href=
-    						"https://www.dropbox.com/s/ssz84xljjo8ji0n/ioio_appstore_icon.jpg">ioio App Store Icon</a>
-    					</li>
-    
-    					<li>
-    						<a class="icon" href=
-    						"https://www.dropbox.com/s/5y2c3xx89vhwmz0/ioio_spotlight_icon.jpg">ioio Spotlight Icon</a>
-    					</li>
-    
-    					<li>
-    						<a class="icon" href=
-    						"https://www.dropbox.com/s/kxqreolx25w8qdw/ioio_portrait.jpg">ioio Launch Page(Portrait)</a>
-    					</li>
-    
-    					<li>
-    						<a class="icon" href=
-    						"https://www.dropbox.com/s/ro5kqpw5fxqzkw0/ioio_landscape.jpg">ioio Launch Page(Landscape)</a>
-    					</li>
-    				</ul>
-    			</section>
-    
-    			<section>
-    				<h4><img class="icon" id="icon" src= "img/ioio_app_icon.jpg" alt="img/ioio_app_icon.jpg"></h4>
-    			</section>
-    
-    			<section data-position="fixed" data-role="footer" data-theme="d">
-    				<section data-role="navbar">
-    					<ul>
-    						<li>
-    							<a data-icon="home" href="#home">Home</a>
-    						</li>
-    
-    						<li>
-    							<a data-icon="gear" href="#">Share</a>
-    						</li>
-    
-    						<li>
-    							<a data-icon="bars" href="#about">About</a>
-    						</li>
-    					</ul>
-    				</section>
-    			</section>
-    		</section>
-    	</div>
-    
-    	<div data-role="page" data-theme="a" id="about">
-    		<section data-position="fixed" data-role="header" data-theme="a">
-    			<h1><a href="#home"><img class="brandImg" src=
-    			"img/brand.jpg" alt="img/brand.jpg"></a></h1>
-    		</section>
-    
-    		<section data-role="content">
-    			<h2>Robert Warren</h2>
-    
-    			<p>AVF Term 1308</p>
-    
-    			<section data-collapsed="true" data-role="collapsible" data-theme=
-    			"d">
-    				<h3>Source</h3>
-    
-    				<ul>
-    					<li>Follow my <a href=
-    					"https://github.com/grindnmosh/Warren_Robert_1308_AVF">github</a>
-    					for updates
-    					</li>
-    
-    					<li>Android <a href=
-    					"http://grindnmosh.github.io/Warren_Robert_1308_AVF/ioio/platforms/android/assets/www/index.html">
-    						Sample</a>
-    					</li>
-    
-    					<li>iOS <a href=
-    					"http://grindnmosh.github.io/Warren_Robert_1308_AVF/ioio/platforms/ios/www/index.html">
-    						Sample</a>
-    					</li>
-    				</ul>
-    			</section>
-    
-    			<section data-collapsed="true" data-role="collapsible" data-theme=
-    			"d">
-    				<h3>Social Networks</h3>
-    
-    				<ul>
-    					<li>Follow me on <a href="https://twitter.com/grindnmosh">
-    						Twitter</a>
-    
-    						<p></p>
-    					</li>
-    
-    					<li>Like Me on <a href=
-    					"https://www.facebook.com/grindnmosh">Facebook</a>
-    
-    						<p></p>
-    					</li>
-    
-    					<li>+1 Me on <a href=
-    					"https://plus.google.com/115633683788706355406/">Google+</a>
-    
-    						<p></p>
-    					</li>
-    				</ul>
-    			</section>
-    
-    			<section data-collapsed="true" data-role="collapsible" data-theme=
-    			"d">
-    				<h3>Contact Info</h3>
-    
-    				<ul>
-    					<li>
-    						<h4>For Bug and Error Reports:</h4>
-    
-    						<p>bugreports@grind-design.com</p>
-    					</li>
-    
-    					<li>
-    						<h4>Suggestions:</h4>
-    
-    						<p>suggestions@grind-design.com</p>
-    					</li>
-    
-    					<li>
-    						<h4>Site Issues:</h4>
-    
-    						<p>admin@grind-design.com</p>
-    					</li>
-    
-    					<li>
-    						<h4>Contact the Developer:</h4>
-    
-    						<p>grindnmosh@grind-design.com</p>
-    					</li>
-    				</ul>
-    			</section>
-    
-    			<section data-collapsed="true" data-role="collapsible" data-theme=
-    			"d">
-    				<h3>Credits</h3>
-    
-    				<ul>
-    					<li>Hand Giving Money To Other Hand Image courtesy of
-    					creativedoxfoto/FreeDigitalPhotos.net</li>
-    				</ul>
-    			</section>
-    		</section>
-    
-    		<section data-position="fixed" data-role="footer" data-theme="d">
-    			<section data-role="navbar">
-    				<ul>
-    					<li>
-    						<a data-icon="home" href="#home">Home</a>
-    					</li>
-    
-    					<li>
-    						<a data-icon="gear" href="#">Share</a>
-    					</li>
-    
-    					<li>
-    						<a data-icon="bars" href="#about">About</a>
-    					</li>
-    				</ul>
-    			</section>
-    		</section>
-    	</div>
-    
-    	<div data-role="page" data-theme="a" id="disc1">
-    		<section data-position="fixed" data-role="header" data-theme="a">
-    			<h1><a href="#home"><img class="brandImg" src=
-    			"img/brand.jpg" alt="img/brand.jpg"></a></h1>
-    		</section>
-    
-    		<section data-role="content">
-    			<ul>
-    				<li>Keeping in mind that you said Twitter would appear still in
-    				some lessons and that we should replace it in all cases with
-    				Instagram, my writing covers Instagram in place of Twitter
-    				where applicable.</li>
-    
-    				<li style="list-style: none"><br></li>
-    
-    				<li>Instagram could be used to as a built in login to the apps
-    				private areas or cross device/web storage for auto population
-    				of Data already entered onto a new device. This would also
-    				allow for instant syncing across the devices allowing Instagram
-    				to be used as cloud storage. I have never actually seen this in
-    				any app, used with Instagram. This is more commonly seen with
-    				Facebook or Google+ logins and occasionally Twitter logins. I
-    				prefer the apps I have seen that give you the choice between
-    				direct login with no cloud support or the multiple social
-    				network login options with cloud support. I like the apps that
-    				have a simple backup sync with more popular direct cloud
-    				options like Dropbox or Box. I intend to use the Facebook Like
-    				API, the Google+ +1 API, the Twitter Follow API, Evernote
-    				syncing API as well as include the Dropbox API for backing up
-    				Data. I just need to learn how to implement these API features.
-    				I also want to make the login options of some or all of these
-    				available. I would love to say this would all happen this month
-    				but we will see.</li>
-    
-    				<li style="list-style: none"><br></li>
-    
-    				<li>JSON-P is an interesting concept, in the fact that is lets
-    				use Data from another domain. This allows you to pull data from
-    				the API’s source websites with no issues. Cross platform the
-    				browser generally denies data unless wrapped in script tags,
-    				which makes the data useless beyond evaluating it. JSON-P uses
-    				this loophole to gain access to cross-domain data and wraps it
-    				in a way that makes it fully usable. Without JSON-P a call for
-    				data would involve several steps of calling your server, which
-    				calls on the API’s server, which in turn sends it back to your
-    				server then to you. That is a lot slower in getting returned
-    				data than directly getting it and only JSON-P can currently do
-    				this effectively. So JSON-P apps definitely provide an
-    				advantage in getting data returned to you faster.</li>
-    
-    				<li style="list-style: none"><br></li>
-    
-    				<li>Some of the APIs that blend best with native functions that
-    				I found actually blend between native features. The camera
-    				would blend well with any of your social media services.
-    				Storage would blend well with cloud services like Dropbox, Box
-    				or even Facebook or Google+. The Network feature works well
-    				with the in-app web browser, the social networks, the cloud
-    				storage, the sharing features using email or messaging and
-    				anything else that needs to pull information from or even
-    				sending information to the web. Contacts can be used to sync
-    				with any of the incorporated services or to populate into
-    				services. These would sync well with sharing options using
-    				social network APIs. The options are limitless and these are
-    				only some general examples.</li>
-    
-    				<li style="list-style: none"><br></li>
-    
-    				<li>My intentions this month is to begin my social network
-    				promotional integration and multi device sync support into my
-    				app and add the features needed to take full advantage of
-    				native features like contacts, calendar, network, internal
-    				storage and when applicable SD card support. I know SD storage
-    				will only be an option for the Android side for most devices
-    				but this is a highly request feature of Android users so I do
-    				intend to implement it. I intend to have at least the basic
-    				functionality to make the app fully useable by the end of this
-    				month and have it available on both app stores. This is an app
-    				that I already enjoy using in the mobile web version I have and
-    				I have had requests to be a beta tester for this app when it
-    				becomes available for such. I already discussed in the first
-    				paragraph some detailed desires for the use of API’s in this
-    				app.</li>
-    
-    				<li style="list-style: none"><br></li>
-    
-    				<li>We have learned so much up till now and honestly it is
-    				really jumbled up in my head as to where or when I learned
-    				what. It is even jumbled which techniques I have just formed in
-    				combination of what I have learned in class, from others or
-    				just trial and error. But I will try to break down these three
-    				categories. As far as research, this is the most important step
-    				in any project. You should a lot time before beginning the
-    				structuring of the project itself to research the why, how to
-    				and effective use of the big picture of what you want to do.
-    				This in turn creates a need for additional research on the
-    				components that need to be incorporated, some of which you had
-    				already planned and some that you hadn’t previously thought of.
-    				This creates it’s own research. Once you have completed your
-    				thorough research you are ready to begin the design stage. The
-    				design stage should include two main pieces. They are our
-    				wireframe and your flowchart. As you build these you find the
-    				need for even more components to complete your goals returning
-    				you to the research stage. This is also the stage to plan your
-    				apps branding, which may change as you go. Once your planning
-    				is complete, it is time to begin the design stages. This is the
-    				point when you start writing your primary code, which has been
-    				html5 so far. We then make it look nice with CSS. We finally
-    				make it function with our JavaScript or JavaScript libraries
-    				such as jQuery. The final step is to add data sources and
-    				native functionality to make the app function as we envisioned
-    				it. One of the biggest things I have learned and something I
-    				want to ensure is included, is to not over think it. As humans
-    				that is our biggest flaw.</li>
-    			</ul>
-    		</section>
-    
-    		<section data-position="fixed" data-role="footer" data-theme="d">
-    			<section data-role="navbar">
-    				<ul>
-    					<li>
-    						<a data-icon="home" href="#home">Home</a>
-    					</li>
-    
-    					<li>
-    						<a data-icon="gear" href="#">Share</a>
-    					</li>
-    
-    					<li>
-    						<a data-icon="bars" href="#about">About</a>
-    					</li>
-    				</ul>
-    			</section>
-    		</section>
-    	</div>
-    
-    	<div data-role="page" data-theme="a" id="view">
-    		<section data-position="fixed" data-role="header" data-theme="a">
-    			<h1><a href="#home"><img class="brandImg" src=
-    			"img/brand.jpg" alt="img/brand.jpg"></a></h1>
-    		</section>
-    
-    		<section data-role="content" data-theme="d" id="display">
-    			<section>
-    				<a href="#add" id="addNewBill" data-icon="arrow-r" data-iconpos="right" data-role="button" data-theme="d" type="button">Add Another Bill</a>
-    			</section>
-    			<section>
-    				<input data-icon="arrow-r" data-iconpos="right" data-role=
-    				"button" data-theme="b" id="clearAllData" type="button" value=
-    				"Clear Storage">
-    			</section>
-    		</section>
-    
-    		<section data-position="fixed" data-role="footer" data-theme="d">
-    			<section data-role="navbar">
-    				<ul>
-    					<li>
-    						<a data-icon="home" href="#home">Home</a>
-    					</li>
-    
-    					<li>
-    						<a data-icon="gear" href="#">Share</a>
-    					</li>
-    
-    					<li>
-    						<a data-icon="bars" href="#about">About</a>
-    					</li>
-    				</ul>
-    			</section>
-    		</section>
-    	</div>
-    
-    	<div data-role="page" data-theme="a" id="goog">
-    		<section data-position="fixed" data-role="header" data-theme="a">
-    			<h1><a href="#home"><img class="brandImg" src= "img/brand.jpg" alt="img/brand.jpg"></a></h1>
-    		</section>
-    
-    		<section>
-    			<h1 id="gcolor">The Developer gives a peak at his Google+ Activities</h1>
-    			<h2><a href=
-    			"https://plus.google.com/115633683788706355406/posts">Visit The
-    			Developer's Google+</a></h2>
-    		</section>
-    
-    		<section data-role="content" data-theme="d">
-	    		<ul>
-	    			<li id="plus">
-	    				<p><img class="load" src="img/loading.png" alt="img/loading.png"></p>
-	    			</li>
-	    		</ul>
-    		</section>
-    
-    		<section data-position="fixed" data-role="footer" data-theme="d">
-    			<section data-role="navbar">
-    				<ul>
-    					<li>
-    						<a data-icon="home" href="#home">Home</a>
-    					</li>
-    
-    					<li>
-    						<a data-icon="gear" href="#">Share</a>
-    					</li>
-    
-    					<li>
-    						<a data-icon="bars" href="#about">About</a>
-    					</li>
-    				</ul>
-    			</section>
-    		</section>
-    	</div>
-    
-    	<div data-role="page" data-theme="a" id="insta">
-    		<section data-position="fixed" data-role="header" data-theme="a">
-    			<h1><a href="#home"><img class="brandImg" src= "img/brand.jpg" alt="img/brand.jpg"></a></h1>
-    		</section>
-    
-    		<section>
-    			<h1>The Developer gives a peak at his life in Instagram</h1>
-    			<h2><a href="http://instagram.com/grindnmosh">Visit The Developer's
-    			Instagram</a></h2>
-    		</section>
-    
-    		<section data-role="content" data-theme="d">
-	    		<ul>
-	    			<li id="instagram">
-	    				<p><img class="load" src="img/loading.png" alt="img/loading.png"></p>
-	    			</li>
-	    		</ul>
-    		</section>
-    
-    		<section data-position="fixed" data-role="footer" data-theme="d">
-    			<section data-role="navbar">
-    				<ul>
-    					<li>
-    						<a data-icon="home" href="#home">Home</a>
-    					</li>
-    
-    					<li>
-    						<a data-icon="gear" href="#">Share</a>
-    					</li>
-    
-    					<li>
-    						<a data-icon="bars" href="#about">About</a>
-    					</li>
-    				</ul>
-    			</section>
-    		</section>
-    	</div>
-    
-    	<div data-role="page" data-theme="a" id="twit">
-    		<section data-position="fixed" data-role="header" data-theme="a">
-    			<h1><a href="#home"><img class="brandImg" src= "img/brand.jpg" alt="img/brand.jpg"></a></h1>
-    		</section>
-    
-    		<section>
-    			<h1>The Developer is a Twit</h1>
-    			<h2>Take a look.......</h2>
-    		</section>
-    
-    		<section data-role="content" data-theme="d" id="twistedTwit">
-    			<a class="twitter-timeline" data-widget-id="366722003048218625"
-    			href="https://twitter.com/grindnmosh">Tweets by @grindnmosh</a>
-    			<script>
-    !               function(d, s, id) {
-    					var js, fjs = d.getElementsByTagName(s)[0],
-    						p = /^http:/.test(d.location) ? 'http' : 'https';
-    					if (!d.getElementById(id)) {
-    						js = d.createElement(s);
-    						js.id = id;
-    						js.src = p + "://platform.twitter.com/widgets.js";
-    						fjs.parentNode.insertBefore(js, fjs);
-    					}
-    				}(document, "script", "twitter-wjs");
-    			</script>
-    		</section>
-    
-    		<section data-position="fixed" data-role="footer" data-theme="d">
-    			<section data-role="navbar">
-    				<ul>
-    					<li>
-    						<a data-icon="home" href="#home">Home</a>
-    					</li>
-    
-    					<li>
-    						<a data-icon="gear" href="#">Share</a>
-    					</li>
-    
-    					<li>
-    						<a data-icon="bars" href="#about">About</a>
-    					</li>
-    				</ul>
-    			</section>
-    		</section>
-    	</div>
-    
-    	<div data-role="page" data-theme="a" id="fbnf">
-    		<section data-position="fixed" data-role="header" data-theme="a">
-    			<h1><a href="#home"><img class="brandImg" src= "img/brand.jpg" alt="img/brand.jpg"></a></h1>
-    		</section>
-    		<section>
-    			<h2 id="fbcolor">The Developer On FaceBook</h2>
-    			<h2><a href="http://facebook.com/grindnmosh">Be Friends With The Developer</a></h2>
-    		</section>
-    		<section data-role="content" data-theme="d">
-	    		<ul>
-	    			<li id="feed">
-	    				<p><img class="load" src="img/loading.png" alt="img/loading.png"></p>
-	    			</li>
-	    		</ul>
-    		</section>
-    
-    		<section data-position="fixed" data-role="footer" data-theme="d">
-    			<section data-role="navbar">
-    				<ul>
-    					<li>
-    						<a data-icon="home" href="#home">Home</a>
-    					</li>
-    
-    					<li>
-    						<a data-icon="gear" href="#">Share</a>
-    					</li>
-    
-    					<li>
-    						<a data-icon="bars" href="#about">About</a>
-    					</li>
-    				</ul>
-    			</section>
-    		</section>
-    	</div>
-    
-    	<div data-role="page" id="add">
-    		<section data-position="fixed" data-role="header" data-theme="a">
-    			<h1><a href="#home"><img class="brandImg" src="img/brand.jpg" alt="img/brand.jpg"></a></h1>
-    		</section>
-    
-    		<section data-role="content" data-theme="a" id="addFormEdits">
-    			<form action="#" id="addBill" name="addBill">
-    				<section data-role="fieldcontain">
-    					<fieldset data-role="controlgroup" id="top">
-    						<h2>Add A New Bill</h2>
-    
-    						<section id="centered">
-    							Fields marked with<p class="star"> * </p>are required fields.
-    						</section>
-    
-    						<section data-role="fieldcontain">
-    							<label for="btype"></label>
-    							 
-    
-    							<p class="star">*</p>Bill Type 
-    							<select class="required" data-native-menu="false" data-theme="d" id="btype" name="btype">
-    								<option data-placeholder="true" value="">
-    									--Choose Bill Type--
-    								</option>
-    
-    								<option value="Housing">
-    									Housing
-    								</option>
-    
-    								<option value="Vehicle">
-    									Vehicle
-    								</option>
-    
-    								<option value="Utilities">
-    									Utilities
-    								</option>
-    
-    								<option value="Personal">
-    									Personal
-    								</option>
-    
-    								<option value="Education">
-    									Education
-    								</option>
-    
-    								<option value="Business">
-    									Business
-    								</option>
-    
-    								<option value="Other">
-    									Other
-    								</option>
-    							</select>
-    
-    							<p class="inputHints">Please select bill category</p>
-    						</section>
-    
-    						<section data-role="fieldcontain">    
-    							<p class="star">*</p>Bill Name
-    							<input class="required" data-clear-btn="true" id="bname" name="bname" placeholder="Elec, Car, Netflix, etc" type="text" value="">
-    
-    							<p class="inputHints">This is where you name your
-    							bill</p>
-    						</section>
-    
-    						<section data-role="fieldcontain">
-    							<label for="prio">Priority</label>
-    							<input data-theme="d" id="prio" max="10" min="0"
-    							type="range" value="5">
-    							<p class="inputHints">Priority:
-    							Low_______________________High</p>
-    						</section>
-    
-    						<section data-role="fieldcontain">
-    							<p class="star">*</p>Amount
-    							<input class="required number" data-clear-btn=
-    							"true" id="amt" name="amt" placeholder="150.00"
-    							type="text">
-    
-    							<p class="inputHints">Please enter bill amount in
-    							100.00 format</p>
-    						</section>
-    
-    						<section data-role="fieldcontain">
-    							<p class="star">*</p>Due Date
-    							<input class="required date" id="due" name="due" type="date">
-    
-    							<p class="inputHints">Please enter the bill due
-    							date</p>
-    						</section>
-    
-    						<section data-role="fieldcontain">
-    							<p class="star">*</p>frequency    
-    							<select class="required" data-native-menu="false"
-    							data-theme="d" id="freqs" name="freqs">
-    								<option data-placeholder="true" value="">
-    									--Choose Frequency--
-    								</option>
-    
-    								<option value="One Time">
-    									One Time
-    								</option>
-    
-    								<option value="Weekly">
-    									Weekly
-    								</option>
-    
-    								<option value="Bi-Weekl">
-    									Bi-Weekly
-    								</option>
-    
-    								<option selected="selected" value="Monthly">
-    									Monthly
-    								</option>
-    
-    								<option value="Quarterly">
-    									Quarterly
-    								</option>
-    
-    								<option value="Annually">
-    									Annually
-    								</option>
-    
-    								<option value="Other">
-    									Other
-    								</option>
-    							</select>
-    
-    							<p class="inputHints">Please select the frequency of this bill</p>
-    						</section>
-    					</fieldset>
-    				</section>
-    
-    				<section data-role="fieldcontain">
-    					<fieldset data-role="controlgroup">    
-    						<p class="star">*</p> Payment Status
-						    <input type="radio" data-theme="d" checked value="UnPaid" name="status" id="unpd" class="Unpaid" />
-						    <label for="unpd">UnPaid</label>
-						    <input type="radio" data-theme="d" value="Paid" name="status" id="pd" class="Unpaid" />
-						    <label for="pd">Paid</label>
-						    <p class="inputHints">Please select payment status</p>	
-    					</fieldset>
-    
-    					<div class="formset" id="effect" style="margin-left: 2em">
-    						<h2>Paid Bill Information:</h2>
-    						<p>Payment Type</p>
-    						<select data-native-menu="false" data-theme="d" id="pdwith" name="pdwith">
-    							<option data-placeholder="true" value="--Choose Payment Type--">
-    								--Choose Payment Type--
-    							</option>
-    
-    							<optgroup label="Cash Payment Types">
-    								<option value="Debit Card">
-    									Debit Card
-    								</option>
-         								<option value="Cash">
-    									Cash
-    								</option>
-         							<option value="Check">
-    									Check
-    								</option>
-    							</optgroup>
-     							<optgroup label="Credit Cards">
-    								<option value="MasterCard">
-    									MasterCard
-    								</option>
-     								<option value="Visa">
-    									Visa
-    								</option>
-     								<option value="Discover">
-    									Discover
-    								</option>
-     								<option value="American Express">
-    									American Express
-    								</option>
-     								<option value="Other Card">
-    									Other Card
-    								</option>
-    							</optgroup>
-    						</select>
-    
-    						<p class="inputHints">Please select payment method if
-    						applicable</p>
-    
-    						<section data-role="fieldcontain">
-    							<fieldset data-role="controlgroup">
-    								<p>Payment Time</p>
-    								<input data-theme="d" id="ontime" name= "paymentTime" type="checkbox"> <label for= "ontime">On Time</label>
-    								<input data-theme="d" id="late" name="paymentTime" type="checkbox" value="Late"> <label for="late">Late</label>
-    								<input data-theme="d" id="lfee" name= "paymentTime" type="checkbox" value="Late Fee"><label for="lfee">Late Fee</label>
-    
-    								<p class="inputHints">Please select all that
-    								apply</p>
-    							</fieldset>
-    						</section>
-    					</div>
-    				</section>
-    
-    				<section data-role="fieldcontain">
-    					<label for="textArea">Comments</label>
-    
-    					<section>
-    						<textarea id="textArea"></textarea>
-    					</section>
-    				</section>
-    
-    				<section data-role="fieldcontain">
-						<input type="submit" name="saveMe" id="saveMe" data-theme="d" value="Save Me" data-role="button" data-icon="arrow-r" data-iconpos="right" />
-    				</section>
-    
-    				<section data-role="fieldcontain">
-    					<input data-icon="arrow-r" data-iconpos="right" data-role=
-    					"button" data-theme="b" id="resetMe" name="resetMe" type=
-    					"reset" value="Reset Me">
-    				</section>
-    
-    				<section data-role="fieldcontain">
-    					<a href="#view" id="displayLink" type="button" data-icon="arrow-r" data-iconpos="right" data-theme="a">Display Bills</a>
-    						
-    				</section><a data-rel="dialog" data-transition="pop" href=
-    				"#errors" id="abErrors">Open Errors</a>
-    			</form>
-    		</section>
-    
-    		<section data-position="fixed" data-role="footer" data-theme="d" id=
-    		"footer">
-    			<section data-role="navbar">
-    				<ul>
-    					<li>
-    						<a data-icon="home" href="#home">Home</a>
-    					</li>
-    
-    					<li>
-    						<a data-icon="gear" href="#">Share</a>
-    					</li>
-    
-    					<li>
-    						<a data-icon="bars" href="#about">About</a>
-    					</li>
-    				</ul>
-    			</section>
-    		</section>
-    	</div>
-    
-    	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> 
-    	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
-    	<script src="js/libs/jquery.validate.min.js" type="text/javascript"></script>
-    	<script src="js/main.js" type="text/javascript"></script> 
-    	<script src="js/json.js" type="text/javascript"></script>
-    </body>
+<head>
+	<title>I Owe, I Owe * Bill List</title>
+	<link href=
+	"http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" rel=
+	"stylesheet">
+	<link href="css/themes/grind-theme.min.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet" type="text/css">
+	<link href="css/portTablet.css" media=
+	"(min-device-width: 530px) and (max-device-width: 710px)" rel="stylesheet"
+	type="text/css">
+	<link href="css/landTablet.css" media="(min-device-width: 720px)" rel=
+	"stylesheet" type="text/css">
+	<script src="js/libs/modernizr.custom.min.js"></script>
+	<meta charset="UTF-8">
+	<meta content="true" name="HandheldFriendly">
+	<meta content="320" name="MobileOptimized">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="A simple way to track your bills." name="description">
+	<meta content="bills, paid, unpaid, bill types, bill list" name="keywords">
+	<meta content="index, follow" name="robots">
+</head>
+
+<body>
+	<div data-role="page" data-theme="a" id="home">
+		<section data-position="fixed" data-role="header" data-theme="a">
+			<h1><a href="#home"><img alt="img/brand.jpg" class="brandImg" src=
+			"img/brand.jpg"></a></h1>
+		</section>
+
+		<section data-role="content">
+			<h2><a class="browse" href="#add" id="cta" name="cta"><img alt=
+			"img/ctabg.png" id="ctaimg" name="ctaimg" src=
+			"img/ctabg.png"></a></h2>
+
+			<h2>Robert Warren</h2>
+
+			<p>AVF Term 1308</p>
+
+			<section data-collapsed="true" data-role="collapsible" data-theme=
+			"d">
+				<h3>Research Discussion topics</h3>
+
+				<ul>
+					<li>
+						<a href="#disc1">Week 1 Discussion: Data Research,
+						Project Intent</a>
+					</li>
+
+					<li>
+						<a href="#">Week 2 Discussion: coming soon</a>
+					</li>
+
+					<li>
+						<a href="#">Week 3 Discussion: coming soon</a>
+					</li>
+				</ul>
+			</section>
+
+			<section data-collapsed="true" data-role="collapsible" data-theme=
+			"d">
+				<h3>Native components Android/iOS</h3>
+
+				<ul>
+					<li>in-app browser</li>
+
+					<li>Date and Time on index page?</li>
+
+					<li>Network to follow links to the web or eventually
+					push/pull info with cloud storage</li>
+
+					<li>contacts to load in bill name with autofill</li>
+
+					<li>email to send a bill entry to a contact or manual entry
+					will link from share tab in nav bar</li>
+
+					<li>messaging for same reason as above?</li>
+				</ul>
+			</section>
+
+			<section data-collapsed="true" data-role="collapsible" data-theme=
+			"d">
+				<h3>JSON-P Data APIs</h3>
+
+				<ul>
+					<li>
+						<a href="#fbnf" id="fb2link" name="fb2link">Follow The
+						Developer On Facebook</a>(Working JSONP)
+					</li>
+
+					<li>
+						<a href="#goog" id="gp2link" name="gp2link">Follow The
+						Developer On Google+</a>(Working JSONP)
+					</li>
+
+					<li>
+						<a href="#twit" id="tw2link" name="tw2link">Follow The
+						Dev On Twitter</a>(Direct Plugin API)
+					</li>
+
+					<li>
+						<a href="#insta" id="instalink" name="instalink">The
+						Developer: A Secret Peak(Instagram)</a>(Working JSONP)
+					</li>
+				</ul>
+			</section>
+
+			<section data-collapsed="true" data-role="collapsible" data-theme=
+			"d">
+				<h3>icon and launch image links</h3>
+
+				<ul>
+					<li>
+						<a class="icon" href=
+						"https://www.dropbox.com/s/8zy4dfn14sh761k/ioio_app_icon.jpg">
+						ioio App Icon</a>
+					</li>
+
+					<li>
+						<a class="icon" href=
+						"https://www.dropbox.com/s/ssz84xljjo8ji0n/ioio_appstore_icon.jpg">
+						ioio App Store Icon</a>
+					</li>
+
+					<li>
+						<a class="icon" href=
+						"https://www.dropbox.com/s/5y2c3xx89vhwmz0/ioio_spotlight_icon.jpg">
+						ioio Spotlight Icon</a>
+					</li>
+
+					<li>
+						<a class="icon" href=
+						"https://www.dropbox.com/s/kxqreolx25w8qdw/ioio_portrait.jpg">
+						ioio Launch Page(Portrait)</a>
+					</li>
+
+					<li>
+						<a class="icon" href=
+						"https://www.dropbox.com/s/ro5kqpw5fxqzkw0/ioio_landscape.jpg">
+						ioio Launch Page(Landscape)</a>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h4><img alt="img/ioio_app_icon.jpg" id="icon" src="img/ioio_app_icon.jpg"></h4>
+			</section>
+
+			<section data-position="fixed" data-role="footer" data-theme="d">
+				<section data-role="navbar">
+					<ul>
+						<li>
+							<a data-icon="home" href="#home">Home</a>
+						</li>
+
+						<li>
+							<a data-icon="gear" href="#">Share</a>
+						</li>
+
+						<li>
+							<a data-icon="bars" href="#about">About</a>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</section>
+	</div>
+
+	<div data-role="page" data-theme="a" id="about">
+		<section data-position="fixed" data-role="header" data-theme="a">
+			<h1><a href="#home"><img alt="img/brand.jpg" class="brandImg" src=
+			"img/brand.jpg"></a></h1>
+		</section>
+
+		<section data-role="content">
+			<h2>Robert Warren</h2>
+
+			<p>AVF Term 1308</p>
+
+			<section data-collapsed="true" data-role="collapsible" data-theme=
+			"d">
+				<h3>Source</h3>
+
+				<ul>
+					<li>Follow my <a href=
+					"https://github.com/grindnmosh/Warren_Robert_1308_AVF">github</a>
+					for updates
+					</li>
+
+					<li>Android <a href=
+					"http://grindnmosh.github.io/Warren_Robert_1308_AVF/ioio/platforms/android/assets/www/index.html">
+						Sample</a>
+					</li>
+
+					<li>iOS <a href=
+					"http://grindnmosh.github.io/Warren_Robert_1308_AVF/ioio/platforms/ios/www/index.html">
+						Sample</a>
+					</li>
+				</ul>
+			</section>
+
+			<section data-collapsed="true" data-role="collapsible" data-theme=
+			"d">
+				<h3>Social Networks</h3>
+
+				<ul>
+					<li>Follow me on <a href="https://twitter.com/grindnmosh">
+						Twitter</a>
+
+						<p></p>
+					</li>
+
+					<li>Like Me on <a href=
+					"https://www.facebook.com/grindnmosh">Facebook</a>
+
+						<p></p>
+					</li>
+
+					<li>+1 Me on <a href=
+					"https://plus.google.com/115633683788706355406/">Google+</a>
+
+						<p></p>
+					</li>
+				</ul>
+			</section>
+
+			<section data-collapsed="true" data-role="collapsible" data-theme=
+			"d">
+				<h3>Contact Info</h3>
+
+				<ul>
+					<li>
+						<h4>For Bug and Error Reports:</h4>
+
+						<p>bugreports@grind-design.com</p>
+					</li>
+
+					<li>
+						<h4>Suggestions:</h4>
+
+						<p>suggestions@grind-design.com</p>
+					</li>
+
+					<li>
+						<h4>Site Issues:</h4>
+
+						<p>admin@grind-design.com</p>
+					</li>
+
+					<li>
+						<h4>Contact the Developer:</h4>
+
+						<p>grindnmosh@grind-design.com</p>
+					</li>
+				</ul>
+			</section>
+
+			<section data-collapsed="true" data-role="collapsible" data-theme=
+			"d">
+				<h3>Credits</h3>
+
+				<ul>
+					<li>Hand Giving Money To Other Hand Image courtesy of
+					creativedoxfoto/FreeDigitalPhotos.net</li>
+				</ul>
+			</section>
+		</section>
+
+		<section data-position="fixed" data-role="footer" data-theme="d">
+			<section data-role="navbar">
+				<ul>
+					<li>
+						<a data-icon="home" href="#home">Home</a>
+					</li>
+
+					<li>
+						<a data-icon="gear" href="#">Share</a>
+					</li>
+
+					<li>
+						<a data-icon="bars" href="#about">About</a>
+					</li>
+				</ul>
+			</section>
+		</section>
+	</div>
+
+	<div data-role="page" data-theme="a" id="disc1">
+		<section data-position="fixed" data-role="header" data-theme="a">
+			<h1><a href="#home"><img alt="img/brand.jpg" class="brandImg" src=
+			"img/brand.jpg"></a></h1>
+		</section>
+
+		<section data-role="content">
+			<ul>
+				<li>Keeping in mind that you said Twitter would appear still in
+				some lessons and that we should replace it in all cases with
+				Instagram, my writing covers Instagram in place of Twitter
+				where applicable.</li>
+
+				<li style="list-style: none"><br></li>
+
+				<li>Instagram could be used to as a built in login to the apps
+				private areas or cross device/web storage for auto population
+				of Data already entered onto a new device. This would also
+				allow for instant syncing across the devices allowing Instagram
+				to be used as cloud storage. I have never actually seen this in
+				any app, used with Instagram. This is more commonly seen with
+				Facebook or Google+ logins and occasionally Twitter logins. I
+				prefer the apps I have seen that give you the choice between
+				direct login with no cloud support or the multiple social
+				network login options with cloud support. I like the apps that
+				have a simple backup sync with more popular direct cloud
+				options like Dropbox or Box. I intend to use the Facebook Like
+				API, the Google+ +1 API, the Twitter Follow API, Evernote
+				syncing API as well as include the Dropbox API for backing up
+				Data. I just need to learn how to implement these API features.
+				I also want to make the login options of some or all of these
+				available. I would love to say this would all happen this month
+				but we will see.</li>
+
+				<li style="list-style: none"><br></li>
+
+				<li>JSON-P is an interesting concept, in the fact that is lets
+				use Data from another domain. This allows you to pull data from
+				the API’s source websites with no issues. Cross platform the
+				browser generally denies data unless wrapped in script tags,
+				which makes the data useless beyond evaluating it. JSON-P uses
+				this loophole to gain access to cross-domain data and wraps it
+				in a way that makes it fully usable. Without JSON-P a call for
+				data would involve several steps of calling your server, which
+				calls on the API’s server, which in turn sends it back to your
+				server then to you. That is a lot slower in getting returned
+				data than directly getting it and only JSON-P can currently do
+				this effectively. So JSON-P apps definitely provide an
+				advantage in getting data returned to you faster.</li>
+
+				<li style="list-style: none"><br></li>
+
+				<li>Some of the APIs that blend best with native functions that
+				I found actually blend between native features. The camera
+				would blend well with any of your social media services.
+				Storage would blend well with cloud services like Dropbox, Box
+				or even Facebook or Google+. The Network feature works well
+				with the in-app web browser, the social networks, the cloud
+				storage, the sharing features using email or messaging and
+				anything else that needs to pull information from or even
+				sending information to the web. Contacts can be used to sync
+				with any of the incorporated services or to populate into
+				services. These would sync well with sharing options using
+				social network APIs. The options are limitless and these are
+				only some general examples.</li>
+
+				<li style="list-style: none"><br></li>
+
+				<li>My intentions this month is to begin my social network
+				promotional integration and multi device sync support into my
+				app and add the features needed to take full advantage of
+				native features like contacts, calendar, network, internal
+				storage and when applicable SD card support. I know SD storage
+				will only be an option for the Android side for most devices
+				but this is a highly request feature of Android users so I do
+				intend to implement it. I intend to have at least the basic
+				functionality to make the app fully useable by the end of this
+				month and have it available on both app stores. This is an app
+				that I already enjoy using in the mobile web version I have and
+				I have had requests to be a beta tester for this app when it
+				becomes available for such. I already discussed in the first
+				paragraph some detailed desires for the use of API’s in this
+				app.</li>
+
+				<li style="list-style: none"><br></li>
+
+				<li>We have learned so much up till now and honestly it is
+				really jumbled up in my head as to where or when I learned
+				what. It is even jumbled which techniques I have just formed in
+				combination of what I have learned in class, from others or
+				just trial and error. But I will try to break down these three
+				categories. As far as research, this is the most important step
+				in any project. You should a lot time before beginning the
+				structuring of the project itself to research the why, how to
+				and effective use of the big picture of what you want to do.
+				This in turn creates a need for additional research on the
+				components that need to be incorporated, some of which you had
+				already planned and some that you hadn’t previously thought of.
+				This creates it’s own research. Once you have completed your
+				thorough research you are ready to begin the design stage. The
+				design stage should include two main pieces. They are our
+				wireframe and your flowchart. As you build these you find the
+				need for even more components to complete your goals returning
+				you to the research stage. This is also the stage to plan your
+				apps branding, which may change as you go. Once your planning
+				is complete, it is time to begin the design stages. This is the
+				point when you start writing your primary code, which has been
+				html5 so far. We then make it look nice with CSS. We finally
+				make it function with our JavaScript or JavaScript libraries
+				such as jQuery. The final step is to add data sources and
+				native functionality to make the app function as we envisioned
+				it. One of the biggest things I have learned and something I
+				want to ensure is included, is to not over think it. As humans
+				that is our biggest flaw.</li>
+			</ul>
+		</section>
+
+		<section data-position="fixed" data-role="footer" data-theme="d">
+			<section data-role="navbar">
+				<ul>
+					<li>
+						<a data-icon="home" href="#home">Home</a>
+					</li>
+
+					<li>
+						<a data-icon="gear" href="#">Share</a>
+					</li>
+
+					<li>
+						<a data-icon="bars" href="#about">About</a>
+					</li>
+				</ul>
+			</section>
+		</section>
+	</div>
+
+	<div data-role="page" data-theme="a" id="view">
+		<section data-position="fixed" data-role="header" data-theme="a">
+			<h1><a href="#home"><img alt="img/brand.jpg" class="brandImg" src=
+			"img/brand.jpg"></a></h1>
+		</section>
+
+		<section data-role="content" data-theme="d" id="display">
+			<section>
+				<a data-icon="arrow-r" data-iconpos="right" data-role="button" data-theme="d" href="#add" id="addNewBill" name= "addNewBill">Add Another Bill</a>
+			</section>
+
+			<section>
+				<input data-icon="arrow-r" data-iconpos="right" data-role= "button" data-theme="b" id="clearAllData" type="button" value= "Clear Storage">
+			</section>
+		</section>
+
+		<section data-position="fixed" data-role="footer" data-theme="d">
+			<section data-role="navbar">
+				<ul>
+					<li>
+						<a data-icon="home" href="#home">Home</a>
+					</li>
+
+					<li>
+						<a data-icon="gear" href="#">Share</a>
+					</li>
+
+					<li>
+						<a data-icon="bars" href="#about">About</a>
+					</li>
+				</ul>
+			</section>
+		</section>
+	</div>
+
+	<div data-role="page" data-theme="a" id="goog">
+		<section data-position="fixed" data-role="header" data-theme="a">
+			<h1><a href="#home"><img alt="img/brand.jpg" class="brandImg" src=
+			"img/brand.jpg"></a></h1>
+		</section>
+
+		<section>
+			<h1 id="gcolor">The Developer gives a peak at his Google+
+			Activities</h1>
+
+			<h2><a href=
+			"https://plus.google.com/115633683788706355406/posts">Visit The
+			Developer's Google+</a></h2>
+		</section>
+
+		<section data-role="content" data-theme="d">
+			<ul>
+				<li id="plus">
+					<h4><img alt="img/loading.png" class="load" src="img/loading.png"></h4>
+				</li>
+			</ul>
+		</section>
+
+		<section data-position="fixed" data-role="footer" data-theme="d">
+			<section data-role="navbar">
+				<ul>
+					<li>
+						<a data-icon="home" href="#home">Home</a>
+					</li>
+
+					<li>
+						<a data-icon="gear" href="#">Share</a>
+					</li>
+
+					<li>
+						<a data-icon="bars" href="#about">About</a>
+					</li>
+				</ul>
+			</section>
+		</section>
+	</div>
+
+	<div data-role="page" data-theme="a" id="insta">
+		<section data-position="fixed" data-role="header" data-theme="a">
+			<h1><a href="#home"><img alt="img/brand.jpg" class="brandImg" src=
+			"img/brand.jpg"></a></h1>
+		</section>
+
+		<section>
+			<h1>The Developer gives a peak at his life in Instagram</h1>
+
+			<h2><a href="http://instagram.com/grindnmosh">Visit The Developer's
+			Instagram</a></h2>
+		</section>
+
+		<section data-role="content" data-theme="d">
+			<ul>
+				<li id="instagram">
+					<h4><img alt="img/loading.png" class="load" src="img/loading.png"></h4>
+				</li>
+			</ul>
+		</section>
+
+		<section data-position="fixed" data-role="footer" data-theme="d">
+			<section data-role="navbar">
+				<ul>
+					<li>
+						<a data-icon="home" href="#home">Home</a>
+					</li>
+
+					<li>
+						<a data-icon="gear" href="#">Share</a>
+					</li>
+
+					<li>
+						<a data-icon="bars" href="#about">About</a>
+					</li>
+				</ul>
+			</section>
+		</section>
+	</div>
+
+	<div data-role="page" data-theme="a" id="twit">
+		<section data-position="fixed" data-role="header" data-theme="a">
+			<h1><a href="#home"><img alt="img/brand.jpg" class="brandImg" src=
+			"img/brand.jpg"></a></h1>
+		</section>
+
+		<section>
+			<h1>The Developer is a Twit</h1>
+
+			<h2>Take a look.......</h2>
+		</section>
+
+		<section data-role="content" data-theme="d" id="twistedTwit">
+			<a class="twitter-timeline" data-widget-id="366722003048218625"
+			href="https://twitter.com/grindnmosh">Tweets by @grindnmosh</a>
+			<script>
+!               function(d, s, id) {
+						var js, fjs = d.getElementsByTagName(s)[0],
+							p = /^http:/.test(d.location) ? 'http' : 'https';
+						if (!d.getElementById(id)) {
+							js = d.createElement(s);
+							js.id = id;
+							js.src = p + "://platform.twitter.com/widgets.js";
+							fjs.parentNode.insertBefore(js, fjs);
+						}
+					}(document, "script", "twitter-wjs");
+			</script>
+		</section>
+
+		<section data-position="fixed" data-role="footer" data-theme="d">
+			<section data-role="navbar">
+				<ul>
+					<li>
+						<a data-icon="home" href="#home">Home</a>
+					</li>
+
+					<li>
+						<a data-icon="gear" href="#">Share</a>
+					</li>
+
+					<li>
+						<a data-icon="bars" href="#about">About</a>
+					</li>
+				</ul>
+			</section>
+		</section>
+	</div>
+
+	<div data-role="page" data-theme="a" id="fbnf">
+		<section data-position="fixed" data-role="header" data-theme="a">
+			<h1><a href="#home"><img alt="img/brand.jpg" class="brandImg" src=
+			"img/brand.jpg"></a></h1>
+		</section>
+
+		<section>
+			<h2 id="fbcolor">The Developer On FaceBook</h2>
+
+			<h2><a href="http://facebook.com/grindnmosh">Be Friends With The
+			Developer</a></h2>
+		</section>
+
+		<section data-role="content" data-theme="d">
+			<ul>
+				<li id="feed">
+					<h4><img alt="img/loading.png" class="load" src="img/loading.png"></h4>
+				</li>
+			</ul>
+		</section>
+
+		<section data-position="fixed" data-role="footer" data-theme="d">
+			<section data-role="navbar">
+				<ul>
+					<li>
+						<a data-icon="home" href="#home">Home</a>
+					</li>
+
+					<li>
+						<a data-icon="gear" href="#">Share</a>
+					</li>
+
+					<li>
+						<a data-icon="bars" href="#about">About</a>
+					</li>
+				</ul>
+			</section>
+		</section>
+	</div>
+
+	<div data-role="page" id="add">
+		<section data-position="fixed" data-role="header" data-theme="a">
+			<h1><a href="#home"><img alt="img/brand.jpg" class="brandImg" src=
+			"img/brand.jpg"></a></h1>
+		</section>
+
+		<section data-role="content" data-theme="a" id="addFormEdits">
+			<form action="#" id="addBill" name="addBill">
+				<section data-role="fieldcontain">
+					<fieldset data-role="controlgroup" id="top">
+						<h2>Add A New Bill</h2>
+
+						<section id="centered">
+							Fields marked with
+
+							<p class="star">*</p>are required fields.
+						</section>
+
+						<section data-role="fieldcontain">
+							<label for="btype"></label>
+
+							<p class="star">*</p>Bill Type <select class=
+							"required" data-native-menu="false" data-theme="d"
+							id="btype" name="btype">
+								<option data-placeholder="true" value="">
+									--Choose Bill Type--
+								</option>
+
+								<option value="Housing">
+									Housing
+								</option>
+
+								<option value="Vehicle">
+									Vehicle
+								</option>
+
+								<option value="Utilities">
+									Utilities
+								</option>
+
+								<option value="Personal">
+									Personal
+								</option>
+
+								<option value="Education">
+									Education
+								</option>
+
+								<option value="Business">
+									Business
+								</option>
+
+								<option value="Other">
+									Other
+								</option>
+							</select>
+
+							<p class="inputHints">Please select bill
+							category</p>
+						</section>
+
+						<section data-role="fieldcontain">
+							<p class="star">*</p>Bill Name <input class=
+							"required" data-clear-btn="true" id="bname" name=
+							"bname" placeholder="Elec, Car, Netflix, etc" type=
+							"text" value="">
+
+							<p class="inputHints">This is where you name your
+							bill</p>
+						</section>
+
+						<section data-role="fieldcontain">
+							<label for="prio">Priority</label>
+							<input data-theme="d" id="prio" max="10" min="0"
+							type="range" value="5">
+
+							<p class="inputHints">Priority:
+							Low_______________________High</p>
+						</section>
+
+						<section data-role="fieldcontain">
+							<p class="star">*</p>Amount <input class=
+							"required number" data-clear-btn="true" id="amt"
+							name="amt" placeholder="150.00" type="text">
+
+							<p class="inputHints">Please enter bill amount in
+							100.00 format</p>
+						</section>
+
+						<section data-role="fieldcontain">
+							<p class="star">*</p>Due Date <input class=
+							"required date" id="due" name="due" type="date">
+
+							<p class="inputHints">Please enter the bill due
+							date</p>
+						</section>
+
+						<section data-role="fieldcontain">
+							<p class="star">*</p>frequency <select class=
+							"required" data-native-menu="false" data-theme="d"
+							id="freqs" name="freqs">
+								<option data-placeholder="true" value="">
+									--Choose Frequency--
+								</option>
+
+								<option value="One Time">
+									One Time
+								</option>
+
+								<option value="Weekly">
+									Weekly
+								</option>
+
+								<option value="Bi-Weekl">
+									Bi-Weekly
+								</option>
+
+								<option selected="selected" value="Monthly">
+									Monthly
+								</option>
+
+								<option value="Quarterly">
+									Quarterly
+								</option>
+
+								<option value="Annually">
+									Annually
+								</option>
+
+								<option value="Other">
+									Other
+								</option>
+							</select>
+
+							<p class="inputHints">Please select the frequency
+							of this bill</p>
+						</section>
+					</fieldset>
+				</section>
+
+				<section data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<p class="star">*</p>Payment Status <input checked
+						class="Unpaid" data-theme="d" id="unpd" name="status"
+						type="radio" value="UnPaid"> <label for=
+						"unpd">UnPaid</label> <input class="Unpaid" data-theme=
+						"d" id="pd" name="status" type="radio" value="Paid">
+						<label for="pd">Paid</label>
+
+						<p class="inputHints">Please select payment status</p>
+					</fieldset>
+
+					<div class="formset" id="effect" style="margin-left: 2em">
+						<h2>Paid Bill Information:</h2>
+
+						<p>Payment Type</p><select data-native-menu="false"
+						data-theme="d" id="pdwith" name="pdwith">
+							<option data-placeholder="true" value=
+							"--Choose Payment Type--">
+								--Choose Payment Type--
+							</option>
+
+							<optgroup label="Cash Payment Types">
+								<option value="Debit Card">
+									Debit Card
+								</option>
+
+								<option value="Cash">
+									Cash
+								</option>
+
+								<option value="Check">
+									Check
+								</option>
+							</optgroup>
+
+							<optgroup label="Credit Cards">
+								<option value="MasterCard">
+									MasterCard
+								</option>
+
+								<option value="Visa">
+									Visa
+								</option>
+
+								<option value="Discover">
+									Discover
+								</option>
+
+								<option value="American Express">
+									American Express
+								</option>
+
+								<option value="Other Card">
+									Other Card
+								</option>
+							</optgroup>
+						</select>
+
+						<p class="inputHints">Please select payment method if
+						applicable</p>
+
+						<section data-role="fieldcontain">
+							<fieldset data-role="controlgroup">
+								<p>Payment Time</p><input data-theme="d" id=
+								"ontime" name="paymentTime" type="checkbox">
+								<label for="ontime">On Time</label>
+								<input data-theme="d" id="late" name=
+								"paymentTime" type="checkbox" value="Late">
+								<label for="late">Late</label>
+								<input data-theme="d" id="lfee" name=
+								"paymentTime" type="checkbox" value=
+								"Late Fee"><label for="lfee">Late Fee</label>
+
+								<p class="inputHints">Please select all that
+								apply</p>
+							</fieldset>
+						</section>
+					</div>
+				</section>
+
+				<section data-role="fieldcontain">
+					<label for="textArea">Comments</label>
+
+					<section>
+						<textarea id="textArea">
+</textarea>
+					</section>
+				</section>
+
+				<section data-role="fieldcontain">
+					<input data-icon="arrow-r" data-iconpos="right" data-role=
+					"button" data-theme="d" id="saveMe" name="saveMe" type=
+					"submit" value="Save Me">
+				</section>
+
+				<section data-role="fieldcontain">
+					<input data-icon="arrow-r" data-iconpos="right" data-role=
+					"button" data-theme="b" id="resetMe" name="resetMe" type=
+					"reset" value="Reset Me">
+				</section>
+
+				<section data-role="fieldcontain">
+					<a data-icon="arrow-r" data-iconpos="right" data-role=
+					"button" data-theme="a" href="#view" id="displayLink" name=
+					"displayLink">Display Bills</a>
+				</section><a data-rel="dialog" data-transition="pop" href=
+				"#errors" id="abErrors" name="abErrors">Open Errors</a>
+			</form>
+		</section>
+
+		<section data-position="fixed" data-role="footer" data-theme="d" id=
+		"footer">
+			<section data-role="navbar">
+				<ul>
+					<li>
+						<a data-icon="home" href="#home">Home</a>
+					</li>
+
+					<li>
+						<a data-icon="gear" href="#">Share</a>
+					</li>
+
+					<li>
+						<a data-icon="bars" href="#about">About</a>
+					</li>
+				</ul>
+			</section>
+		</section>
+	</div><script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> <script src=
+"http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> <script src="js/libs/jquery.validate.min.js" type="text/javascript"></script> <script src="js/main.js" type="text/javascript"></script> <script src="js/json.js" type="text/javascript"></script>
+</body>
 </html>

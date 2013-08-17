@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/assets/www/index.html" description="&lt;h2&gt;&lt;a class=&quot;browse&quot; href=&quot;#add&quot; id=&quot;cta&quot; name=&quot;c..." line="35" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="00e51b47-b8c6-40f7-8fa4-3656e33f986f" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/css/landTablet.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/css/portTablet.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/css/landTablet.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/css/portTablet.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ios/ioio.xcodeproj/project.xcworkspace/xcuserdata/1LoveCyn.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/../ios/ioio.xcodeproj/project.xcworkspace/xcuserdata/1LoveCyn.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/css/index.css" afterPath="$PROJECT_DIR$/assets/www/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ios/www/css/index.css" afterPath="$PROJECT_DIR$/../ios/www/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/index.html" afterPath="$PROJECT_DIR$/assets/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ios/www/index.html" afterPath="$PROJECT_DIR$/../ios/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,10 +78,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="91" selection-start="649" selection-end="649" vertical-scroll-proportion="0.45192307" vertical-offset="114" max-vertical-offset="13050">
+            <state line="23" column="0" selection-start="713" selection-end="713" vertical-scroll-proportion="22.884615" vertical-offset="2130" max-vertical-offset="13710">
               <folding>
                 <element signature="n#style#0;n#li#1;n#ul#0;n#section#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#3;n#ul#0;n#section#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -84,6 +90,15 @@
                 <element signature="n#style#0;n#li#9;n#ul#0;n#section#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#section#1;n#form#0;n#section#1;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/www/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="149" column="13" selection-start="2049" selection-end="2049" vertical-scroll-proportion="0.516129" vertical-offset="2027" max-vertical-offset="3930">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,12 +122,13 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/assets/www/index.html" />
+        <option value="$PROJECT_DIR$/assets/www/css/index.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="393" />
-    <option name="y" value="99" />
+    <option name="x" value="16" />
+    <option name="y" value="22" />
     <option name="width" value="996" />
     <option name="height" value="757" />
   </component>
@@ -198,6 +214,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -212,7 +250,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Dropbox/Full Sail/ASD/Warren_Robert_ASD_1306" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="a0cec369" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="42f78607b8fb9f6b" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="AVD_for_Nexus_4_by_Google" />
@@ -376,7 +414,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="393" y="99" width="996" height="757" extended-state="0" />
+    <frame x="16" y="22" width="996" height="757" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -529,7 +567,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="91" selection-start="649" selection-end="649" vertical-scroll-proportion="0.45192307" vertical-offset="114" max-vertical-offset="13050">
+        <state line="23" column="0" selection-start="713" selection-end="713" vertical-scroll-proportion="22.884615" vertical-offset="2130" max-vertical-offset="13710">
           <folding>
             <element signature="n#style#0;n#li#1;n#ul#0;n#section#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#3;n#ul#0;n#section#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -538,6 +576,13 @@
             <element signature="n#style#0;n#li#9;n#ul#0;n#section#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#section#1;n#form#0;n#section#1;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="149" column="13" selection-start="2049" selection-end="2049" vertical-scroll-proportion="0.516129" vertical-offset="2027" max-vertical-offset="3930">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -24,22 +24,14 @@ h4 {
 #gridImg .ui-block {
 	height: 100px;
 }
-#browseSz {
-	width: 275px;
-	text-align: center;
-}
 #billTypeImg {
-	margin: 20px 20px 20px 00px;
+	margin: 20px 20px 20px 0;
 }
 #fbcolor {
 	color: blue;
 }
 #gcolor {
 	color: red;
-}
-.load {
-	text-align: center;
-	width: 350px;
 }
 #images {
 	width: 125px;
@@ -75,14 +67,6 @@ h4 {
 }
 #imgSize5 {
 	height: 75px;
-}
-#ctaimg {
-	width: 275px;
-	text-align: center;
-}
-.brandImg {
-	width: 130px;
-	text-align: left;
 }
 p {
 	text-align: left;
@@ -140,4 +124,133 @@ li {
     padding-top: .8em;
     margin-top: 1.4em;
     border-top: 1px solid rgba(0,0,0,.1);
+}
+#ctaimg {
+	width: 240px; 
+	text-align: center;
+}
+.brandImg {
+	width: 130px; 
+	text-align: center;
+}
+.load {
+	text-align: center;
+	width: 240px;
+}
+.icon {
+	text-align: center;
+	width: 100px;
+}
+
+
+
+
+/* iPhone Horizontal */ 
+@media all and (min-width: 480px){  
+	#ctaimg {
+		width: 100% !important; 
+	}
+	.brandImg {
+		width: 100% !important; 
+	}
+	.load {
+		width: 100% !important;
+	}
+	.icon {
+		width: 100% !important;
+	}
+}
+
+/* iPhone vertical */
+@media all and (min-width: 1px){
+	#ctaimg {
+		width: 100% !important;
+	}
+	.brandImg {
+		width: 100% !important;
+	}
+	.load {
+		width: 100% !important;
+	}
+	.icon {
+		width: 100% !important;
+	}
+}
+
+/* iPad Verticle */ 
+@media only screen and (min-width: 768px) {
+	#ctaimg {
+		width: 50% !important; 
+	}
+	.brandImg {
+		width: 50% !important; 
+	}
+	.load {
+		width: 50% !important;
+	}
+	#icon {
+		width: 50% !important;
+	}
+}
+
+/* iPad Horizontal */ 
+@media only screen and (min-width: 1024px) {     
+	#ctaimg {
+		width: 50% !important; 
+	}
+	.brandImg {
+		width: 50% !important; 
+	}
+	.load {
+		width: 50% !important;
+	}
+	.icon {
+		width: 50% !important;
+	}
+}  
+
+/* Nexus 7 Horizontal */ 
+@media only screen and (min-width: 1280px) {     
+	#ctaimg { 
+		width: 33.3333333% !important; 
+	}
+	.brandImg {
+		width: 33.3333333% !important; 
+	}
+	.load {
+		width: 33.3333333% !important;
+	}
+	.icon {
+		width: 33.3333333% !important;
+	}
+}  
+/* Monitor 1600 */ 
+@media only screen and (min-width: 1600px) {
+	#ctaimg { 
+		width: 25% !important; 
+	}
+	.brandImg {
+		width: 25% !important; 
+	}
+	.load {
+		width: 25% !important;
+	}
+	.icon {
+		width: 25% !important;
+	}
+}  
+/* Monitor 1920 */ 
+@media only screen and (min-width: 1920px) {     
+	#ctaimg { 
+		width: 20% !important; 
+	}
+	.brandImg {
+		width: 20% !important; 
+	}
+	.load {
+		width: 20% !important;
+	}
+	.icon {
+		width: 20% !important;
+	}
 }
