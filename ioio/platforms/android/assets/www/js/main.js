@@ -4,8 +4,28 @@ Term 1308
 AVF
 I Owe, I Owe * Bill List
 */
+
+document.addEventListener("deviceready", onDeviceReady, false);
+ 
+var iabRef = null;
+function iabLoadStart(event) {
+    alert(event.type + ' - ' + event.url);
+}
+
+function iabLoadStop(event) {
+    alert(event.type + ' - ' + event.url);
+}
+
+function iabClose(event) {
+     alert(event.type);
+     iabRef.removeEventListener('loadstart', iabLoadStart);
+     iabRef.removeEventListener('loadstop', iabLoadStop);
+     iabRef.removeEventListener('exit', iabClose);
+}
+ 
 function onDeviceReady() {
-	
+	 alert('Device is ready!');
+	 
 	$('#home').on('pageinit', function(){
 		//code needed for home page goes here
 	});	
@@ -22,9 +42,10 @@ function onDeviceReady() {
 			}
 		});
 	});	
-	//any other code needed for addItem page goes here
-		
+	//any other code needed onDeveice Ready Goes Here.
+	//var ref = window.open('http://apache.org', '_blank', 'location=yes');
 } // phonegap deviceready
+
 var edit = document.getElementById("saveMe");
 var makeEdits = "";
 var runDelete = "";
@@ -66,19 +87,14 @@ var createButtons = function(key, buttons) {
 		delButton.innerHTML = delText;
 		buttons.appendChild(delButton);
 };
+	
+var success = function() {
+	navigator.notification.alert("JSON Success!", dismiss, "Fresh Data", "Cool");
+}	
 
-var contactsFn = function() {
-	//load camera immediately? load buttons first?	
-}; // end contactsFn
-var networkTestFn = function() {
-	//check for connection? load data?	
-}; // end networkTestFn
-var emailFn = function() {
-	//do something	
-}; // end emailFn
-var smsFn = function() {
-	//do something	
-}; // end smsFn	
+var dismiss = function() {
+	//not sure yet
+}
 	
 $('#instalink').on('click', function() {
 	$.mobile.changePage("#insta", {});
@@ -317,7 +333,6 @@ var clearAll = function() {
 	return clearAll;
 };
 
-document.addEventListener("deviceready", onDeviceReady, false);
 dLink.addEventListener("click", getBill);
 edit.addEventListener("click", getForm);
 clearBill.addEventListener("click", clearAll);
