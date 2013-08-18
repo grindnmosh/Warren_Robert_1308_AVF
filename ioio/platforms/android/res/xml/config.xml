@@ -16,8 +16,5 @@
     <preference name="exit-on-suspend" value="false" />
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
-    <feature name="InAppBrowser">
-        <param name="android-package" value="org.apache.cordova.InAppBrowser" />
-    </feature>
-    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+    <plugin name="Device" value="org.apache.cordova.Device" />
 </widget>

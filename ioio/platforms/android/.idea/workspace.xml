@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00e51b47-b8c6-40f7-8fa4-3656e33f986f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/cordova.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ios/ioio.xcodeproj/project.xcworkspace/xcuserdata/1LoveCyn.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/../ios/ioio.xcodeproj/project.xcworkspace/xcuserdata/1LoveCyn.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/config.xml" afterPath="$PROJECT_DIR$/res/xml/config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/index.html" afterPath="$PROJECT_DIR$/assets/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ios/www/index.html" afterPath="$PROJECT_DIR$/../ios/www/index.html" />
@@ -79,10 +79,8 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="930" column="7" selection-start="36960" selection-end="36960" vertical-scroll-proportion="-52.125" vertical-offset="12699" max-vertical-offset="14040">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#section#1;n#form#0;n#section#1;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="945" column="7" selection-start="31796" selection-end="31796" vertical-scroll-proportion="0.0" vertical-offset="14160" max-vertical-offset="14265">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,7 +97,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/www/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="351" column="57" selection-start="13050" selection-end="13050" vertical-scroll-proportion="0.9230769" vertical-offset="4905" max-vertical-offset="5355">
+            <state line="95" column="18" selection-start="2707" selection-end="2707" vertical-scroll-proportion="0.8005115" vertical-offset="1112" max-vertical-offset="5535">
               <folding />
             </state>
           </provider>
@@ -108,7 +106,7 @@
       <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/xml/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="39" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+            <state line="13" column="25" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="390">
               <folding />
             </state>
           </provider>
@@ -171,6 +169,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -209,7 +208,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -227,13 +225,13 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="AVD_for_Nexus_4_by_Google" />
-    <property name="restartRequiresConfirmation" value="true" />
     <property name="AndroidTargetDevices" value="emulator-5554" />
-    <property name="MemberChooser.showClasses" value="true" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Android Application.android">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -388,15 +386,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="17" y="23" width="996" height="757" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3233909" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3987441" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32182103" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -407,11 +404,12 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496361" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21263158" sideWeight="0.6766091" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3233909" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21263158" sideWeight="0.67817897" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32182103" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -479,10 +477,36 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/assets/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="906" column="7" selection-start="30859" selection-end="30859" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="13680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="138" column="1" selection-start="1926" selection-end="1926" vertical-scroll-proportion="0.0" vertical-offset="1862" max-vertical-offset="3930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="338" column="49" selection-start="10555" selection-end="10555" vertical-scroll-proportion="0.0" vertical-offset="5055" max-vertical-offset="5160">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/xml/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="39" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="435">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="0" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="13710">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#section#1;n#form#0;n#section#1;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -496,36 +520,28 @@
     <entry file="file://$PROJECT_DIR$/assets/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="28" selection-start="2013" selection-end="2013" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="13080">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#section#1;n#form#0;n#section#1;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="24" selection-start="1875" selection-end="1875" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="13080">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#section#1;n#form#0;n#section#1;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="22" selection-start="1256" selection-end="1256" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="14025">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#section#1;n#form#0;n#section#1;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="12" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="14025">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#section#1;n#form#0;n#section#1;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -543,17 +559,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/xml/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="39" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+        <state line="13" column="25" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="390">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="930" column="7" selection-start="36960" selection-end="36960" vertical-scroll-proportion="-52.125" vertical-offset="12699" max-vertical-offset="14040">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#section#1;n#form#0;n#section#1;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="945" column="7" selection-start="31796" selection-end="31796" vertical-scroll-proportion="0.0" vertical-offset="14160" max-vertical-offset="14265">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -566,7 +580,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="351" column="57" selection-start="13050" selection-end="13050" vertical-scroll-proportion="0.9230769" vertical-offset="4905" max-vertical-offset="5355">
+        <state line="95" column="18" selection-start="2707" selection-end="2707" vertical-scroll-proportion="0.8005115" vertical-offset="1112" max-vertical-offset="5535">
           <folding />
         </state>
       </provider>

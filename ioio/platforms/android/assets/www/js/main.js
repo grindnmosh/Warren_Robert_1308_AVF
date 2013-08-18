@@ -96,6 +96,22 @@ var dismiss = function() {
 	//not sure yet
 }
 	
+$('#devLink').on('click', function() {
+	var device = "";
+	$.mobile.changePage("#infoPage", {});
+	alert("Here's the device info!");
+	//var newSub = document.createElement("li");
+	//loadImg(device.platform, newSub);
+	var element = document.getElementById('devInfo');
+	element.innerHTML = 	'Device Name: '     + device.name     + '<br />' + 
+							'Device Cordova: '  + device.cordova + '<br />' + 
+							'Device Platform: ' + device.platform + '<br />' + 
+							'Device UUID: '     + device.uuid     + '<br />' + 
+							'Device Model: '    + device.model     + '<br />' + 
+							'Device Version: '  + device.version  + '<br />';
+	alert(element.innerHTML);
+});
+
 $('#instalink').on('click', function() {
 	$.mobile.changePage("#insta", {});
 	$.ajax({
@@ -227,6 +243,15 @@ var loadImg = function(billImg, newSub) {
 	var imgSize = insertImg.setAttribute("id", "billImg");
 	var imgSz = insertImg.setAttribute("class", "billImg");
 	var setImg = insertImg.setAttribute("src", "img/" + billImg + ".jpg");
+	img.appendChild(insertImg);
+};
+var platImg = function(platform, newSub) {
+	var img = document.createElement("li");
+	newSub.appendChild(img);
+	var insertImg = document.createElement("img");
+	var imgSize = insertImg.setAttribute("id", "platform");
+	var imgSz = insertImg.setAttribute("class", "platform");
+	var setImg = insertImg.setAttribute("src", "img/" + platform + ".jpg");
 	img.appendChild(insertImg);
 };
 var cleanHouse = function() {
