@@ -28,18 +28,24 @@ function onDeviceReady() {
 		
 	$('#infoPage').on('pageinit', function() {
 		var device = "";
+		var dName = device.name;
+		var dCord = device.cordova;
+		var dPlat = device.platform;
+		var du = device.uuid;
+		var dMod = device.model;
+		var dVer = device.version;
 		//var newSub = document.createElement("li");
 		//loadImg(device.platform, newSub);
-		var element = document.getElementById('devInfo');
-		element.innerHTML = 	'Device Name: '     + device.name     + '<br />' + 
-								'Device Cordova: '  + device.cordova + '<br />' + 
-								'Device Platform: ' + device.platform + '<br />' + 
-								'Device UUID: '     + device.uuid     + '<br />' + 
-								'Device Model: '    + device.model     + '<br />' + 
-								'Device Version: '  + device.version  + '<br />';
+		$('#devInfo').html( 'Device Name: '     + dName + '<br />' + 
+							'Device Cordova: '  + dCord + '<br />' + 
+							'Device Platform: ' + dPlat + '<br />' + 
+							'Device UUID: '     + du + '<br />' + 
+							'Device Model: '    + dMod + '<br />' + 
+							'Device Version: '  + dVer + '<br />');
 	});
 	
 	$('#locale').on('pageinit', function(position) {
+		$.mobile.changePage("#locale", {});
 		var where = function(position){
 			var latitude = position.coords.latitude;
 			var	longitude = position.coords.longitude;
@@ -58,26 +64,26 @@ function onDeviceReady() {
 		});
 	});
 	
-	$('#conLink').on('click', function() { 
+	$('#conLink').on('click', function() {
+		$.mobile.changePage("#home", {});
 		var checkConnection = function() {
-			alert(navigator.connection.type);
-		    var networkState = navigator.connection.type;
+		    var conTo = navigator.connection.type;
+		    console.log = conTo
 		    var Connection = "";
-		    var states = {};
-		    states[Connection.UNKNOWN]  = "I don't know what you're connected to";
-		    states[Connection.ETHERNET] = "You're Wired";
-		    states[Connection.WIFI]     = "WiFi For The Win";
-		    states[Connection.CELL_2G]  = "2G? Is it even gonna load?";
-		    states[Connection.CELL_3G]  = "You're on the standard connection";
-		    states[Connection.CELL_4G]  = "It's all about that 4G love";
-		    states[Connection.CELL]     = "Cellular";
-		    states[Connection.NONE]     = "You're not connected to the internet.";
+		    var modes = {};
+		    modes[Connection.UNKNOWN]  = "I don't know what you're connected to";
+		    modes[Connection.ETHERNET] = "You're Wired";
+		    modes[Connection.WIFI]     = "WiFi For The Win";
+		    modes[Connection.CELL_2G]  = "2G? Is it even gonna load?";
+		    modes[Connection.CELL_3G]  = "You're on the standard connection";
+		    modes[Connection.CELL_4G]  = "It's all about that 4G love";
+		    modes[Connection.CELL]     = "Cellular";
+		    modes[Connection.NONE]     = "You're not connected to the internet.";
 		
-		    alert('Connection type: ' + states[networkState]);
+		    alert('Connection type: ' + modes[conTo]);
 		};
 	});
-		
-		
+	
 	var dismiss = function() {
 		//not sure yet
 	};
@@ -86,13 +92,52 @@ function onDeviceReady() {
 		
 	};
 
-
 	var popUp = function() {
 		navigator.notification.alert("On your device!", dismiss, "Fresh Data", "Cool");
 	};
+
+	
+	$('#instalink').on('click', function() {
+		$.mobile.changePage("#insta", {});
+		$.ajax({
+			url: "https://api.instagram.com/v1/users/188391197/media/recent/?access_token=188391197.542325c.4843642a97f447cdb843f9275c8a1420",
+			type: "GET",
+			dataType: "JSONP",
+			success: function(pics, status) {
+				$('#instagram').empty();
+				$.each(pics.data, function(i, img) {
+					var makeSubLi = $("<img id=images src='" + img.images.low_resolution.url + "'/>");
+					makeSubLi.appendTo('#instagram');
+				});
+			}
+		});
+	});
+	
+		$('#gp2link').on('click', function() {
+		$.mobile.changePage("#goog", {});
+		$.ajax({
+			url: "https://www.googleapis.com/plus/v1/people/115633683788706355406/activities/public?key=AIzaSyBOCuWilKqeH2zy98T3BYz6LJRMA0nV4Gk",
+			type: "GET",
+			dataType: "JSONP",
+			success: function(data, status) {
+				alert("JSONP Success");
+				console.log(data);
+				$('#plus').empty();
+				$.each(data.items, function(i, item) {
+					console.log(item);
+					var makeSubLi = $("<h3 id='gcolor'>" + item.object.content + "</h3><hr/>");
+					makeSubLi.appendTo('#plus');
+				});
+			}
+		});
+	});
+
+	
+
 	//any other code needed onDeveice Ready Goes Here.
 	document.addEventListener("pause", pausible, false);
 } // phonegap deviceready
+
 var edit = document.getElementById("saveMe");
 var makeEdits = "";
 var runDelete = "";
@@ -135,59 +180,26 @@ var createButtons = function(key, buttons) {
 		buttons.appendChild(delButton);
 };	
 
-$('#instalink').on('click', function() {
-	$.mobile.changePage("#insta", {});
-	$.ajax({
-		url: "https://api.instagram.com/v1/users/188391197/media/recent/?access_token=188391197.542325c.4843642a97f447cdb843f9275c8a1420",
-		type: "GET",
-		dataType: "JSONP",
-		success: function(pics, status) {
-			console.log(pics.data);
-			$('#instagram').empty();
-			$.each(pics.data, function(i, img) {
-				var makeSubLi = $("<img id=images src='" + img.images.low_resolution.url + "'/>");
-				makeSubLi.appendTo('#instagram');
-			});
-		}
-	});
-});
-
 $('#fb2link').on('click', function() {
-	$.mobile.changePage("#fbnf", {});
-	$.ajax({
-		url: "https://graph.facebook.com/100004240532347?fields=id,name,feed&access_token=618228588208865|ULb0s2EwnML7ByFoQiF-coTZ4R0",
-		type: "GET",
-		dataType: "JSONP",
-		success: function(stream) {
-			alert("JSONP Success");
-			console.log(stream);
-			$.each(stream.feed.data, function(i, data) {
-				console.log(data.story);
-				$('#feed').empty();
-				var makeSubLi = $("<h3 id = 'fbcolor'>" + data.story + "</h3><h3><img src='" + data.picture + "'/>" + "</h3><hr/>");
-				makeSubLi.appendTo('#feed');
-			});
-		}
+		$.mobile.changePage("#fbnf", {});
+		$.ajax({
+			url: "https://graph.facebook.com/100004240532347?fields=id,name,feed&access_token=618228588208865|f679d35ee1986ba1201bfe7c0fccd857",
+			type: "GET",
+			dataType: "JSONP",
+			success: function(stream) {
+				alert("JSONP Success");
+				console.log(stream);
+				$.each(stream.data, function(i, data) {
+					console.log(data.story);
+					$('#feed').empty();
+					var makeSubLi = $("<h3 id = 'fbcolor'>" + data.story + "</h3><h3><img src='" + data.picture + "'/>" + "</h3><hr/>");
+					makeSubLi.appendTo('#feed');
+				});
+			}
+		});
 	});
-});
-$('#gp2link').on('click', function() {
-	$.mobile.changePage("#goog", {});
-	$.ajax({
-		url: "https://www.googleapis.com/plus/v1/people/115633683788706355406/activities/public?key=AIzaSyBOCuWilKqeH2zy98T3BYz6LJRMA0nV4Gk",
-		type: "GET",
-		dataType: "JSONP",
-		success: function(data, status) {
-			alert("JSONP Success");
-			console.log(data);
-			$('#plus').empty();
-			$.each(data.items, function(i, item) {
-				console.log(item);
-				var makeSubLi = $("<h3 id='gcolor'>" + item.object.content + "</h3><hr/>");
-				makeSubLi.appendTo('#plus');
-			});
-		}
-	});
-});
+
+
 var howPaid = function() {
 	var paidWith = document.getElementById("pdwith");
 	if (status - pd.checked) {

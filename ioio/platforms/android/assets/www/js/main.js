@@ -27,19 +27,26 @@ function onDeviceReady() {
 	});	
 		
 	$('#infoPage').on('pageinit', function() {
+		$.mobile.changePage("#infoPage", {});
 		var device = "";
+		var dName = device.name;
+		var dCord = device.cordova;
+		var dPlat = device.platform;
+		var du = device.uuid;
+		var dMod = device.model;
+		var dVer = device.version;
 		//var newSub = document.createElement("li");
 		//loadImg(device.platform, newSub);
-		var element = document.getElementById('devInfo');
-		element.innerHTML = 	'Device Name: '     + device.name     + '<br />' + 
-								'Device Cordova: '  + device.cordova + '<br />' + 
-								'Device Platform: ' + device.platform + '<br />' + 
-								'Device UUID: '     + device.uuid     + '<br />' + 
-								'Device Model: '    + device.model     + '<br />' + 
-								'Device Version: '  + device.version  + '<br />';
+		$('#devInfo').html( 'Device Name: '     + dName + '<br />' + 
+							'Device Cordova: '  + dCord + '<br />' + 
+							'Device Platform: ' + dPlat + '<br />' + 
+							'Device UUID: '     + du + '<br />' + 
+							'Device Model: '    + dMod + '<br />' + 
+							'Device Version: '  + dVer + '<br />');
 	});
 	
 	$('#locale').on('pageinit', function(position) {
+		$.mobile.changePage("#locale", {});
 		var where = function(position){
 			var latitude = position.coords.latitude;
 			var	longitude = position.coords.longitude;
@@ -58,22 +65,23 @@ function onDeviceReady() {
 		});
 	});
 	
-	$('#conLink').on('click', function() { 
+	$('#conLink').on('click', function() {
+		$.mobile.changePage("#home", {});
 		var checkConnection = function() {
-			alert(navigator.connection.type);
-		    var networkState = navigator.connection.type;
+		    var conTo = navigator.connection.type;
+		    console.log = conTo
 		    var Connection = "";
-		    var states = {};
-		    states[Connection.UNKNOWN]  = "I don't know what you're connected to";
-		    states[Connection.ETHERNET] = "You're Wired";
-		    states[Connection.WIFI]     = "WiFi For The Win";
-		    states[Connection.CELL_2G]  = "2G? Is it even gonna load?";
-		    states[Connection.CELL_3G]  = "You're on the standard connection";
-		    states[Connection.CELL_4G]  = "It's all about that 4G love";
-		    states[Connection.CELL]     = "Cellular";
-		    states[Connection.NONE]     = "You're not connected to the internet.";
+		    var modes = {};
+		    modes[Connection.UNKNOWN]  = "I don't know what you're connected to";
+		    modes[Connection.ETHERNET] = "You're Wired";
+		    modes[Connection.WIFI]     = "WiFi For The Win";
+		    modes[Connection.CELL_2G]  = "2G? Is it even gonna load?";
+		    modes[Connection.CELL_3G]  = "You're on the standard connection";
+		    modes[Connection.CELL_4G]  = "It's all about that 4G love";
+		    modes[Connection.CELL]     = "Cellular";
+		    modes[Connection.NONE]     = "You're not connected to the internet.";
 		
-		    alert('Connection type: ' + states[networkState]);
+		    alert('Connection type: ' + modes[conTo]);
 		};
 	});
 		

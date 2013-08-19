@@ -23,11 +23,11 @@
     <access origin="http://plus.google.com" />
     <access origin="http://www.twitter.com" />
     <access origin="http://www.instagram.com" />
-    <access origin="http://127.0.0.1*"/> 
+    <access origin="http://127.0.0.1*" />
     <access origin="http://google.com*" />
     <access origin="http://maps.google.com*" />
-    <access origin="https://google.com*"/>
-    <access origin="https://maps.google.com*"/>
+    <access origin="https://google.com*" />
+    <access origin="https://maps.google.com*" />
     <preference name="useBrowserHistory" value="true" />
     <preference name="exit-on-suspend" value="false" />
     <preference name="fullscreen" value="true" />
@@ -37,4 +37,7 @@
     <plugin name="SplashScreen" value="org.apache.cordova.SplashScreen" />
     <plugin name="Notification" value="org.apache.cordova.Notification" />
     <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.core.GeoBroker" />
+    </feature>
 </widget>
