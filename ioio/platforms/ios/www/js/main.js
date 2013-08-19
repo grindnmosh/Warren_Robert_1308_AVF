@@ -5,7 +5,9 @@ AVF
 I Owe, I Owe * Bill List
 */
 
+
 document.addEventListener("deviceready", onDeviceReady, false);
+
  
 var iabRef = null;
 function iabLoadStart(event) {
@@ -26,7 +28,7 @@ function iabClose(event) {
 function onDeviceReady() {
 	 alert('Device is ready!');
 	 
-	$('#home').on('pageinit', function(){
+	 $('#home').on('pageinit', function(){
 		//code needed for home page goes here
 	});	
 			
@@ -42,10 +44,62 @@ function onDeviceReady() {
 			}
 		});
 	});	
-	//any other code needed onDeveice Ready Goes Here.
-	//var ref = window.open('http://apache.org', '_blank', 'location=yes');
-} // phonegap deviceready
+		
+	$('#infoPage').on('pageinit', function() {
+		//navigator.notification.alert("On your device!", dismiss, "Fresh Data", "Cool");
+		//var newSub = document.createElement("li");
+		//loadImg(device.platform, newSub);
+		var element = document.getElementById('devInfo');
+		element.innerHTML = 	'Device Name: '     + device.name     + '<br />' + 
+								'Device Cordova: '  + device.cordova + '<br />' + 
+								'Device Platform: ' + device.platform + '<br />' + 
+								'Device UUID: '     + device.uuid     + '<br />' + 
+								'Device Model: '    + device.model     + '<br />' + 
+								'Device Version: '  + device.version  + '<br />';
+	});
+	
+	
+	$('#locale').on('pageinit', function() {
+		var where = function(position){
+			var lattitude = position.coords.latitude;
+			var	longitude = position.coords.longitude;
+			$('#geo').html('<img src=http://maps.googleapis.com/maps/api/staticmap?zoom=13&size=200x200+ &markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true />');
+		};
+		function onError(error) {
+		    alert('code: '    + error.code    + '\n' +
+		          'message: ' + error.message + '\n');
+		};
+		
+		$('#geoLink').on('click', function() { 
+			 navigator.geolocation.getCurrentPosition(where, onError, {enableHighAccuracy:true});
+		});
+	});
+	
+	var checkConnection = function() {
+		var navigator = "";
+		alert(navigator.connection.type);
+	    var networkState = navigator.connection.type;
+	
+	    var states = {};
+	    states[Connection.UNKNOWN]  = "I don't know what you're connected to";
+	    states[Connection.ETHERNET] = "You're Wired";
+	    states[Connection.WIFI]     = "WiFi For The Win";
+	    states[Connection.CELL_2G]  = "2G? Is it even gonna load?";
+	    states[Connection.CELL_3G]  = "You're on the standard connection";
+	    states[Connection.CELL_4G]  = "It's all about that 4G love";
+	    states[Connection.CELL]     = "Cellular";
+	    states[Connection.NONE]     = "You're not connected to the internet.";
+	
+	    alert('Connection type: ' + states[networkState]);
+	}
+	checkConnection()
 
+	var popUp = function() {
+		navigator.notification.alert("On your device!", dismiss, "Fresh Data", "Cool");
+	}
+	//any other code needed onDeveice Ready Goes Here.
+	 //document.addEventListener("pause", onPause, false);
+} // phonegap deviceready
 var edit = document.getElementById("saveMe");
 var makeEdits = "";
 var runDelete = "";
@@ -86,31 +140,15 @@ var createButtons = function(key, buttons) {
 		delButton.addEventListener("click", runDelete);
 		delButton.innerHTML = delText;
 		buttons.appendChild(delButton);
-};
-	
-var success = function() {
-	navigator.notification.alert("JSON Success!", dismiss, "Fresh Data", "Cool");
-}	
+};	
 
 var dismiss = function() {
 	//not sure yet
 }
+
+var pausible = function() {
 	
-$('#devLink').on('click', function() {
-	var device = "";
-	$.mobile.changePage("#infoPage", {});
-	alert("Here's the device info!");
-	//var newSub = document.createElement("li");
-	//loadImg(device.platform, newSub);
-	var element = document.getElementById('devInfo');
-	element.innerHTML = 	'Device Name: '     + device.name     + '<br />' + 
-							'Device Cordova: '  + device.cordova + '<br />' + 
-							'Device Platform: ' + device.platform + '<br />' + 
-							'Device UUID: '     + device.uuid     + '<br />' + 
-							'Device Model: '    + device.model     + '<br />' + 
-							'Device Version: '  + device.version  + '<br />';
-	alert(element.innerHTML);
-});
+}	
 
 $('#instalink').on('click', function() {
 	$.mobile.changePage("#insta", {});
@@ -119,7 +157,6 @@ $('#instalink').on('click', function() {
 		type: "GET",
 		dataType: "JSONP",
 		success: function(pics, status) {
-			alert("JSONP Success");
 			console.log(pics.data);
 			$('#instagram').empty();
 			$.each(pics.data, function(i, img) {

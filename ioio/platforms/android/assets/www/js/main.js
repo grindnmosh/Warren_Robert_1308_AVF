@@ -5,7 +5,9 @@ AVF
 I Owe, I Owe * Bill List
 */
 
+
 document.addEventListener("deviceready", onDeviceReady, false);
+
  
 var iabRef = null;
 function iabLoadStart(event) {
@@ -25,8 +27,9 @@ function iabClose(event) {
  
 function onDeviceReady() {
 	 alert('Device is ready!');
+	 checkConnection();
 	 
-	$('#home').on('pageinit', function(){
+	 $('#home').on('pageinit', function(){
 		//code needed for home page goes here
 	});	
 			
@@ -43,7 +46,7 @@ function onDeviceReady() {
 		});
 	});	
 	//any other code needed onDeveice Ready Goes Here.
-	//var ref = window.open('http://apache.org', '_blank', 'location=yes');
+	 document.addEventListener("pause", onPause, false);
 } // phonegap deviceready
 
 var edit = document.getElementById("saveMe");
@@ -88,17 +91,37 @@ var createButtons = function(key, buttons) {
 		buttons.appendChild(delButton);
 };
 	
-var success = function() {
-	navigator.notification.alert("JSON Success!", dismiss, "Fresh Data", "Cool");
+var popUp = function() {
+	navigator.notification.prompt("JSON Success!", dismiss, "Fresh Data", "Cool");
 }	
 
 var dismiss = function() {
 	//not sure yet
 }
+
+var pausible = function() {
+	
+}
+
+var checkConnection = function() {
+    var networkState = navigator.connection.type;
+
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI]     = 'WiFi connection';
+    states[Connection.CELL_2G]  = 'Cell 2G connection';
+    states[Connection.CELL_3G]  = 'Cell 3G connection';
+    states[Connection.CELL_4G]  = 'Cell 4G connection';
+    states[Connection.CELL]     = 'Cell generic connection';
+    states[Connection.NONE]     = 'No network connection';
+
+    alert('Connection type: ' + states[networkState]);
+}
 	
 $('#devLink').on('click', function() {
-	var device = "";
 	$.mobile.changePage("#infoPage", {});
+	var device = "";
 	alert("Here's the device info!");
 	//var newSub = document.createElement("li");
 	//loadImg(device.platform, newSub);
@@ -119,7 +142,6 @@ $('#instalink').on('click', function() {
 		type: "GET",
 		dataType: "JSONP",
 		success: function(pics, status) {
-			alert("JSONP Success");
 			console.log(pics.data);
 			$('#instagram').empty();
 			$.each(pics.data, function(i, img) {

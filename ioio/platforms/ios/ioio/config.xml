@@ -11,7 +11,18 @@
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
+    <feature name="File">
+        <param name="ios-package" value="CDVFile" />
+    </feature>
+    <feature name="FileTransfer">
+        <param name="ios-package" value="CDVFileTransfer" />
+    </feature>
     <access origin="*" />
+    <access origin="http://www.dropbox.com" />
+    <access origin="http://www.facebook.com" />
+    <access origin="http://plus.google.com" />
+    <access origin="http://www.twitter.com" />
+    <access origin="http://www.instagram.com" />
     <preference name="KeyboardDisplayRequiresUserAction" value="true" />
     <preference name="SuppressesIncrementalRendering" value="false" />
     <preference name="UIWebViewBounce" value="true" />
@@ -26,4 +37,8 @@
     <preference name="BackupWebStorage" value="cloud" />
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
+    <plugin name="InAppBrowser" value="CDVInAppBrowser" />
+    <plugin name="SplashScreen" value="CDVSplashScreen" />
+    <plugin name="Notification" value="CDVNotification" />
+    <plugin name="NetworkStatus" value="CDVConnection" />
 </widget>

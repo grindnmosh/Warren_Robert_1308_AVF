@@ -1,20 +1,35 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.cordova.helloCordova" version="2.0.0" xmlns="http://www.w3.org/ns/widgets">
-    <name>Hello Cordova</name>
+    <name>IOIO</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        A simple Bill App.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="grindnmosh@gmail.com">
+        Robert Warren
     </author>
     <content src="index.html" />
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.FileUtils" />
+    </feature>
+    <feature name="FileTransfer">
+        <param name="android-package" value="org.apache.cordova.FileTransfer" />
+    </feature>
     <access origin="*" />
+    <access origin="http://www.dropbox.com" />
+    <access origin="http://www.facebook.com" />
+    <access origin="http://plus.google.com" />
+    <access origin="http://www.twitter.com" />
+    <access origin="http://www.instagram.com" />
     <preference name="useBrowserHistory" value="true" />
     <preference name="exit-on-suspend" value="false" />
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
+    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
     <plugin name="Device" value="org.apache.cordova.Device" />
+    <plugin name="SplashScreen" value="org.apache.cordova.SplashScreen" />
+    <plugin name="Notification" value="org.apache.cordova.Notification" />
+    <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
 </widget>

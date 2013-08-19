@@ -64,6 +64,7 @@ I Owe, I Owe * Bill List
 
 				<ul>
 					<li><a href="#infoPage" id="devLink">Device Info</a></li>
+					<li><a href="#locale" id="geoLink">Where oh Where Are You?</a></li>
 					<li>in-app browser(displayed following any link)</li>
 
 					<li>Date and Time on index page?</li>
@@ -98,7 +99,7 @@ I Owe, I Owe * Bill List
 					</li>
 
 					<li>
-						<a href="#insta" id="instalink">The Developer: A Secret Peak(Instagram)</a>(Working JSONP)
+						<a href="#insta" id="instalink" onclick="popUp(); return false;">The Developer: A Secret Peak(Instagram)</a>(Working JSONP)
 					</li>
 				</ul>
 			</section>
@@ -512,7 +513,7 @@ I Owe, I Owe * Bill List
 		<section>
 			<h1>The Developer gives a peak at his life in Instagram</h1>
 
-			<h2><a href="#" onclick="window.open('http://instagram.com/grindnmosh','_blank','location=yes')">Visit The Developer's Instagram</a></h2>
+			<h2><a href="#" onclick="window.open('http://m.instagram.com/grindnmosh','_blank','location=yes')">Visit The Developer's Instagram</a></h2>
 		</section>
 
 		<section data-role="content" data-theme="d">
@@ -599,7 +600,7 @@ I Owe, I Owe * Bill List
 		<section>
 			<h2 id="fbcolor">The Developer On FaceBook</h2>
 
-			<h2><a href="#" onclick="window.open('http://facebook.com/grindnmosh','_blank','location=yes')">Be Friends With The Developer</a></h2>
+			<h2><a href="#" onclick="window.open('http://m.facebook.com/grindnmosh','_blank','location=yes')">Be Friends With The Developer</a></h2>
 		</section>
 
 		<section data-role="content" data-theme="d">
@@ -642,6 +643,43 @@ I Owe, I Owe * Bill List
 		<section data-role="content" data-theme="d">
 			<ul>
 				<li id="devInfo">
+					<h4><img alt="img/loading.png" class="load" src="img/loading.png"></h4>
+				</li>
+			</ul>
+		</section>
+
+		<section data-position="fixed" data-role="footer" data-theme="d">
+			<section data-role="navbar">
+				<ul>
+					<li>
+						<a data-icon="home" href="#home">Home</a>
+					</li>
+
+					<li>
+						<a data-icon="gear" href="#">Share</a>
+					</li>
+
+					<li>
+						<a data-icon="bars" href="#about">About</a>
+					</li>
+				</ul>
+			</section>
+		</section>
+	</div>
+
+	<div data-role="page" data-theme="a" id="locale">
+		<section data-position="fixed" data-role="header" data-theme="a">
+			<h1><a href="#home"><img alt="img/brand.jpg" class="brandImg" src=
+			"img/brand.jpg"></a></h1>
+		</section>
+
+		<section>
+			<h2>I see you!</h2>
+		</section>
+		
+		<section data-role="content" data-theme="d">
+			<ul>
+				<li id="geo">
 					<h4><img alt="img/loading.png" class="load" src="img/loading.png"></h4>
 				</li>
 			</ul>
