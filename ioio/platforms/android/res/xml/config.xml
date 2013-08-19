@@ -23,6 +23,11 @@
     <access origin="http://plus.google.com" />
     <access origin="http://www.twitter.com" />
     <access origin="http://www.instagram.com" />
+    <access origin="http://127.0.0.1*"/> 
+    <access origin="http://google.com*" />
+    <access origin="http://maps.google.com*" />
+    <access origin="https://google.com*"/>
+    <access origin="https://maps.google.com*"/>
     <preference name="useBrowserHistory" value="true" />
     <preference name="exit-on-suspend" value="false" />
     <preference name="fullscreen" value="true" />

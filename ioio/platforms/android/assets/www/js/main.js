@@ -6,28 +6,8 @@ I Owe, I Owe * Bill List
 */
 
 
-document.addEventListener("deviceready", onDeviceReady, false);
-
- 
-var iabRef = null;
-function iabLoadStart(event) {
-    alert(event.type + ' - ' + event.url);
-}
-
-function iabLoadStop(event) {
-    alert(event.type + ' - ' + event.url);
-}
-
-function iabClose(event) {
-     alert(event.type);
-     iabRef.removeEventListener('loadstart', iabLoadStart);
-     iabRef.removeEventListener('loadstop', iabLoadStop);
-     iabRef.removeEventListener('exit', iabClose);
-}
- 
 function onDeviceReady() {
 	 alert('Device is ready!');
-	 checkConnection();
 	 
 	 $('#home').on('pageinit', function(){
 		//code needed for home page goes here
@@ -45,10 +25,74 @@ function onDeviceReady() {
 			}
 		});
 	});	
-	//any other code needed onDeveice Ready Goes Here.
-	 document.addEventListener("pause", onPause, false);
-} // phonegap deviceready
+		
+	$('#infoPage').on('pageinit', function() {
+		var device = "";
+		//var newSub = document.createElement("li");
+		//loadImg(device.platform, newSub);
+		var element = document.getElementById('devInfo');
+		element.innerHTML = 	'Device Name: '     + device.name     + '<br />' + 
+								'Device Cordova: '  + device.cordova + '<br />' + 
+								'Device Platform: ' + device.platform + '<br />' + 
+								'Device UUID: '     + device.uuid     + '<br />' + 
+								'Device Model: '    + device.model     + '<br />' + 
+								'Device Version: '  + device.version  + '<br />';
+	});
+	
+	$('#locale').on('pageinit', function(position) {
+		var where = function(position){
+			var latitude = position.coords.latitude;
+			var	longitude = position.coords.longitude;
+			$('#geo').html('<center><img class="icon" src= http://maps.googleapis.com/maps/api/staticmap?&zoom=14&size=600x600&markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true /></center>' + '<center>' + latitude + ', '+ longitude + '</center>');
+			 alert("Stop! It's Map Time!");  
+			   
+		};
+		
+		function err(error) {
+		    alert('code: '    + error.code    + '\n' +
+		          'message: ' + error.message + '\n');
+		};
+		
+		$('#geoLink').on('click', function() { 
+			 navigator.geolocation.getCurrentPosition(where, err, {timeout: 20000, enableHighAccuracy: true, maximumAge: 10000});
+		});
+	});
+	
+	$('#conLink').on('click', function() { 
+		var checkConnection = function() {
+			alert(navigator.connection.type);
+		    var networkState = navigator.connection.type;
+		    var Connection = "";
+		    var states = {};
+		    states[Connection.UNKNOWN]  = "I don't know what you're connected to";
+		    states[Connection.ETHERNET] = "You're Wired";
+		    states[Connection.WIFI]     = "WiFi For The Win";
+		    states[Connection.CELL_2G]  = "2G? Is it even gonna load?";
+		    states[Connection.CELL_3G]  = "You're on the standard connection";
+		    states[Connection.CELL_4G]  = "It's all about that 4G love";
+		    states[Connection.CELL]     = "Cellular";
+		    states[Connection.NONE]     = "You're not connected to the internet.";
+		
+		    alert('Connection type: ' + states[networkState]);
+		};
+	});
+		
+		
+	var dismiss = function() {
+		//not sure yet
+	};
+	
+	var pausible = function() {
+		
+	};
 
+
+	var popUp = function() {
+		navigator.notification.alert("On your device!", dismiss, "Fresh Data", "Cool");
+	};
+	//any other code needed onDeveice Ready Goes Here.
+	document.addEventListener("pause", pausible, false);
+} // phonegap deviceready
 var edit = document.getElementById("saveMe");
 var makeEdits = "";
 var runDelete = "";
@@ -89,51 +133,7 @@ var createButtons = function(key, buttons) {
 		delButton.addEventListener("click", runDelete);
 		delButton.innerHTML = delText;
 		buttons.appendChild(delButton);
-};
-	
-var popUp = function() {
-	navigator.notification.prompt("JSON Success!", dismiss, "Fresh Data", "Cool");
-}	
-
-var dismiss = function() {
-	//not sure yet
-}
-
-var pausible = function() {
-	
-}
-
-var checkConnection = function() {
-    var networkState = navigator.connection.type;
-
-    var states = {};
-    states[Connection.UNKNOWN]  = 'Unknown connection';
-    states[Connection.ETHERNET] = 'Ethernet connection';
-    states[Connection.WIFI]     = 'WiFi connection';
-    states[Connection.CELL_2G]  = 'Cell 2G connection';
-    states[Connection.CELL_3G]  = 'Cell 3G connection';
-    states[Connection.CELL_4G]  = 'Cell 4G connection';
-    states[Connection.CELL]     = 'Cell generic connection';
-    states[Connection.NONE]     = 'No network connection';
-
-    alert('Connection type: ' + states[networkState]);
-}
-	
-$('#devLink').on('click', function() {
-	$.mobile.changePage("#infoPage", {});
-	var device = "";
-	alert("Here's the device info!");
-	//var newSub = document.createElement("li");
-	//loadImg(device.platform, newSub);
-	var element = document.getElementById('devInfo');
-	element.innerHTML = 	'Device Name: '     + device.name     + '<br />' + 
-							'Device Cordova: '  + device.cordova + '<br />' + 
-							'Device Platform: ' + device.platform + '<br />' + 
-							'Device UUID: '     + device.uuid     + '<br />' + 
-							'Device Model: '    + device.model     + '<br />' + 
-							'Device Version: '  + device.version  + '<br />';
-	alert(element.innerHTML);
-});
+};	
 
 $('#instalink').on('click', function() {
 	$.mobile.changePage("#insta", {});
@@ -379,7 +379,24 @@ var clearAll = function() {
 	}
 	return clearAll;
 };
+ 
+var iabRef = null;
+function iabLoadStart(event) {
+    alert(event.type + ' - ' + event.url);
+}
 
+function iabLoadStop(event) {
+    alert(event.type + ' - ' + event.url);
+}
+
+function iabClose(event) {
+     alert(event.type);
+     iabRef.removeEventListener('loadstart', iabLoadStart);
+     iabRef.removeEventListener('loadstop', iabLoadStop);
+     iabRef.removeEventListener('exit', iabClose);
+}
+ 
+document.addEventListener("deviceready", onDeviceReady, false);
 dLink.addEventListener("click", getBill);
 edit.addEventListener("click", getForm);
 clearBill.addEventListener("click", clearAll);

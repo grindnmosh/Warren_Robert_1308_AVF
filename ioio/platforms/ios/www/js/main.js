@@ -6,25 +6,6 @@ I Owe, I Owe * Bill List
 */
 
 
-document.addEventListener("deviceready", onDeviceReady, false);
-
- 
-var iabRef = null;
-function iabLoadStart(event) {
-    alert(event.type + ' - ' + event.url);
-}
-
-function iabLoadStop(event) {
-    alert(event.type + ' - ' + event.url);
-}
-
-function iabClose(event) {
-     alert(event.type);
-     iabRef.removeEventListener('loadstart', iabLoadStart);
-     iabRef.removeEventListener('loadstop', iabLoadStop);
-     iabRef.removeEventListener('exit', iabClose);
-}
- 
 function onDeviceReady() {
 	 alert('Device is ready!');
 	 
@@ -46,7 +27,7 @@ function onDeviceReady() {
 	});	
 		
 	$('#infoPage').on('pageinit', function() {
-		//navigator.notification.alert("On your device!", dismiss, "Fresh Data", "Cool");
+		var device = "";
 		//var newSub = document.createElement("li");
 		//loadImg(device.platform, newSub);
 		var element = document.getElementById('devInfo');
@@ -58,47 +39,59 @@ function onDeviceReady() {
 								'Device Version: '  + device.version  + '<br />';
 	});
 	
-	
-	$('#locale').on('pageinit', function() {
+	$('#locale').on('pageinit', function(position) {
 		var where = function(position){
-			var lattitude = position.coords.latitude;
+			var latitude = position.coords.latitude;
 			var	longitude = position.coords.longitude;
-			$('#geo').html('<img src=http://maps.googleapis.com/maps/api/staticmap?zoom=13&size=200x200+ &markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true />');
+			$('#geo').html('<center><img class="icon" src= http://maps.googleapis.com/maps/api/staticmap?&zoom=14&size=600x600&markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true /></center>' + '<center>' + latitude + ', '+ longitude + '</center>');
+			 alert("Stop! It's Map Time!");  
+			   
 		};
-		function onError(error) {
+		
+		function err(error) {
 		    alert('code: '    + error.code    + '\n' +
 		          'message: ' + error.message + '\n');
 		};
 		
 		$('#geoLink').on('click', function() { 
-			 navigator.geolocation.getCurrentPosition(where, onError, {enableHighAccuracy:true});
+			 navigator.geolocation.getCurrentPosition(where, err, {timeout: 20000, enableHighAccuracy: true, maximumAge: 10000});
 		});
 	});
 	
-	var checkConnection = function() {
-		var navigator = "";
-		alert(navigator.connection.type);
-	    var networkState = navigator.connection.type;
+	$('#conLink').on('click', function() { 
+		var checkConnection = function() {
+			alert(navigator.connection.type);
+		    var networkState = navigator.connection.type;
+		    var Connection = "";
+		    var states = {};
+		    states[Connection.UNKNOWN]  = "I don't know what you're connected to";
+		    states[Connection.ETHERNET] = "You're Wired";
+		    states[Connection.WIFI]     = "WiFi For The Win";
+		    states[Connection.CELL_2G]  = "2G? Is it even gonna load?";
+		    states[Connection.CELL_3G]  = "You're on the standard connection";
+		    states[Connection.CELL_4G]  = "It's all about that 4G love";
+		    states[Connection.CELL]     = "Cellular";
+		    states[Connection.NONE]     = "You're not connected to the internet.";
+		
+		    alert('Connection type: ' + states[networkState]);
+		};
+	});
+		
+		
+	var dismiss = function() {
+		//not sure yet
+	};
 	
-	    var states = {};
-	    states[Connection.UNKNOWN]  = "I don't know what you're connected to";
-	    states[Connection.ETHERNET] = "You're Wired";
-	    states[Connection.WIFI]     = "WiFi For The Win";
-	    states[Connection.CELL_2G]  = "2G? Is it even gonna load?";
-	    states[Connection.CELL_3G]  = "You're on the standard connection";
-	    states[Connection.CELL_4G]  = "It's all about that 4G love";
-	    states[Connection.CELL]     = "Cellular";
-	    states[Connection.NONE]     = "You're not connected to the internet.";
-	
-	    alert('Connection type: ' + states[networkState]);
-	}
-	checkConnection()
+	var pausible = function() {
+		
+	};
+
 
 	var popUp = function() {
 		navigator.notification.alert("On your device!", dismiss, "Fresh Data", "Cool");
-	}
+	};
 	//any other code needed onDeveice Ready Goes Here.
-	 //document.addEventListener("pause", onPause, false);
+	document.addEventListener("pause", pausible, false);
 } // phonegap deviceready
 var edit = document.getElementById("saveMe");
 var makeEdits = "";
@@ -141,14 +134,6 @@ var createButtons = function(key, buttons) {
 		delButton.innerHTML = delText;
 		buttons.appendChild(delButton);
 };	
-
-var dismiss = function() {
-	//not sure yet
-}
-
-var pausible = function() {
-	
-}	
 
 $('#instalink').on('click', function() {
 	$.mobile.changePage("#insta", {});
@@ -394,7 +379,24 @@ var clearAll = function() {
 	}
 	return clearAll;
 };
+ 
+var iabRef = null;
+function iabLoadStart(event) {
+    alert(event.type + ' - ' + event.url);
+}
 
+function iabLoadStop(event) {
+    alert(event.type + ' - ' + event.url);
+}
+
+function iabClose(event) {
+     alert(event.type);
+     iabRef.removeEventListener('loadstart', iabLoadStart);
+     iabRef.removeEventListener('loadstop', iabLoadStop);
+     iabRef.removeEventListener('exit', iabClose);
+}
+ 
+document.addEventListener("deviceready", onDeviceReady, false);
 dLink.addEventListener("click", getBill);
 edit.addEventListener("click", getForm);
 clearBill.addEventListener("click", clearAll);
