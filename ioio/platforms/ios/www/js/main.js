@@ -102,7 +102,6 @@ function onDeviceReady() {
 			type: "GET",
 			dataType: "JSONP",
 			success: function(pics, status) {
-				navigator.notification.alert("On your device!", dismiss, "Fresh Data", "Cool");
 				$('#instagram').empty();
 				$.each(pics.data, function(i, img) {
 					var makeSubLi = $("<img id=images src='" + img.images.low_resolution.url + "'/>");

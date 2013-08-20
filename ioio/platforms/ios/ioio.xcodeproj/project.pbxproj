@@ -42,7 +42,8 @@
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
-		F7803D602DF2499FAAA49061 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAD5BDBE8EF40F38F522BFC /* CDVLocation.m */; };
+		84A9491DDFDF4299BF6CB042 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = D102CC0437C14DCC8115DB11 /* CDVInAppBrowser.m */; };
+		7ECCB64E04A4485BB721A8A1 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E6AA4EE8F04DCD98AD33AC /* CDVDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,8 +109,10 @@
 		8D1107310486CEB800E47090 /* ioio-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ioio-Info.plist"; path = "../ioio-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ioio/config.xml; sourceTree = "<group>"; };
-		5DAD5BDBE8EF40F38F522BFC /* CDVLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLocation.m"; path = "org.apache.cordova.core.geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		6AC838BBE5BE4E7A9C346CD6 /* CDVLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLocation.h"; path = "org.apache.cordova.core.geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		D102CC0437C14DCC8115DB11 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVInAppBrowser.m"; path = "org.apache.cordova.core.inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		F4F169FD4F4F4909A02088B5 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVInAppBrowser.h"; path = "org.apache.cordova.core.inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		70E6AA4EE8F04DCD98AD33AC /* CDVDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVDevice.m"; path = "org.apache.cordova.core.device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		70C5AA8320894CBC9E043091 /* CDVDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVDevice.h"; path = "org.apache.cordova.core.device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,8 +258,10 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				5DAD5BDBE8EF40F38F522BFC /* CDVLocation.m */,
-				6AC838BBE5BE4E7A9C346CD6 /* CDVLocation.h */,
+				D102CC0437C14DCC8115DB11 /* CDVInAppBrowser.m */,
+				F4F169FD4F4F4909A02088B5 /* CDVInAppBrowser.h */,
+				70E6AA4EE8F04DCD98AD33AC /* CDVDevice.m */,
+				70C5AA8320894CBC9E043091 /* CDVDevice.h */,
 			);
 			name = Plugins;
 			path = ioio/Plugins;
@@ -424,7 +429,8 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				F7803D602DF2499FAAA49061 /* CDVLocation.m in Sources */,
+				84A9491DDFDF4299BF6CB042 /* CDVInAppBrowser.m in Sources */,
+				7ECCB64E04A4485BB721A8A1 /* CDVDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,7 +32,8 @@ function onDeviceReady() {
 		var dPlat = device.platform;
 		var du = device.uuid;
 		var dMod = device.model;
-		var dVer = device.version;
+		var dVer = device.version;;
+        alert(dName)
 		//var newSub = document.createElement("li");
 		//loadImg(device.platform, newSub);
 		$('#devInfo').html( 'Device Name: '     + dName + '<br />' + 

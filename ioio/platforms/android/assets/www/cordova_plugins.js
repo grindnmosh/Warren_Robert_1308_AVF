@@ -1,31 +1,17 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/org.apache.cordova.core.geolocation/www/Coordinates.js",
-        "id": "org.apache.cordova.core.geolocation.Coordinates",
+        "file": "plugins/org.apache.cordova.core.inappbrowser/www/InAppBrowser.js",
+        "id": "org.apache.cordova.core.inappbrowser.InAppBrowser",
         "clobbers": [
-            "Coordinates"
+            "window.open"
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.core.geolocation/www/PositionError.js",
-        "id": "org.apache.cordova.core.geolocation.PositionError",
+        "file": "plugins/org.apache.cordova.core.device/www/device.js",
+        "id": "org.apache.cordova.core.device.device",
         "clobbers": [
-            "PositionError"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.core.geolocation/www/Position.js",
-        "id": "org.apache.cordova.core.geolocation.Position",
-        "clobbers": [
-            "Position"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.core.geolocation/www/geolocation.js",
-        "id": "org.apache.cordova.core.geolocation.geolocation",
-        "clobbers": [
-            "navigator.geolocation"
+            "device"
         ]
     }
 ]

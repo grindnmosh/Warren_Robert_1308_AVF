@@ -28,6 +28,7 @@
     <access origin="http://maps.google.com*" />
     <access origin="https://google.com*" />
     <access origin="https://maps.google.com*" />
+    <access origin="http://maps.googleapis.com*" />
     <preference name="KeyboardDisplayRequiresUserAction" value="true" />
     <preference name="SuppressesIncrementalRendering" value="false" />
     <preference name="UIWebViewBounce" value="true" />
@@ -46,7 +47,10 @@
     <plugin name="SplashScreen" value="CDVSplashScreen" />
     <plugin name="Notification" value="CDVNotification" />
     <plugin name="NetworkStatus" value="CDVConnection" />
-    <feature name="Geolocation">
-        <param name="ios-package" value="CDVLocation" />
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVInAppBrowser" />
+    </feature>
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
     </feature>
 </widget>
