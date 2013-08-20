@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00e51b47-b8c6-40f7-8fa4-3656e33f986f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ios/ioio.xcodeproj/project.xcworkspace/xcuserdata/1LoveCyn.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/../ios/ioio.xcodeproj/project.xcworkspace/xcuserdata/1LoveCyn.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ios/www/index.html" afterPath="$PROJECT_DIR$/../ios/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ios/www/js/main.js" afterPath="$PROJECT_DIR$/../ios/www/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/index.html" afterPath="$PROJECT_DIR$/assets/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/main.js" afterPath="$PROJECT_DIR$/assets/www/js/main.js" />
     </list>
     <ignored path="android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,7 +76,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="480" column="0" selection-start="19661" selection-end="19661" vertical-scroll-proportion="0.04054054" vertical-offset="7185" max-vertical-offset="14760">
+            <state line="480" column="0" selection-start="19578" selection-end="19578" vertical-scroll-proportion="0.04054054" vertical-offset="7185" max-vertical-offset="14745">
               <folding />
             </state>
           </provider>
@@ -140,6 +139,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -179,7 +179,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -196,13 +195,13 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="AVD_for_Nexus_4_by_Google" />
-    <property name="AndroidTargetDevices" value="emulator-5554" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
+    <property name="AndroidTargetDevices" value="emulator-5554" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Android Application.android">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -552,7 +551,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="480" column="0" selection-start="19661" selection-end="19661" vertical-scroll-proportion="0.04054054" vertical-offset="7185" max-vertical-offset="14760">
+        <state line="480" column="0" selection-start="19578" selection-end="19578" vertical-scroll-proportion="0.04054054" vertical-offset="7185" max-vertical-offset="14745">
           <folding />
         </state>
       </provider>
