@@ -27,7 +27,6 @@ function onDeviceReady() {
 	});	
 		
 	$('#infoPage').on('pageinit', function() {
-		var device = "";
 		var dName = device.name;
 		var dCord = device.cordova;
 		var dPlat = device.platform;
@@ -65,10 +64,9 @@ function onDeviceReady() {
 	});
 	
 	$('#conLink').on('click', function() {
-		$.mobile.changePage("#home", {});
 		var checkConnection = function() {
 		    var conTo = navigator.connection.type;
-		    console.log = conTo
+		    console.log =(conTo);
 		    var Connection = "";
 		    var modes = {};
 		    modes[Connection.UNKNOWN]  = "I don't know what you're connected to";
@@ -104,6 +102,7 @@ function onDeviceReady() {
 			type: "GET",
 			dataType: "JSONP",
 			success: function(pics, status) {
+				navigator.notification.alert("On your device!", dismiss, "Fresh Data", "Cool");
 				$('#instagram').empty();
 				$.each(pics.data, function(i, img) {
 					var makeSubLi = $("<img id=images src='" + img.images.low_resolution.url + "'/>");
