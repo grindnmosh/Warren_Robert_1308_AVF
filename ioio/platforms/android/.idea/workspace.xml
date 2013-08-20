@@ -2,78 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00e51b47-b8c6-40f7-8fa4-3656e33f986f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/plugins/org.apache.cordova.core.geolocation/www/Coordinates.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/plugins/org.apache.cordova.core.geolocation/www/Position.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/plugins/org.apache.cordova.core.geolocation/www/PositionError.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/plugins/org.apache.cordova.core.geolocation/www/geolocation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/apache/cordova/core/CordovaLocationListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/apache/cordova/core/GPSListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/apache/cordova/core/GeoBroker.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/apache/cordova/core/NetworkListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/ioio/Plugins/org.apache.cordova.core.geolocation/CDVLocation.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/ioio/Plugins/org.apache.cordova.core.geolocation/CDVLocation.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/plugins/org.apache.cordova.core.geolocation/www/Coordinates.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/plugins/org.apache.cordova.core.geolocation/www/Position.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/plugins/org.apache.cordova.core.geolocation/www/PositionError.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/plugins/org.apache.cordova.core.geolocation/www/geolocation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/.fetch.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/docs/Coordinates/coordinates.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/docs/Position/position.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/docs/PositionError/positionError.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/docs/geolocation.clearWatch.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/docs/geolocation.getCurrentPosition.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/docs/geolocation.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/docs/geolocation.watchPosition.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/docs/parameters/geolocation.options.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/docs/parameters/geolocationError.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/docs/parameters/geolocationSuccess.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/plugin.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/src/android/CordovaLocationListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/src/android/GPSListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/src/android/GeoBroker.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/src/android/NetworkListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/src/blackberry10/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/src/ios/CDVLocation.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/src/ios/CDVLocation.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/src/wp/GeoLocation.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/test/autotest/html/HtmlReporter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/test/autotest/html/HtmlReporterHelpers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/test/autotest/html/ReporterView.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/test/autotest/html/SpecView.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/test/autotest/html/SuiteView.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/test/autotest/html/TrivialReporter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/test/autotest/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/test/autotest/jasmine.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/test/autotest/jasmine.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/test/autotest/pages/geolocation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/test/autotest/test-runner.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/test/autotest/tests/geolocation.tests.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/test/cordova-incl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/test/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/test/location/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/test/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/test/master.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/www/Coordinates.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/www/Position.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/www/PositionError.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/www/geolocation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/CordovaLib/Classes/CDVNotification.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/CordovaLib/Classes/CDVNotification.m" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ios/ioio.xcodeproj/project.xcworkspace/xcuserdata/1LoveCyn.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/../ios/ioio.xcodeproj/project.xcworkspace/xcuserdata/1LoveCyn.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ios/ioio/Resources/icons/icon-72.png" afterPath="$PROJECT_DIR$/../ios/ioio/Resources/icons/icon-72.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ios/ioio/Resources/icons/icon-72@2x.png" afterPath="$PROJECT_DIR$/../ios/ioio/Resources/icons/icon-72@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable/icon.png" afterPath="$PROJECT_DIR$/res/drawable/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/icon.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/icon.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/icon.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/icon.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ios/ioio/Resources/icons/icon.png" afterPath="$PROJECT_DIR$/../ios/ioio/Resources/icons/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ios/ioio/Resources/icons/icon@2x.png" afterPath="$PROJECT_DIR$/../ios/ioio/Resources/icons/icon@2x.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/src/android/CordovaLocationListener.java" afterPath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/src/android/CordovaLocationListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/src/android/GPSListener.java" afterPath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/src/android/GPSListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/src/android/GeoBroker.java" afterPath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/src/android/GeoBroker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/src/android/NetworkListener.java" afterPath="$PROJECT_DIR$/../../plugins/org.apache.cordova.core.geolocation/src/android/NetworkListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../plugins/android.json" afterPath="$PROJECT_DIR$/../../plugins/android.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/config.xml" afterPath="$PROJECT_DIR$/res/xml/config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ios/ioio/config.xml" afterPath="$PROJECT_DIR$/../ios/ioio/config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/cordova_plugins.js" afterPath="$PROJECT_DIR$/assets/www/cordova_plugins.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ios/www/cordova_plugins.js" afterPath="$PROJECT_DIR$/../ios/www/cordova_plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/index.html" afterPath="$PROJECT_DIR$/assets/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ios/www/index.html" afterPath="$PROJECT_DIR$/../ios/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../plugins/ios.json" afterPath="$PROJECT_DIR$/../../plugins/ios.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/main.js" afterPath="$PROJECT_DIR$/assets/www/js/main.js" />
@@ -91,7 +33,6 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CompilerWorkspaceConfiguration">
-    <option name="USE_COMPILE_SERVER" value="false" />
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
     <option name="PARALLEL_COMPILATION" value="true" />
     <option name="COMPILER_PROCESS_HEAP_SIZE" value="1500" />
@@ -149,19 +90,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="505" column="4" selection-start="20173" selection-end="20173" vertical-scroll-proportion="-315.625" vertical-offset="0" max-vertical-offset="14745">
+            <state line="514" column="18" selection-start="20597" selection-end="20597" vertical-scroll-proportion="0.98108107" vertical-offset="7347" max-vertical-offset="14700">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="32" selection-start="692" selection-end="692" vertical-scroll-proportion="0.16030534" vertical-offset="432" max-vertical-offset="6300">
+            <state line="411" column="2" selection-start="13037" selection-end="13037" vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="6315">
               <folding />
             </state>
           </provider>
@@ -187,8 +128,8 @@
       <list>
         <option value="$PROJECT_DIR$/assets/www/css/index.css" />
         <option value="$PROJECT_DIR$/res/xml/config.xml" />
-        <option value="$PROJECT_DIR$/assets/www/index.html" />
         <option value="$PROJECT_DIR$/assets/www/js/main.js" />
+        <option value="$PROJECT_DIR$/assets/www/index.html" />
       </list>
     </option>
   </component>
@@ -224,6 +165,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,11 +194,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
+              <option name="myItemId" value="cordova" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cordova" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -277,15 +247,10 @@
               <option name="myItemId" value="www" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -298,7 +263,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Dropbox/Full Sail/ASD/Warren_Robert_ASD_1306" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="a0cec369" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="AVD_for_Nexus_4_by_Google" />
@@ -488,9 +453,10 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3987441" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31868133" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31711146" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -501,9 +467,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496361" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21263158" sideWeight="0.6813187" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31868133" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21263158" sideWeight="0.68288857" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31711146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -573,13 +538,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="906" column="7" selection-start="30859" selection-end="30859" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="13680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="138" column="1" selection-start="1926" selection-end="1926" vertical-scroll-proportion="0.0" vertical-offset="1862" max-vertical-offset="3930">
@@ -646,13 +604,6 @@
         <state line="3" column="21" selection-start="101" selection-end="101" vertical-scroll-proportion="0.022123894" vertical-offset="0" max-vertical-offset="678" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/cordova_plugins.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="403">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="138" column="1" selection-start="1926" selection-end="1926" vertical-scroll-proportion="0.5123153" vertical-offset="1862" max-vertical-offset="3930">
@@ -665,16 +616,30 @@
         <state line="17" column="25" selection-start="653" selection-end="653" vertical-scroll-proportion="0.51970446" vertical-offset="44" max-vertical-offset="450" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/index.html">
+    <entry file="file://$PROJECT_DIR$/cordova/lib/list-devices">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="505" column="4" selection-start="20173" selection-end="20173" vertical-scroll-proportion="-315.625" vertical-offset="0" max-vertical-offset="14745">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/cordova_plugins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="403">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="32" selection-start="692" selection-end="692" vertical-scroll-proportion="0.16030534" vertical-offset="432" max-vertical-offset="6300">
+        <state line="411" column="2" selection-start="13037" selection-end="13037" vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="6315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="514" column="18" selection-start="20597" selection-end="20597" vertical-scroll-proportion="0.98108107" vertical-offset="7347" max-vertical-offset="14700">
           <folding />
         </state>
       </provider>

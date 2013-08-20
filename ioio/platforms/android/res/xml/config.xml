@@ -17,23 +17,17 @@
     <feature name="FileTransfer">
         <param name="android-package" value="org.apache.cordova.FileTransfer" />
     </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.SplashScreen" />
+    </feature>
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.Device" />
     </feature>
     <feature name="Geolocation">
         <param name="android-package" value="org.apache.cordova.GeoBroker" />
-    </feature>
-    <feature name="InAppBrowser">
-        <param name="android-package" value="org.apache.cordova.InAppBrowser" />
-    </feature>
-    <feature name="NetworkStatus">
-        <param name="android-package" value="org.apache.cordova.NetworkManager" />
-    </feature>
-    <feature name="Notification">
-        <param name="android-package" value="org.apache.cordova.Notification" />
-    </feature>
-    <feature name="SplashScreen">
-        <param name="android-package" value="org.apache.cordova.SplashScreen" />
     </feature>
     <access origin="*" />
     <access origin="http://www.dropbox.com" />
@@ -61,5 +55,8 @@
     </feature>
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
     </feature>
 </widget>

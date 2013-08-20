@@ -25,7 +25,7 @@ function onDeviceReady() {
 			}
 		});
 	});	
-		
+	
 	$('#infoPage').on('pageinit', function() {
 		var dName = device.name;
 		var dCord = device.cordova;
@@ -132,6 +132,27 @@ function onDeviceReady() {
 
 	
 
+
+	$('#fb2link').on('click', function() {
+		$.mobile.changePage("#fbnf", {});
+		$.ajax({
+			url: "https://graph.facebook.com/100004240532347?fields=id,name,feed&access_token=618228588208865|f679d35ee1986ba1201bfe7c0fccd857",
+			type: "GET",
+			dataType: "JSONP",
+			success: function(stream) {
+				alert("JSONP Success");
+				console.log(stream);
+				$.each(stream.data, function(i, data) {
+					console.log(data.story);
+					$('#feed').empty();
+					var makeSubLi = $("<h3 id = 'fbcolor'>" + data.story + "</h3><h3><img src='" + data.picture + "'/>" + "</h3><hr/>");
+					makeSubLi.appendTo('#feed');
+				});
+			}
+		});
+	});
+	
+	
 	//any other code needed onDeveice Ready Goes Here.
 	document.addEventListener("pause", pausible, false);
 } // phonegap deviceready
@@ -178,25 +199,7 @@ var createButtons = function(key, buttons) {
 		buttons.appendChild(delButton);
 };	
 
-$('#fb2link').on('click', function() {
-		$.mobile.changePage("#fbnf", {});
-		$.ajax({
-			url: "https://graph.facebook.com/100004240532347?fields=id,name,feed&access_token=618228588208865|f679d35ee1986ba1201bfe7c0fccd857",
-			type: "GET",
-			dataType: "JSONP",
-			success: function(stream) {
-				alert("JSONP Success");
-				console.log(stream);
-				$.each(stream.data, function(i, data) {
-					console.log(data.story);
-					$('#feed').empty();
-					var makeSubLi = $("<h3 id = 'fbcolor'>" + data.story + "</h3><h3><img src='" + data.picture + "'/>" + "</h3><hr/>");
-					makeSubLi.appendTo('#feed');
-				});
-			}
-		});
-	});
-
+	
 
 var howPaid = function() {
 	var paidWith = document.getElementById("pdwith");

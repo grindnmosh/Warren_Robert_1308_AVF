@@ -17,6 +17,9 @@
     <feature name="FileTransfer">
         <param name="ios-package" value="CDVFileTransfer" />
     </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
     <access origin="*" />
     <access origin="http://www.dropbox.com" />
     <access origin="http://www.facebook.com" />
@@ -49,6 +52,9 @@
     <plugin name="NetworkStatus" value="CDVConnection" />
     <feature name="InAppBrowser">
         <param name="ios-package" value="CDVInAppBrowser" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
     </feature>
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
