@@ -27,7 +27,6 @@ function onDeviceReady() {
 	});	
 		
 	$('#infoPage').on('pageinit', function() {
-		$.mobile.changePage("#infoPage", {});
 		var device = "";
 		var dName = device.name;
 		var dCord = device.cordova;
@@ -50,7 +49,7 @@ function onDeviceReady() {
 		var where = function(position){
 			var latitude = position.coords.latitude;
 			var	longitude = position.coords.longitude;
-			$('#geo').html('<center><img class="icon" src= http://maps.googleapis.com/maps/api/staticmap?&zoom=14&size=600x600&markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true /></center>' + '<center>' + latitude + ', '+ longitude + '</center>');
+			$('#geo').html('<center><img class="icon" src= http://maps.googleapis.com/maps/api/staticmap?&zoom=14&size=600x600&markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true /></center>' + '<center>' + 'Latitude = ' + latitude + ', Longitude ='+ longitude + '</center>');
 			 alert("Stop! It's Map Time!");  
 			   
 		};
@@ -84,8 +83,7 @@ function onDeviceReady() {
 		    alert('Connection type: ' + modes[conTo]);
 		};
 	});
-		
-		
+	
 	var dismiss = function() {
 		//not sure yet
 	};
@@ -94,13 +92,52 @@ function onDeviceReady() {
 		
 	};
 
-
 	var popUp = function() {
 		navigator.notification.alert("On your device!", dismiss, "Fresh Data", "Cool");
 	};
+
+	
+	$('#instalink').on('click', function() {
+		$.mobile.changePage("#insta", {});
+		$.ajax({
+			url: "https://api.instagram.com/v1/users/188391197/media/recent/?access_token=188391197.542325c.4843642a97f447cdb843f9275c8a1420",
+			type: "GET",
+			dataType: "JSONP",
+			success: function(pics, status) {
+				$('#instagram').empty();
+				$.each(pics.data, function(i, img) {
+					var makeSubLi = $("<img id=images src='" + img.images.low_resolution.url + "'/>");
+					makeSubLi.appendTo('#instagram');
+				});
+			}
+		});
+	});
+	
+		$('#gp2link').on('click', function() {
+		$.mobile.changePage("#goog", {});
+		$.ajax({
+			url: "https://www.googleapis.com/plus/v1/people/115633683788706355406/activities/public?key=AIzaSyBOCuWilKqeH2zy98T3BYz6LJRMA0nV4Gk",
+			type: "GET",
+			dataType: "JSONP",
+			success: function(data, status) {
+				alert("JSONP Success");
+				console.log(data);
+				$('#plus').empty();
+				$.each(data.items, function(i, item) {
+					console.log(item);
+					var makeSubLi = $("<h3 id='gcolor'>" + item.object.content + "</h3><hr/>");
+					makeSubLi.appendTo('#plus');
+				});
+			}
+		});
+	});
+
+	
+
 	//any other code needed onDeveice Ready Goes Here.
 	document.addEventListener("pause", pausible, false);
 } // phonegap deviceready
+
 var edit = document.getElementById("saveMe");
 var makeEdits = "";
 var runDelete = "";
@@ -143,59 +180,26 @@ var createButtons = function(key, buttons) {
 		buttons.appendChild(delButton);
 };	
 
-$('#instalink').on('click', function() {
-	$.mobile.changePage("#insta", {});
-	$.ajax({
-		url: "https://api.instagram.com/v1/users/188391197/media/recent/?access_token=188391197.542325c.4843642a97f447cdb843f9275c8a1420",
-		type: "GET",
-		dataType: "JSONP",
-		success: function(pics, status) {
-			console.log(pics.data);
-			$('#instagram').empty();
-			$.each(pics.data, function(i, img) {
-				var makeSubLi = $("<img id=images src='" + img.images.low_resolution.url + "'/>");
-				makeSubLi.appendTo('#instagram');
-			});
-		}
-	});
-});
-
 $('#fb2link').on('click', function() {
-	$.mobile.changePage("#fbnf", {});
-	$.ajax({
-		url: "https://graph.facebook.com/100004240532347?fields=id,name,feed&access_token=618228588208865|ULb0s2EwnML7ByFoQiF-coTZ4R0",
-		type: "GET",
-		dataType: "JSONP",
-		success: function(stream) {
-			alert("JSONP Success");
-			console.log(stream);
-			$.each(stream.feed.data, function(i, data) {
-				console.log(data.story);
-				$('#feed').empty();
-				var makeSubLi = $("<h3 id = 'fbcolor'>" + data.story + "</h3><h3><img src='" + data.picture + "'/>" + "</h3><hr/>");
-				makeSubLi.appendTo('#feed');
-			});
-		}
+		$.mobile.changePage("#fbnf", {});
+		$.ajax({
+			url: "https://graph.facebook.com/100004240532347?fields=id,name,feed&access_token=618228588208865|f679d35ee1986ba1201bfe7c0fccd857",
+			type: "GET",
+			dataType: "JSONP",
+			success: function(stream) {
+				alert("JSONP Success");
+				console.log(stream);
+				$.each(stream.data, function(i, data) {
+					console.log(data.story);
+					$('#feed').empty();
+					var makeSubLi = $("<h3 id = 'fbcolor'>" + data.story + "</h3><h3><img src='" + data.picture + "'/>" + "</h3><hr/>");
+					makeSubLi.appendTo('#feed');
+				});
+			}
+		});
 	});
-});
-$('#gp2link').on('click', function() {
-	$.mobile.changePage("#goog", {});
-	$.ajax({
-		url: "https://www.googleapis.com/plus/v1/people/115633683788706355406/activities/public?key=AIzaSyBOCuWilKqeH2zy98T3BYz6LJRMA0nV4Gk",
-		type: "GET",
-		dataType: "JSONP",
-		success: function(data, status) {
-			alert("JSONP Success");
-			console.log(data);
-			$('#plus').empty();
-			$.each(data.items, function(i, item) {
-				console.log(item);
-				var makeSubLi = $("<h3 id='gcolor'>" + item.object.content + "</h3><hr/>");
-				makeSubLi.appendTo('#plus');
-			});
-		}
-	});
-});
+
+
 var howPaid = function() {
 	var paidWith = document.getElementById("pdwith");
 	if (status - pd.checked) {
