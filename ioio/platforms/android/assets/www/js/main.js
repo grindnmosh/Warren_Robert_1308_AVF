@@ -40,11 +40,12 @@ function onDeviceReady() {
 							'<center><img class = icon src = "img/' + dPlat + '.png"/></center>');
 	});
 	
-	$('#locale').on('click', function(position) {
+	$('#geoLink').on('click', function() {
 		$.mobile.changePage("#locale", {});
 		var where = function(position){
 			var latitude = position.coords.latitude;
 			var	longitude = position.coords.longitude;
+            alert(latitude);
 			$('#geo').html('<center><img class="icon" src= http://maps.googleapis.com/maps/api/staticmap?&zoom=14&size=600x600&markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true /></center>' + '<center>' + 'Latitude = ' + latitude + ',<br> Longitude ='+ longitude + '</center>');
 			 alert("Stop! It's Map Time!");  
 			   

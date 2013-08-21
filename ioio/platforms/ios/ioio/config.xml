@@ -26,13 +26,19 @@
     <preference name="BackupWebStorage" value="cloud" />
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
-    <feature name="Geolocation">
-        <param name="ios-package" value="CDVLocation" />
-    </feature>
     <feature name="Device">
-        <param name="ios-package" value="CDVDevice"/>
+        <param name="ios-package" value="CDVDevice" />
     </feature>
     <feature name="InAppBrowser">
         <param name="ios-package" value="CDVInAppBrowser" />
+    </feature>
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
+    <feature name="Media">
+        <param name="ios-package" value="CDVSound" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
     </feature>
 </widget>

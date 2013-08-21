@@ -8,11 +8,6 @@ I Owe, I Owe * Bill List
 
 function onDeviceReady() {
 	 alert('Device is ready!');
-	 
-	 $('#home').on('pageinit', function(){
-		//code needed for home page goes here
-	});	
-			
 	
 	$('#add').on('pageinit', function(getForm) {
 		var billForm = $('#addBill');
@@ -40,7 +35,7 @@ function onDeviceReady() {
 							'<center><img class = icon src = "img/' + dPlat + '.png"/></center>');
 	});
 	
-	$('#locale').on('click', function(position) {
+	$('#geoLink').on('click', function() {
 		$.mobile.changePage("#locale", {});
 		var where = function(position){
 			var latitude = position.coords.latitude;
