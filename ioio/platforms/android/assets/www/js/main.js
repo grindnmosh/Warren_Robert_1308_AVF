@@ -5,7 +5,7 @@ AVF
 I Owe, I Owe * Bill List
 */
 
-document.addEventListener("deviceready", onDeviceReady(), true);
+
 function onDeviceReady() {
 	 alert('Device is ready!');
 	 
@@ -27,20 +27,17 @@ function onDeviceReady() {
 	});	
 	
 	$('#infoPage').on('pageinit', function() {
-		var dName = device.name;
 		var dCord = device.cordova;
 		var dPlat = device.platform;
 		var du = device.uuid;
 		var dMod = device.model;
 		var dVer = device.version;
-		//var newSub = document.createElement("li");
-		//loadImg(device.platform, newSub);
-		$('#devInfo').html( 'Device Name: '     + dName + '<br />' + 
-							'Device Cordova: '  + dCord + '<br />' + 
-							'Device Platform: ' + dPlat + '<br />' + 
-							'Device UUID: '     + du + '<br />' + 
-							'Device Model: '    + dMod + '<br />' + 
-							'Device Version: '  + dVer + '<br />');
+		$('#devInfo').html( 'Device Cordova: '  + dCord + '<br>' + 
+							'Device Platform: ' + dPlat + '<br>' + 
+							'Device UUID: '     + du + '<br>' + 
+							'Device Model: '    + dMod + '<br>' + 
+							'Device Version: '  + dVer + '<br>' + 
+							'<center><img class = icon src = "img/' + dPlat + '.png"/></center>');
 	});
 	
 	$('#locale').on('pageinit', function(position) {
@@ -48,7 +45,7 @@ function onDeviceReady() {
 		var where = function(position){
 			var latitude = position.coords.latitude;
 			var	longitude = position.coords.longitude;
-			$('#geo').html('<center><img class="icon" src= http://maps.googleapis.com/maps/api/staticmap?&zoom=14&size=600x600&markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true /></center>' + '<center>' + 'Latitude = ' + latitude + ', Longitude ='+ longitude + '</center>');
+			$('#geo').html('<center><img class="icon" src= http://maps.googleapis.com/maps/api/staticmap?&zoom=14&size=600x600&markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true /></center>' + '<center>' + 'Latitude = ' + latitude + ',<br> Longitude ='+ longitude + '</center>');
 			 alert("Stop! It's Map Time!");  
 			   
 		};
@@ -63,38 +60,7 @@ function onDeviceReady() {
 		});
 	});
 	
-	$('#conLink').on('click', function() {
-		var checkConnection = function() {
-		    var conTo = navigator.connection.type;
-		    console.log =(conTo);
-		    var Connection = "";
-		    var modes = {};
-		    modes[Connection.UNKNOWN]  = "I don't know what you're connected to";
-		    modes[Connection.ETHERNET] = "You're Wired";
-		    modes[Connection.WIFI]     = "WiFi For The Win";
-		    modes[Connection.CELL_2G]  = "2G? Is it even gonna load?";
-		    modes[Connection.CELL_3G]  = "You're on the standard connection";
-		    modes[Connection.CELL_4G]  = "It's all about that 4G love";
-		    modes[Connection.CELL]     = "Cellular";
-		    modes[Connection.NONE]     = "You're not connected to the internet.";
 		
-		    alert('Connection type: ' + modes[conTo]);
-		};
-	});
-	
-	var dismiss = function() {
-		//not sure yet
-	};
-	
-	var pausible = function() {
-		
-	};
-
-	var popUp = function() {
-		navigator.notification.alert("On your device!", dismiss, "Fresh Data", "Cool");
-	};
-
-	
 	$('#instalink').on('click', function() {
 		$.mobile.changePage("#insta", {});
 		$.ajax({
@@ -102,9 +68,10 @@ function onDeviceReady() {
 			type: "GET",
 			dataType: "JSONP",
 			success: function(pics, status) {
+				alert("JSONP Success");
 				$('#instagram').empty();
 				$.each(pics.data, function(i, img) {
-					var makeSubLi = $("<img id=images src='" + img.images.low_resolution.url + "'/>");
+					var makeSubLi = $("<img class=images src='" + img.images.low_resolution.url + "'/>");
 					makeSubLi.appendTo('#instagram');
 				});
 			}
@@ -154,8 +121,7 @@ function onDeviceReady() {
 	
 	
 	//any other code needed onDeveice Ready Goes Here.
-	document.addEventListener("pause", pausible, false);
-} // phonegap deviceready
+} 	// phonegap deviceready
 
 var edit = document.getElementById("saveMe");
 var makeEdits = "";
@@ -280,15 +246,6 @@ var loadImg = function(billImg, newSub) {
 	var setImg = insertImg.setAttribute("src", "img/" + billImg + ".jpg");
 	img.appendChild(insertImg);
 };
-var platImg = function(platform, newSub) {
-	var img = document.createElement("li");
-	newSub.appendChild(img);
-	var insertImg = document.createElement("img");
-	var imgSize = insertImg.setAttribute("id", "platform");
-	var imgSz = insertImg.setAttribute("class", "platform");
-	var setImg = insertImg.setAttribute("src", "img/" + platform + ".jpg");
-	img.appendChild(insertImg);
-};
 var cleanHouse = function() {
 	if (localStorage.length === 0) {
 		alert("There is no data to clear!!");
@@ -409,7 +366,7 @@ function iabClose(event) {
      iabRef.removeEventListener('exit', iabClose);
 }
  
-//document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReady, false);
 dLink.addEventListener("click", getBill);
 edit.addEventListener("click", getForm);
 clearBill.addEventListener("click", clearAll);

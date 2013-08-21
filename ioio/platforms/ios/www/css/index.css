@@ -27,17 +27,13 @@ h4 {
 #billTypeImg {
 	margin: 20px 20px 20px 0;
 }
-#fbcolor {
+.fbcolor {
 	color: blue;
 }
-#gcolor {
+.gcolor {
 	color: red;
 }
-#images {
-	width: 125px;
-	margin: 20px 20px 20px 20px;
-	border: 2px solid blue;
-}
+
 #dueDateImg {
 	margin: 20px 20px 20px 20px;
 }
@@ -125,7 +121,7 @@ li {
     margin-top: 1.4em;
     border-top: 1px solid rgba(0,0,0,.1);
 }
-#ctaimg {
+.ctaimg {
 	width: 240px; 
 	text-align: center;
 }
@@ -142,12 +138,16 @@ li {
 	width: 100px;
 }
 
-
+.images {
+	width: 90px;
+	margin: 5px;
+	border: 2px solid blue;
+}
 
 
 /* iPhone Horizontal */ 
 @media all and (min-width: 480px){  
-	#ctaimg {
+	.ctaimg {
 		width: 100% !important; 
 	}
 	.brandImg {
@@ -163,7 +163,7 @@ li {
 
 /* iPhone vertical */
 @media all and (min-width: 1px){
-	#ctaimg {
+	.ctaimg {
 		width: 100% !important;
 	}
 	.brandImg {
@@ -179,7 +179,7 @@ li {
 
 /* iPad Verticle */ 
 @media only screen and (min-width: 768px) {
-	#ctaimg {
+	.ctaimg {
 		width: 50% !important; 
 	}
 	.brandImg {
@@ -188,14 +188,14 @@ li {
 	.load {
 		width: 50% !important;
 	}
-	#icon {
+	.icon {
 		width: 50% !important;
 	}
 }
 
 /* iPad Horizontal */ 
 @media only screen and (min-width: 1024px) {     
-	#ctaimg {
+	.ctaimg {
 		width: 50% !important; 
 	}
 	.brandImg {
@@ -211,7 +211,7 @@ li {
 
 /* Nexus 7 Horizontal */ 
 @media only screen and (min-width: 1280px) {     
-	#ctaimg { 
+	.ctaimg { 
 		width: 33.3333333% !important; 
 	}
 	.brandImg {
@@ -226,7 +226,7 @@ li {
 }  
 /* Monitor 1600 */ 
 @media only screen and (min-width: 1600px) {
-	#ctaimg { 
+	.ctaimg { 
 		width: 25% !important; 
 	}
 	.brandImg {
@@ -241,7 +241,7 @@ li {
 }  
 /* Monitor 1920 */ 
 @media only screen and (min-width: 1920px) {     
-	#ctaimg { 
+	.ctaimg { 
 		width: 20% !important; 
 	}
 	.brandImg {

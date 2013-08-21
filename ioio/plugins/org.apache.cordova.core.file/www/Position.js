@@ -1,4 +1,4 @@
-cordova.define("org.apache.cordova.core.file.FileUploadResult", function(require, exports, module) {/*
+cordova.define("org.apache.cordova.core.geolocation.Position", function(require, exports, module) {/*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -19,15 +19,16 @@ cordova.define("org.apache.cordova.core.file.FileUploadResult", function(require
  *
 */
 
-/**
- * FileUploadResult
- * @constructor
- */
-var FileUploadResult = function() {
-    this.bytesSent = 0;
-    this.responseCode = null;
-    this.response = null;
+var Coordinates = require('./Coordinates');
+
+var Position = function(coords, timestamp) {
+    if (coords) {
+        this.coords = new Coordinates(coords.latitude, coords.longitude, coords.altitude, coords.accuracy, coords.heading, coords.velocity, coords.altitudeAccuracy);
+    } else {
+        this.coords = new Coordinates();
+    }
+    this.timestamp = (timestamp !== undefined) ? timestamp : new Date();
 };
 
-module.exports = FileUploadResult;
+module.exports = Position;
 });

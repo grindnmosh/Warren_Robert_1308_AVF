@@ -1,4 +1,4 @@
-cordova.define("org.apache.cordova.core.file.FileUploadResult", function(require, exports, module) {/*
+cordova.define("org.apache.cordova.core.geolocation.PositionError", function(require, exports, module) {/*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -20,14 +20,20 @@ cordova.define("org.apache.cordova.core.file.FileUploadResult", function(require
 */
 
 /**
- * FileUploadResult
+ * Position error object
+ *
  * @constructor
+ * @param code
+ * @param message
  */
-var FileUploadResult = function() {
-    this.bytesSent = 0;
-    this.responseCode = null;
-    this.response = null;
+var PositionError = function(code, message) {
+    this.code = code || null;
+    this.message = message || '';
 };
 
-module.exports = FileUploadResult;
+PositionError.PERMISSION_DENIED = 1;
+PositionError.POSITION_UNAVAILABLE = 2;
+PositionError.TIMEOUT = 3;
+
+module.exports = PositionError;
 });
