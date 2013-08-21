@@ -8,11 +8,6 @@ I Owe, I Owe * Bill List
 
 function onDeviceReady() {
 	 alert('Device is ready!');
-	 
-	 $('#home').on('pageinit', function(){
-		//code needed for home page goes here
-	});	
-			
 	
 	$('#add').on('pageinit', function(getForm) {
 		var billForm = $('#addBill');
@@ -40,12 +35,11 @@ function onDeviceReady() {
 							'<center><img class = icon src = "img/' + dPlat + '.png"/></center>');
 	});
 	
-	$('#geoLink').on('click', function() {
-		$.mobile.changePage("#locale", {});
+	
+		
 		var where = function(position){
 			var latitude = position.coords.latitude;
 			var	longitude = position.coords.longitude;
-            alert(latitude);
 			$('#geo').html('<center><img class="icon" src= http://maps.googleapis.com/maps/api/staticmap?&zoom=14&size=600x600&markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true /></center>' + '<center>' + 'Latitude = ' + latitude + ',<br> Longitude ='+ longitude + '</center>');
 			 alert("Stop! It's Map Time!");  
 			   
@@ -57,9 +51,10 @@ function onDeviceReady() {
 		};
 		
 		$('#geoLink').on('click', function() { 
-			 navigator.geolocation.getCurrentPosition(where, err, {timeout: 20000, enableHighAccuracy: true, maximumAge: 10000});
+			$.mobile.changePage("#locale", {});
+			 navigator.geolocation.getCurrentPosition(where, err, {enableHighAccuracy: true});
 		});
-	});
+	
 	
 		
 	$('#instalink').on('click', function() {

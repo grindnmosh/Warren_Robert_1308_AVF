@@ -35,8 +35,8 @@ function onDeviceReady() {
 							'<center><img class = icon src = "img/' + dPlat + '.png"/></center>');
 	});
 	
-	$('#geoLink').on('click', function() {
-		$.mobile.changePage("#locale", {});
+	
+		
 		var where = function(position){
 			var latitude = position.coords.latitude;
 			var	longitude = position.coords.longitude;
@@ -51,9 +51,10 @@ function onDeviceReady() {
 		};
 		
 		$('#geoLink').on('click', function() { 
-			 navigator.geolocation.getCurrentPosition(where, err, {timeout: 20000, enableHighAccuracy: true, maximumAge: 10000});
+			$.mobile.changePage("#locale", {});
+			 navigator.geolocation.getCurrentPosition(where, err, {enableHighAccuracy: true});
 		});
-	});
+	
 	
 		
 	$('#instalink').on('click', function() {
