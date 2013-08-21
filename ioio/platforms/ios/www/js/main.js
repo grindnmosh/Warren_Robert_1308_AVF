@@ -40,7 +40,7 @@ function onDeviceReady() {
 							'<center><img class = icon src = "img/' + dPlat + '.png"/></center>');
 	});
 	
-	$('#locale').on('pageinit', function(position) {
+	$('#locale').on('click', function(position) {
 		$.mobile.changePage("#locale", {});
 		var where = function(position){
 			var latitude = position.coords.latitude;
