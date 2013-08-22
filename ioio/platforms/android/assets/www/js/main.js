@@ -37,23 +37,12 @@ function onDeviceReady() {
 	
 	
 		
-		var where = function(position){
-			var latitude = position.coords.latitude;
-			var	longitude = position.coords.longitude;
-			$('#geo').html('<center><img class="icon" src= http://maps.googleapis.com/maps/api/staticmap?&zoom=14&size=600x600&markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true /></center>' + '<center>' + 'Latitude = ' + latitude + ',<br> Longitude ='+ longitude + '</center>');
-			 alert("Stop! It's Map Time!");  
-			   
-		};
 		
-		function err(error) {
-		    alert('code: '    + error.code    + '\n' +
-		          'message: ' + error.message + '\n');
-		};
 		
-		$('#geoLink').on('click', function() { 
-			$.mobile.changePage("#locale", {});
-			 navigator.geolocation.getCurrentPosition(where, err, {enableHighAccuracy: true});
-		});
+	$('#geoLink').on('click', function() { 
+		$.mobile.changePage("#locale", {});
+		 navigator.geolocation.getCurrentPosition(where, err, {enableHighAccuracy: true});
+	});
 	
 	
 		
@@ -161,7 +150,19 @@ var createButtons = function(key, buttons) {
 		buttons.appendChild(delButton);
 };	
 
-	
+
+var where = function(position){
+	var latitude = position.coords.latitude;
+	var	longitude = position.coords.longitude;
+	$('#geo').html('<img class="map" src= "http://maps.googleapis.com/maps/api/staticmap?center=' + latitude + ', '+ longitude + '&zoom=18&size=600x600&maptype=hybrid&markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true" />' + '<center>' + 'Latitude = ' + latitude + ',<br> Longitude ='+ longitude + '</center>');
+	 alert("Stop! It's Map Time!");  
+	   
+};
+
+function err(error) {
+    alert('code: '    + error.code    + '\n' +
+          'message: ' + error.message + '\n');
+};
 
 var howPaid = function() {
 	var paidWith = document.getElementById("pdwith");

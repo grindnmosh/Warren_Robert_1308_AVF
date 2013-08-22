@@ -121,6 +121,15 @@ li {
     margin-top: 1.4em;
     border-top: 1px solid rgba(0,0,0,.1);
 }
+.map {
+    padding: 0;
+    top : 0 !important;  
+    right : 0 !important; 
+    bottom : 0 !important;  
+    left : 0 !important;  
+    height: 100%; 
+    width: 100%;  
+}
 .ctaimg {
 	width: 240px; 
 	text-align: center;
@@ -135,7 +144,7 @@ li {
 }
 .icon {
 	text-align: center;
-	width: 100px;
+	width: 200px;
 }
 
 .images {
