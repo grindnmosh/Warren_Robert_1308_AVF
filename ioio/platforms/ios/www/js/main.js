@@ -35,7 +35,18 @@ function onDeviceReady() {
 							'<center><img class = icon src = "img/' + dPlat + '.png"/></center>');
 	});
 	
-	
+	var where = function(position){
+	var latitude = position.coords.latitude;
+	var	longitude = position.coords.longitude;
+	$('#geo').html('<img class="map" src= "http://maps.googleapis.com/maps/api/staticmap?center=' + latitude + ', '+ longitude + '&zoom=18&size=600x600&maptype=hybrid&markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true" />' + '<center>' + 'Latitude = ' + latitude + ',<br> Longitude ='+ longitude + '</center>');
+	 	alert("Stop! It's Map Time!");  
+	 };
+
+	var err = function(error) {
+	    alert('code: '    + error.code    + '\n' +
+	          'message: ' + error.message + '\n');
+	};
+
 		
 		
 		
@@ -151,18 +162,6 @@ var createButtons = function(key, buttons) {
 };	
 
 
-var where = function(position){
-	var latitude = position.coords.latitude;
-	var	longitude = position.coords.longitude;
-	$('#geo').html('<img class="map" src= "http://maps.googleapis.com/maps/api/staticmap?center=' + latitude + ', '+ longitude + '&zoom=18&size=600x600&maptype=hybrid&markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true" />' + '<center>' + 'Latitude = ' + latitude + ',<br> Longitude ='+ longitude + '</center>');
-	 alert("Stop! It's Map Time!");  
-	   
-};
-
-function err(error) {
-    alert('code: '    + error.code    + '\n' +
-          'message: ' + error.message + '\n');
-};
 
 var howPaid = function() {
 	var paidWith = document.getElementById("pdwith");
