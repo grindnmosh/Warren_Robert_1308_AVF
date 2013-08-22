@@ -36,9 +36,9 @@ function onDeviceReady() {
 	});
 	
 	var where = function(position){
-	var latitude = position.coords.latitude;
-	var	longitude = position.coords.longitude;
-	$('#geo').html('<img class="map" src= "http://maps.googleapis.com/maps/api/staticmap?&zoom=18&size=600x600&maptype=hybrid&markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true" />' + '<center>' + 'Latitude = ' + latitude + ',<br> Longitude ='+ longitude + '</center>');
+		var latitude = position.coords.latitude;
+		var	longitude = position.coords.longitude;
+		$('#geo').html('<img class="map" src= "http://maps.googleapis.com/maps/api/staticmap?&zoom=18&size=600x600&maptype=hybrid&markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true" />' + '<center>' + 'Latitude = ' + latitude + ',<br> Longitude ='+ longitude + '</center>');
 	 	alert("Stop! It's Map Time!");  
 	 };
 
