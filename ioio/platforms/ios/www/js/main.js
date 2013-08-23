@@ -51,8 +51,7 @@ function onDeviceReady() {
 		
 		
 	$('#geoLink').on('click', function() { 
-		$.mobile.changePage("#locale", {});
-		 navigator.geolocation.getCurrentPosition(where, err, {enableHighAccuracy:true});
+		 navigator.geolocation.getCurrentPosition(where, err);
 	});
 	
 	
@@ -99,21 +98,20 @@ function onDeviceReady() {
 	$('#fb2link').on('click', function() {
 		$.mobile.changePage("#fbnf", {});
 		$.ajax({
-			url: "https://graph.facebook.com/100004240532347?fields=id,name,feed&access_token=618228588208865|f679d35ee1986ba1201bfe7c0fccd857",
+			url: "https://graph.facebook.com/100004240532347?fields=devices,feed,photos,posts&access_token=CAAIyRo9j4uEBAHXVSOSqwD3ZAiqb80TtZARdJfD0KZB9ZC39sirVUwfCf1VZAcVLcPbLSNj70ri75H9ukDpbSu7yLojFezZAKFlEoQaHVCF64imPH02wn2VZCY1IKLDoD7vJpZCx8nsxEsBMzzYVD4XGeCpDpJRGkuFc7yfs71LZCLAZDZD",
 			type: "GET",
 			dataType: "JSONP",
-			success: function(stream) {
+			success: function(pull) {
 				alert("JSONP Success");
-				console.log(stream);
-				$.each(stream.data, function(i, data) {
-					console.log(data.story);
-					$('#feed').empty();
-					var makeSubLi = $("<h3 id = 'fbcolor'>" + data.story + "</h3><h3><img src='" + data.picture + "'/>" + "</h3><hr/>");
+				$('#feed').empty();
+				$.each(pull.feed.data, function(i, data) {
+					var makeSubLi = $("<h3 id = 'fbcolor'>" + "<h3><img src='" + data.icon + "'/></h3>" +data.story + "</h3><h3><img src='" + data.picture + "'/></h3><hr/>");
 					makeSubLi.appendTo('#feed');
 				});
 			}
 		});
 	});
+
 	
 	
 	//any other code needed onDeveice Ready Goes Here.

@@ -36,9 +36,9 @@ function onDeviceReady() {
 	});
 	
 	var where = function(position){
-		var latitude = position.coords.latitude;
-		var	longitude = position.coords.longitude;
-		$('#geo').html('<img class="map" src= "http://maps.googleapis.com/maps/api/staticmap?&zoom=18&size=600x600&maptype=hybrid&markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true" />' + '<center>' + 'Latitude = ' + latitude + ',<br> Longitude ='+ longitude + '</center>');
+	var latitude = position.coords.latitude;
+	var	longitude = position.coords.longitude;
+	$('#geo').html('<img class="map" src= "http://maps.googleapis.com/maps/api/staticmap?&zoom=18&size=600x600&maptype=hybrid&markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true" />' + '<center>' + 'Latitude = ' + latitude + ',<br> Longitude ='+ longitude + '</center>');
 	 	alert("Stop! It's Map Time!");  
 	 };
 
@@ -51,8 +51,7 @@ function onDeviceReady() {
 		
 		
 	$('#geoLink').on('click', function() { 
-		$.mobile.changePage("#locale", {});
-		 navigator.geolocation.getCurrentPosition(where, err, {enableHighAccuracy:true});
+		 navigator.geolocation.getCurrentPosition(where, err);
 	});
 	
 	
@@ -74,7 +73,7 @@ function onDeviceReady() {
 		});
 	});
 	
-		$('#gp2link').on('click', function() {
+	$('#gp2link').on('click', function() {
 		$.mobile.changePage("#goog", {});
 		$.ajax({
 			url: "https://www.googleapis.com/plus/v1/people/115633683788706355406/activities/public?key=AIzaSyBOCuWilKqeH2zy98T3BYz6LJRMA0nV4Gk",
@@ -99,16 +98,14 @@ function onDeviceReady() {
 	$('#fb2link').on('click', function() {
 		$.mobile.changePage("#fbnf", {});
 		$.ajax({
-			url: "https://graph.facebook.com/100004240532347?fields=id,name,feed&access_token=618228588208865|f679d35ee1986ba1201bfe7c0fccd857",
+			url: "https://graph.facebook.com/100004240532347?fields=devices,feed,photos,posts&access_token=CAAIyRo9j4uEBAHXVSOSqwD3ZAiqb80TtZARdJfD0KZB9ZC39sirVUwfCf1VZAcVLcPbLSNj70ri75H9ukDpbSu7yLojFezZAKFlEoQaHVCF64imPH02wn2VZCY1IKLDoD7vJpZCx8nsxEsBMzzYVD4XGeCpDpJRGkuFc7yfs71LZCLAZDZD",
 			type: "GET",
 			dataType: "JSONP",
-			success: function(stream) {
+			success: function(pull) {
 				alert("JSONP Success");
-				console.log(stream);
-				$.each(stream.data, function(i, data) {
-					console.log(data.story);
-					$('#feed').empty();
-					var makeSubLi = $("<h3 id = 'fbcolor'>" + data.story + "</h3><h3><img src='" + data.picture + "'/>" + "</h3><hr/>");
+				$('#feed').empty();
+				$.each(pull.feed.data, function(i, data) {
+					var makeSubLi = $("<h3 id = 'fbcolor'>" +data.story + "</h3><h3><img src='" + data.picture + "'/></h3><h3>" + data.link + "</h3><hr/>");
 					makeSubLi.appendTo('#feed');
 				});
 			}
