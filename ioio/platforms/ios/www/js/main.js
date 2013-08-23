@@ -105,7 +105,7 @@ function onDeviceReady() {
 				alert("JSONP Success");
 				$('#feed').empty();
 				$.each(pull.feed.data, function(i, data) {
-					var makeSubLi = $("<h3 id = 'fbcolor'>" + "<h3><img src='" + data.icon + "'/></h3>" +data.story + "</h3><h3><img src='" + data.picture + "'/></h3><hr/>");
+					var makeSubLi = $("<h3 id = 'fbcolor'>" +data.story + "</h3><h3><img src='" + data.picture + "'/></h3><h3>" + data.link + "</h3><hr/>");
 					makeSubLi.appendTo('#feed');
 				});
 			}
