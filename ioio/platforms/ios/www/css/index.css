@@ -27,11 +27,86 @@ h4 {
 #billTypeImg {
 	margin: 20px 20px 20px 0;
 }
+.incolor {
+	color: black;
+	background-color: white;
+}
 .fbcolor {
-	color: blue;
+	color: black;
+	text-shadow: black;
+}
+.fbcolor2 {
+	color: black;
+	text-shadow: black;
+	border: 2px solid black;
+	text-shadow: black;
+	width: 100%;
+	display: block;
+	background-color: white;
 }
 .gcolor {
-	color: red;
+	color: black;
+	text-shadow: black;
+	display: block;
+}
+.gcolor2 {
+	color: black;
+	border: 1px solid red;
+	text-shadow: red;
+	width: 100%;
+	background-color: white;
+}
+#gcolor {
+    background-image:url('http://lucrativepen.com/wp-content/uploads/2012/10/G+.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width:100%;
+	background-color: white;
+}
+#fbcolor {
+    background-image:url('http://i.telegraph.co.uk/multimedia/archive/02337/Facebook_logo_2337036f.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width:100%;
+	background-color: white;
+}
+#instagram {
+	background-image:url('http://cdn2.ubergizmo.com/wp-content/uploads/2013/01/instagram-jan-19-rollback-terms-of-service.jpeg');
+    background-position: 50% 50%;
+    background-repeat: repeat;
+    width:100%;
+    height: 100%;
+	background-color: white;
+}
+#instaHead {
+	background-image:url('http://cdn2.ubergizmo.com/wp-content/uploads/2013/01/instagram-jan-19-rollback-terms-of-service.jpeg');
+    background-position: 50% 50%;
+    background-repeat: repeat;
+    width:100%;
+    height: 100%;
+    color: Black;
+	text-shadow: black;
+	background-color: white;
+}
+#gHead {
+	background-image:url('http://lucrativepen.com/wp-content/uploads/2012/10/G+.jpg');
+    background-position: 50% 50%;
+    background-repeat: repeat;
+    width:100%;
+    height: 100%;
+    color: yellow;
+	text-shadow: black;
+	background-color: white;
+}
+#fbHead {
+	background-image:url('http://i.telegraph.co.uk/multimedia/archive/02337/Facebook_logo_2337036f.jpg');
+    background-position: 50% 50%;
+    background-repeat: repeat;
+    width:100%;
+    height: 100%;
+    color: yellow;
+	text-shadow: black;
+	background-color: white;
 }
 
 #dueDateImg {
@@ -148,9 +223,14 @@ li {
 }
 
 .images {
-	width: 90px;
+	width: 23%;
 	margin: 5px;
 	border: 2px solid blue;
+}
+.images:first-child {
+	width: 48%;
+	margin: 5px;
+	border: 2px solid purple;
 }
 
 

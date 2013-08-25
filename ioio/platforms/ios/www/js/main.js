@@ -7,7 +7,6 @@ I Owe, I Owe * Bill List
 
 
 function onDeviceReady() {
-	 alert('Device is ready!');
 	
 	$('#add').on('pageinit', function(getForm) {
 		var billForm = $('#addBill');
@@ -39,7 +38,6 @@ function onDeviceReady() {
 	var latitude = position.coords.latitude;
 	var	longitude = position.coords.longitude;
 	$('#geo').html('<img class="map" src= "http://maps.googleapis.com/maps/api/staticmap?&zoom=18&size=600x600&maptype=hybrid&markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true" />' + '<center>' + 'Latitude = ' + latitude + ',<br> Longitude ='+ longitude + '</center>');
-	 	alert("Stop! It's Map Time!");  
 	 };
 
 	var err = function(error) {
@@ -63,7 +61,6 @@ function onDeviceReady() {
 			type: "GET",
 			dataType: "JSONP",
 			success: function(pics, status) {
-				alert("JSONP Success");
 				$('#instagram').empty();
 				$.each(pics.data, function(i, img) {
 					var makeSubLi = $("<img class=images src='" + img.images.low_resolution.url + "'/>");
@@ -80,12 +77,9 @@ function onDeviceReady() {
 			type: "GET",
 			dataType: "JSONP",
 			success: function(data, status) {
-				alert("JSONP Success");
-				console.log(data);
 				$('#plus').empty();
 				$.each(data.items, function(i, item) {
-					console.log(item);
-					var makeSubLi = $("<h3 id='gcolor'>" + item.object.content + "</h3><hr/>");
+					var makeSubLi = $("<section id='gcolor' class ='gcolor2'>" + item.object.content + "</section>");
 					makeSubLi.appendTo('#plus');
 				});
 			}
@@ -98,14 +92,13 @@ function onDeviceReady() {
 	$('#fb2link').on('click', function() {
 		$.mobile.changePage("#fbnf", {});
 		$.ajax({
-			url: "https://graph.facebook.com/100004240532347?fields=devices,feed,photos,posts&access_token=CAAIyRo9j4uEBAHXVSOSqwD3ZAiqb80TtZARdJfD0KZB9ZC39sirVUwfCf1VZAcVLcPbLSNj70ri75H9ukDpbSu7yLojFezZAKFlEoQaHVCF64imPH02wn2VZCY1IKLDoD7vJpZCx8nsxEsBMzzYVD4XGeCpDpJRGkuFc7yfs71LZCLAZDZD",
+			url: "https://graph.facebook.com/100004240532347?fields=devices,feed,photos,posts&access_token=CAACEdEose0cBAKU6oNIaaKHiIAfovgB5zoXDAL1kmrmMWe48J4fBxSnhfE5iAEQCTEfjwgHwZBRSB1KkGMbNodAh9ZCFjvRz9LFkZB7ZAiVBtSNsdgcCy8ujzfgeKFEZCglw6z2581vyFLy1ObpIgTA5NYqszeJUZD",
 			type: "GET",
 			dataType: "JSONP",
 			success: function(pull) {
-				alert("JSONP Success");
 				$('#feed').empty();
-				$.each(pull.feed.data, function(i, data) {
-					var makeSubLi = $("<h3 id = 'fbcolor'>" +data.story + "</h3><h3><img src='" + data.picture + "'/></h3><h3>" + data.link + "</h3><hr/>");
+				$.each(pull.posts.data, function(i, data) {
+					var makeSubLi = $("<section id='fbcolor' class = 'fbcolor2'><h3>" +data.story + "</h3><p><img src='" + data.picture + "'/></p><p>" + data.link + "</p></section>");
 					makeSubLi.appendTo('#feed');
 				});
 			}
