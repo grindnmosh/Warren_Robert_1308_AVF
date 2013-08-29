@@ -77,9 +77,8 @@ function onDeviceReady() {
 			type: "GET",
 			dataType: "JSONP",
 			success: function(data, status) {
-				$('#plus').empty();
 				$.each(data.items, function(i, item) {
-					var makeSubLi = $("<section id='gcolor' class ='gcolor2'>" + item.object.content + "</section>");
+					var makeSubLi = $("<section class ='gcolor2'>" + item.object.content + "</section>");
 					makeSubLi.appendTo('#plus');
 				});
 			}
@@ -92,13 +91,12 @@ function onDeviceReady() {
 	$('#fb2link').on('click', function() {
 		$.mobile.changePage("#fbnf", {});
 		$.ajax({
-			url: "https://graph.facebook.com/100004240532347?fields=devices,feed,photos,posts&access_token=CAACEdEose0cBAKU6oNIaaKHiIAfovgB5zoXDAL1kmrmMWe48J4fBxSnhfE5iAEQCTEfjwgHwZBRSB1KkGMbNodAh9ZCFjvRz9LFkZB7ZAiVBtSNsdgcCy8ujzfgeKFEZCglw6z2581vyFLy1ObpIgTA5NYqszeJUZD",
+			url: "https://graph.facebook.com/100004240532347?fields=devices,feed,photos,posts&access_token=CAACEdEose0cBAEwk5zUz3v7ZBNCZBEBPZARlZAgXgsQZCsjOvxioEnF1KokZBN4jimTKFHyZADjuvZAC18Onmqd0iryENrp2eo25T4TS1ehBcSkRgcEodUvKg48MiZB6ZAfchHERzFW5s58epuUObhQFx61QF9GfhtsbdEMs1ubZAZBqbjVTxvmAHZAk8RYKiGfNtH20ZD",
 			type: "GET",
 			dataType: "JSONP",
 			success: function(pull) {
-				$('#feed').empty();
 				$.each(pull.posts.data, function(i, data) {
-					var makeSubLi = $("<section id='fbcolor' class = 'fbcolor2'><h3>" +data.story + "</h3><p><img src='" + data.picture + "'/></p><p>" + data.link + "</p></section>");
+					var makeSubLi = $("<section class = 'fbcolor2'><h3>" +data.story + "</h3><p><img src='" + data.picture + "'/></p><p>" + data.link + "</p></section>");
 					makeSubLi.appendTo('#feed');
 				});
 			}
