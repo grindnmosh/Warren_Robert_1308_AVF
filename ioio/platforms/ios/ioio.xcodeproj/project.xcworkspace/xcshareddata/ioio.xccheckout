@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2D2A8923-5F67-4342-A205-E0C47D201259</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ioio</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6C761CAE-933E-42C4-BE89-9C27E452267F</key>
+		<string>https://github.com/grindnmosh/Warren_Robert_1308_AVF</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ioio/platforms/ios/ioio.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6C761CAE-933E-42C4-BE89-9C27E452267F</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/grindnmosh/Warren_Robert_1308_AVF</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6C761CAE-933E-42C4-BE89-9C27E452267F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6C761CAE-933E-42C4-BE89-9C27E452267F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Warren_Robert_1308_AVF</string>
+		</dict>
+	</array>
+</dict>
+</plist>
