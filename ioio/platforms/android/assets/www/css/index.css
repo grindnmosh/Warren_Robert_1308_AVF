@@ -27,47 +27,6 @@ h4 {
 #billTypeImg {
 	margin: 20px 20px 20px 0;
 }
-.incolor {
-	color: black;
-	background-color: white;
-}
-.fbcolor {
-	color: black;
-	text-shadow: black;
-}
-.fbcolor2 {
-	color: black;
-	border: 2px solid black;
-	width: 100%;
-}
-.gcolor {
-	color: black;
-	text-shadow: black;
-}
-.gcolor2 {
-	color: black;
-	border: 1px solid black;
-	width: 100%;
-}
-.plus {
-    background-image:url('http://lucrativepen.com/wp-content/uploads/2012/10/G+.jpg');
-    background-repeat: no-repeat;
-    background-position:25% 25%;
-    background-attachment: fixed;
-    width:100%;
-    background-color: white;
-}
-#fbnf {
-    background-image:url('http://i.telegraph.co.uk/multimedia/archive/02337/Facebook_logo_2337036f.jpg');
-    background-repeat: no-repeat;
-    background-position:25% 25%;
-    background-attachment: fixed;
-    width:100%;
-    background-color: white;
-}
-#feed {
-	width: 100%;
-}
 #dueDateImg {
 	margin: 20px 20px 20px 20px;
 }

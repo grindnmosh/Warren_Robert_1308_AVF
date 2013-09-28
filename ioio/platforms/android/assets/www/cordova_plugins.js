@@ -36,13 +36,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.core.inappbrowser/www/InAppBrowser.js",
-        "id": "org.apache.cordova.core.inappbrowser.InAppBrowser",
-        "clobbers": [
-            "window.open"
-        ]
-    },
-    {
         "file": "plugins/org.apache.cordova.core.AudioHandler/www/MediaError.js",
         "id": "org.apache.cordova.core.AudioHandler.MediaError",
         "clobbers": [
@@ -54,6 +47,20 @@ module.exports = [
         "id": "org.apache.cordova.core.AudioHandler.Media",
         "clobbers": [
             "window.Media"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.core.inappbrowser/www/InAppBrowser.js",
+        "id": "org.apache.cordova.core.inappbrowser.InAppBrowser",
+        "clobbers": [
+            "window.open"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.core.splashscreen/www/splashscreen.js",
+        "id": "org.apache.cordova.core.splashscreen.SplashScreen",
+        "clobbers": [
+            "navigator.splashscreen"
         ]
     }
 ]

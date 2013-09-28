@@ -33,78 +33,7 @@ function onDeviceReady() {
 							'Device Version: '  + dVer + '<br>' + 
 							'<center><img class = icon src = "img/' + dPlat + '.png"/></center>');
 	});
-	
-	var where = function(position){
-	var latitude = position.coords.latitude;
-	var	longitude = position.coords.longitude;
-	$('#geo').html('<img class="map" src= "http://maps.googleapis.com/maps/api/staticmap?&zoom=18&size=600x600&maptype=hybrid&markers=color:red%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true" />' + '<center>' + 'Latitude = ' + latitude + ',<br> Longitude ='+ longitude + '</center>');
-	 };
 
-	var err = function(error) {
-	    alert('code: '    + error.code    + '\n' +
-	          'message: ' + error.message + '\n');
-	};
-
-		
-		
-		
-	$('#geoLink').on('click', function() { 
-		 navigator.geolocation.getCurrentPosition(where, err);
-	});
-	
-	
-		
-	$('#instalink').on('click', function() {
-		$.mobile.changePage("#insta", {});
-		$.ajax({
-			url: "https://api.instagram.com/v1/users/188391197/media/recent/?access_token=188391197.542325c.4843642a97f447cdb843f9275c8a1420",
-			type: "GET",
-			dataType: "JSONP",
-			success: function(pics, status) {
-				$('#instagram').empty();
-				$.each(pics.data, function(i, img) {
-					var makeSubLi = $("<img class=images src='" + img.images.low_resolution.url + "'/>");
-					makeSubLi.appendTo('#instagram');
-				});
-			}
-		});
-	});
-	
-		$('#gp2link').on('click', function() {
-		$.mobile.changePage("#goog", {});
-		$.ajax({
-			url: "https://www.googleapis.com/plus/v1/people/115633683788706355406/activities/public?key=AIzaSyBOCuWilKqeH2zy98T3BYz6LJRMA0nV4Gk",
-			type: "GET",
-			dataType: "JSONP",
-			success: function(data, status) {
-				$.each(data.items, function(i, item) {
-					var makeSubLi = $("<section class ='gcolor2'>" + item.object.content + "</section>");
-					makeSubLi.appendTo('#plus');
-				});
-			}
-		});
-	});
-
-	
-
-
-	$('#fb2link').on('click', function() {
-		$.mobile.changePage("#fbnf", {});
-		$.ajax({
-			url: "https://graph.facebook.com/100004240532347?fields=devices,feed,photos,posts&access_token=CAACEdEose0cBAEwk5zUz3v7ZBNCZBEBPZARlZAgXgsQZCsjOvxioEnF1KokZBN4jimTKFHyZADjuvZAC18Onmqd0iryENrp2eo25T4TS1ehBcSkRgcEodUvKg48MiZB6ZAfchHERzFW5s58epuUObhQFx61QF9GfhtsbdEMs1ubZAZBqbjVTxvmAHZAk8RYKiGfNtH20ZD",
-			type: "GET",
-			dataType: "JSONP",
-			success: function(pull) {
-				$.each(pull.posts.data, function(i, data) {
-					var makeSubLi = $("<section class = 'fbcolor2'><h3>" +data.story + "</h3><p><img src='" + data.picture + "'/></p><p>" + data.link + "</p></section>");
-					makeSubLi.appendTo('#feed');
-				});
-			}
-		});
-	});
-
-	
-	
 	//any other code needed onDeveice Ready Goes Here.
 } 	// phonegap deviceready
 
